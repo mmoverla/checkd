@@ -1,0 +1,118 @@
+/* nyskrollrFloorplanTest */
+.floorplanPresentation{
+  position: relative;
+  height:10000px;
+  font-family: "HelveticaNeue-UltraLight", "Helvetica Neue UltraLight", Helvetica, Arial, sans-serif;
+
+}
+.bg-image{
+  position: fixed;
+  top:0;
+  left:0;
+  width: 100%;
+  height:100%;
+  -webkit-background-size: cover !important;
+  background: url(../images/subpages/new/lp_floorplan-bg.jpg)0 0 no-repeat;
+  z-index:-51;
+}
+
+#bg_pattern{
+background-image: url(../images/subpages/new/bg_pattern.png);
+position: fixed;
+opacity:1;
+left:0;
+top:0;
+width: 100%;
+height: 100%;
+z-index: -50;
+}
+
+.floorplan-icon-logo{
+	position: absolute;
+	max-height: 150px;
+	max-width: 150px;
+	top:0;
+	left: 0;
+	z-index: 10;
+	margin: 290px 0 0 130px;
+	
+/*	background-image: url(../images/subpages/new/floorplan_logo.png) no-repeat center center;
+*/}
+.floorplan-icon-logo img{
+	border-radius: 15px;
+	max-height: 130px;
+	max-width: 130px;
+}
+.floorplan-icon-text{
+	position: absolute;
+	max-height: 100px;
+	max-width: 200px;
+	top:0;
+	left: 0;
+	z-index: 11;
+	margin: 318px 0 0 277px;
+}
+.floorplan-icon-text p{
+	font-size: 50px;
+	color: #ffffff;
+}
+#floorplan-icon-underlay{
+	position: absolute;
+	height: 200px;
+	width: 530px;
+	top:0;
+	left: 0;
+	z-index: 5;
+	margin: 257px 0 0 81px;
+	background-color: #333333;
+	border-radius: 15px;
+}
+#floorplan-intro-text-wrap{
+	position: absolute;
+	height: 94px;
+	width: 191px;
+	top:0;
+	left: 0;
+	z-index: 5;
+	margin: 497px 0 0 81px;
+	font: "Helvetica Neue Light";
+	background-color: #333333;
+	border-radius: 15px;
+	padding-top: 7px;
+}
+#floorplan-intro-text-wrap a{
+	position: relative;
+	margin: 0px 0 0 16px;
+	font-size: 20px;
+	color: #ffffff;
+}
+.floorplan-video-box{
+	position: absolute;
+	height: 94px;
+	width: 315px;
+	top:0;
+	left: 0;
+	z-index: 5;
+	margin: 497px 0 0 294px;
+	background-color: #333333;
+	border-radius: 15px;
+	padding-top: 7px;
+}
+#play-icon {
+  position: absolute;
+  text-align: center;
+  background: url(../images/subpages/new/play-icon.png) no-repeat center center;
+  height: 50px;
+  width: 550px;
+  background-size: cover;
+  z-index: 5;
+  /*margin: 232px 0 0 630px;*/
+  margin: 0 auto;
+  margin-top: 230px
+ !important;
+  left: 0;
+  right: 0;
+  /*bottom: 0;*/
+}
+
+

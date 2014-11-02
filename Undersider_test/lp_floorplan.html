@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="icon" type="image/ico" href="favicon.ico"/>
+    <link rel="shortcut icon" href="favicon.ico"/> 
+    <link rel="icon" type="image/x-icon"
+   href="favicon.ico"/>
+    <title>CHECKD</title>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/floorplan_ny_lp.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/lp_addons.css"> <!-- LAGT TIL NY -->
+    <link rel="stylesheet" href="css/css/font-awesome.min.css">
+</head>
+
+<body>
+<!-- NAV SECTION --> <!-- navbar-style ligger på lp_addons.css -->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="display:block">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a  class="navbar-toggle"  href="http://admin.checkdd.com/admin/">
+        LOGIN
+      </a>
+      
+      <a class="navbar-brand" href="index.html"><img src="images/frontpage/new/elements/logo.png"></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+        <ul class="nav navbar-nav navbar-right">
+          <li ><a  href="http://admin.checkdd.com/admin/" class="login-nav" >LOGIN</a></li>
+          <li ><a  href="english/eq.html" class="login-nav" >ENG</a></li>
+          <!-- <li><a class="flags-nav" href="index.html"><img src="images/Norway.png" alt="English webpage"></a></li> -->
+        </ul>
+
+        <form method="post" name="form" id="form" class="navbar-form navbar-right" action="registration_process.php" style="display:block">
+       <input type="text" id="email" name="email" placeholder="E-mail her" style="input" tabindex="3" class="form-control">
+       <input type="hidden" name="task" value="registrationNew" />
+        <button class="btn btn-nav-green" type="submit" name="Submit">Registerer deg nå!</button>
+       </form>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<!-- PRESENTATION SECTION -->
+<section class="floorplanPresentation">
+<div class="bg-image"></div>
+<div id="bg_pattern"></div>
+<div id="floorplan-icon-underlay"></div>
+<div class="floorplan-icon-logo"><a href="#"><img src="images/subpages/new/floorplan_logo_lg.png"/></a>
+</div>
+
+<div class="floorplan-icon-text">
+  <p>FLOORPLAN</p>
+</div>
+
+<div id="floorplan-intro-text-wrap">
+  <a href="https://itunes.apple.com/no/app/checkd-equipment/id816139052?l=nb&mt=8"target="_blank" tabindex="5"><i class="fa fa-apple fa-4x"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="https://play.google.com/store/apps/details?id=com.checkdequipment"target="_blank" tabindex="6"><i class="fa fa-android fa-4x"></i></a>
+</div>
+<div class="floorplan-video-box"></div>
+<div id="play-icon"></div>
+</section> 
+<!-- PRESENTATION SECTION END-->
+
+<!-- REGISTER SECTION -->
+<section class="register-section-lp">
+
+<form class="reg-box-lp" method="post" action="registration_process.php"> 
+            <input type="email" placeholder="e-mail her"></input>
+            <input type="submit" value="register deg nå"></input>
+          </form>
+</section> <!-- END REGISTER SECTION -->
+
+<br>
+
+<!-- FOOTER -->
+<footer id="makeWhiteBg">
+<br>
+    <h1 class="footer-text">Vi gleder oss til å høre fra deg!</h1>
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="social-row">
+            <a href="https://www.facebook.com/checkdit?ref_type=bookmark "target="_blank"> <i class="fa fa-facebook fa-2x"></i></a>
+            <a href="https://twitter.com/Checkdsuite"target="_blank"> <i class="fa fa-twitter fa-2x"></i></a>
+            <a href="https://www.linkedin.com/profile/view?id=25148638&authType=OUT_OF_NETWORK&authToken=romw&locale=en_US&srchid=2022537561403619882208&srchindex=2&srchtotal=43&trk=vsrp_people_res_name&trkInfo=VSRPsearchId%3A2022537561403619882208%2CVSRPtargetId%3A25148638%2CVSRPcmpt%3Aprimary"target="_blank"> <i class="fa fa-linkedin fa-2x"></i></a>
+        </div>
+    </div>
+</div>
+<div class="faq-link"><a href="support.html">Kundestøtte</a>
+      -
+      <a href="faq.html">FAQ</a></div>
+</footer>
+<script type="text/javascript">
+    function downloadJSAtOnload() {
+      var element = document.createElement("script");
+      element.src = "deferredfunctions.js";
+      document.body.appendChild(element);
+    }
+
+    if (window.addEventListener)
+      window.addEventListener("load", downloadJSAtOnload, false);
+    else if (window.attachEvent)
+      window.attachEvent("onload", downloadJSAtOnload);
+    else window.onload = downloadJSAtOnload;
+  </script>
+  <script>
+  function spillAv() {
+    document.getElementById('wrap').style.cssText = 'display: block;';
+    document.getElementById('overlay-image').style.cssText = 'display:none;';
+    document.getElementById('playvid').src = 
+    document.getElementById('playvid').src.replace('autoplay=0','autoplay=1');
+  }
+  </script>
+<script type="text/javascript">
+  function downloadJSAtOnload() {
+    var element = document.createElement("script");
+    element.src = "deferredfunctions.js";
+    document.body.appendChild(element);
+  }
+  if (window.addEventListener)
+    window.addEventListener("load", downloadJSAtOnload, false);
+  else if (window.attachEvent)
+    window.attachEvent("onload", downloadJSAtOnload);
+  else window.onload = downloadJSAtOnload;
+</script>
+
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/ekko-lightbox.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,170 @@
+
+
+.myImageNew{
+    /*position: relative;*/
+    background: url(../images/forside4.jpg);
+    -webkit-background-size: cover;  /* Byttet auto med cover */
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/checkd.it/bare/css/**/.myBackground.jpg', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/checkd.it/bare/css/**/myBackground.jpg', sizingMethod='scale')";
+   background-position: center center;
+    background-repeat:  no-repeat;
+    color: #fff;
+    text-align: center;
+    background-color: rgba(38, 38, 38, .8);
+    cursor: default;
+    height: 100vh;
+    overflow: hidden;
+    background-attachment: fixed;
+    /*-webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -o-filter: blur(2px);
+    -ms-filter: blur(2px);
+    filter: blur(2px);*/
+   }
+
+
+	.logo-front
+    {
+      margin: auto;
+      position: absolute;
+      top: 90px; left: 0; bottom: 0; right: 0;
+      z-index: 10;
+
+    }
+
+
+     #vp-text{
+     
+      position: absolute; 
+     margin: auto;
+     top: 300px; left: 0; bottom: 0; right: 0;
+     z-index: 999;
+      
+      text-align: center;
+      font-family: "HelveticaNeue-UltraLight", "Helvetica Neue UltraLight", Helvetica, Arial, sans-serif;
+      font-size: 4.143em;
+    }
+    
+     #underline{
+      font-size: 100%;
+      font-family: "HelveticaNeue-UltraLight", "Helvetica Neue UltraLight", Helvetica, Arial, sans-serif;
+      
+      z-index: 10;
+    }
+
+    .box {
+ 
+
+  width:400px;
+  height:100px;
+
+   margin: auto;
+      position: absolute;
+      top: 180px; left: 0; bottom: 0; right: 0;
+      z-index: 999;
+}
+
+.learn-more{
+   z-index: 999;
+  position: absolute;
+ margin: auto;
+top: 0; left: 0; bottom: -700px; right: 0;
+width: 70px;
+height: 70px;
+text-align: center;
+text-decoration: none;
+font-weight: bold;
+border: 1px solid white;
+border-radius: 100%;
+padding-top: 7px;
+}
+
+.box-left{
+      position: absolute;
+      /*left:30px;*/
+      left: 0;
+      top: 750px;
+      z-index: 999;
+     /*background-color:#fff;*/
+      width: 510px;
+      height: 90px;
+      opacity: 0.8;
+      /*border: 1px solid;
+      border-radius:100%;*/
+      font-family: "HelveticaNeue-Light", "Helvetica Neue Light", Helvetica, Arial, sans-serif;
+      font-size: 1.286em;
+     
+      
+    
+    }
+
+
+
+
+
+    input[type="email"] {
+  appearance: none;
+  width:380px;
+  height:70px;
+  font-size:3em;
+  background:transparent;
+  border:none;
+  border-bottom:solid 4px #e6e8eb;
+  text-align:center;
+  transition: border-color 0.6s ease;
+}
+
+input[type="email"]::-webkit-input-placeholder {
+   color: #464c4c;
+   color: #fff;
+   font-family: "HelveticaNeue-UltraLight", "Helvetica Neue UltraLight", Helvetica, Arial, sans-serif;
+   font-size: 1.000em;
+   transition: color 0.3s ease;
+}
+
+input[type="email"]:focus::-webkit-input-placeholder {
+   color: transparent;
+   transition: color 0.3s ease;
+}
+
+
+input[type="email"]:focus {
+   outline:none;
+   border:none;
+  border-bottom:solid 4px #00AEEF;
+  transition: border-color 1s ease;
+}
+
+input[type="submit"] {
+  appearance: none;
+  width:380px;
+  height:50px;
+  font-size:1.05em;
+  background: rgba(24, 169, 240, 0.8);
+  
+  color: #cfd0d3;
+  border:none;
+  text-align:center;
+  letter-spacing:0.15em;
+  text-transform:uppercase;
+  transition: color 0.5s ease;
+  outline:none;
+   border:none;
+   font-family: "HelveticaNeue-UltraLight", "Helvetica Neue UltraLight", Helvetica, Arial, sans-serif;
+   font-size: 1.571em;
+   margin-top: 5px;
+}
+
+
+
+@media screen and (max-width: 600px) { 
+   
+    .box {width: 100%; }
+    input[type="email"] {width:100%;}
+}
+
+
+

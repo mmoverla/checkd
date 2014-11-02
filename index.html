@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="description" content="Checkd">
+ <meta name="author" content="">
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <link rel="shortcut icon" href="favicon.ico"/> 
+ <title>CHECKD</title>
+ <!-- Bootstrap core CSS and stylesheets -->
+ <!-- <link href="css/main.css" rel="stylesheet"> -->
+ <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/flags/css/flag-icon.css" rel="stylesheet">
+ <!-- <link href="css/ekko-lightbox.min.css" rel="stylesheet"> -->
+ <!-- FONTS -->
+ <link rel="stylesheet" href="css/css/font-awesome.min.css">
+ <link href='http://fonts.googleapis.com/css?family=Lato:100,300' rel='stylesheet' type='text/css'>
+
+ <!-- Scripts -->
+ <!-- JQuery -->
+ <script src="js/jquery-1.10.2.js"></script>
+ <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<!-- Google analytics -->
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-52741783-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+ <!-- Add custom CSS here -->
+ <style>.embed-container { position: relative; padding-bottom: 56.25%; padding-top: 35px height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
+  <style type="text/css">
+  input.error{ border:1px solid red;}
+  label.error{ display:none !important; }
+</style>
+ <style type="text/css">
+  input:required:invalid, input:focus:invalid {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAeVJREFUeNqkU01oE1EQ/mazSTdRmqSxLVSJVKU9RYoHD8WfHr16kh5EFA8eSy6hXrwUPBSKZ6E9V1CU4tGf0DZWDEQrGkhprRDbCvlpavan3ezu+LLSUnADLZnHwHvzmJlvvpkhZkY7IqFNaTuAfPhhP/8Uo87SGSaDsP27hgYM/lUpy6lHdqsAtM+BPfvqKp3ufYKwcgmWCug6oKmrrG3PoaqngWjdd/922hOBs5C/jJA6x7AiUt8VYVUAVQXXShfIqCYRMZO8/N1N+B8H1sOUwivpSUSVCJ2MAjtVwBAIdv+AQkHQqbOgc+fBvorjyQENDcch16/BtkQdAlC4E6jrYHGgGU18Io3gmhzJuwub6/fQJYNi/YBpCifhbDaAPXFvCBVxXbvfbNGFeN8DkjogWAd8DljV3KRutcEAeHMN/HXZ4p9bhncJHCyhNx52R0Kv/XNuQvYBnM+CP7xddXL5KaJw0TMAF8qjnMvegeK/SLHubhpKDKIrJDlvXoMX3y9xcSMZyBQ+tpyk5hzsa2Ns7LGdfWdbL6fZvHn92d7dgROH/730YBLtiZmEdGPkFnhX4kxmjVe2xgPfCtrRd6GHRtEh9zsL8xVe+pwSzj+OtwvletZZ/wLeKD71L+ZeHHWZ/gowABkp7AwwnEjFAAAAAElFTkSuQmCC);
+    background-position: right top ;
+    background-repeat: no-repeat;
+    -moz-box-shadow: none;
+  }
+  input:required:valid {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAepJREFUeNrEk79PFEEUx9/uDDd7v/AAQQnEQokmJCRGwc7/QeM/YGVxsZJQYI/EhCChICYmUJigNBSGzobQaI5SaYRw6imne0d2D/bYmZ3dGd+YQKEHYiyc5GUyb3Y+77vfeWNpreFfhvXfAWAAJtbKi7dff1rWK9vPHx3mThP2Iaipk5EzTg8Qmru38H7izmkFHAF4WH1R52654PR0Oamzj2dKxYt/Bbg1OPZuY3d9aU82VGem/5LtnJscLxWzfzRxaWNqWJP0XUadIbSzu5DuvUJpzq7sfYBKsP1GJeLB+PWpt8cCXm4+2+zLXx4guKiLXWA2Nc5ChOuacMEPv20FkT+dIawyenVi5VcAbcigWzXLeNiDRCdwId0LFm5IUMBIBgrp8wOEsFlfeCGm23/zoBZWn9a4C314A1nCoM1OAVccuGyCkPs/P+pIdVIOkG9pIh6YlyqCrwhRKD3GygK9PUBImIQQxRi4b2O+JcCLg8+e8NZiLVEygwCrWpYF0jQJziYU/ho2TUuCPTn8hHcQNuZy1/94sAMOzQHDeqaij7Cd8Dt8CatGhX3iWxgtFW/m29pnUjR7TSQcRCIAVW1FSr6KAVYdi+5Pj8yunviYHq7f72po3Y9dbi7CxzDO1+duzCXH9cEPAQYAhJELY/AqBtwAAAAASUVORK5CYII=);
+    background-position: right top ;
+    background-repeat: no-repeat;
+  }
+</style>
+
+
+
+
+</head>
+<!--<body onload="changeText()">-->
+
+<body onload="startQ();startQ2();">
+
+<!-- NAV SECTION -->
+<nav class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a  class="navbar-toggle"  href="http://admin.checkdd.com/admin/">
+        LOGIN
+      </a>
+      
+      <a class="navbar-brand" href="index.html"><img src="images/frontpage/new/elements/logo.png"></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+      	<ul class="nav navbar-nav navbar-right">
+        	<li ><a  href="http://admin.checkdd.com/admin/" class="login-nav" >LOGIN</a></li>
+          <li><a href="english/index-en.html" type="button" class="btn btn-flag-eng navbar-btn"> </a></li>
+         
+       	</ul>
+
+        <form method="post" name="form" id="form" class="navbar-form navbar-right" action="registration_process.php">
+       <input type="text" id="email" name="email" placeholder="E-mail here" style="input" tabindex="3" class="form-control" required>
+       <input type="hidden" name="task" value="registrationNew" />
+        <button class="btn btn-nav-green" type="submit" name="Submit">Registerer deg nå!</button></div>
+       </form>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<!-- NAV SECTION END -->
+  <!-- FRONT PAGE SECTION -->
+
+  <div class="myImageNew">
+
+    <div class="login"> <a href="http://admin.checkdd.com/admin/"target="_blank" tabindex="1" > <Strong> LOGIN </Strong> </a></div>
+    <a  href="english/index-en.html" class="flag" ><img src="images/frontpage/new/elements/eng.png"></a>
+    <!-- <div class="flags"><a href="english/index.html" ><img src="images/Norway.png" alt="English webpage"></a></div> -->
+
+
+    <div class="logo-front"><img src="images/frontpage/new/elements/logo-white.svg" onerror="this.src=images/frontpage/new/elements/checkd_logo_white.png"></div>
+  
+    <div class="box"><button class="popover-button" data-toggle="modal" data-target="#myModal">Start gratis prøvetid</button></div>
+   <!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Lukk</span></button>
+        <h4 class="modal-title" id="myModalLabel">Skriv inn din epost og registrer</h4>
+      </div>
+      <div class="modal-body">
+        
+        <form method="post" name="form" id="form" action="registration_process.php">
+       <input type="text" id="email" name="email" placeholder="E-mail here" style="input" tabindex="3" class="form-control" required>
+       <input type="hidden" name="task" value="registrationNew" />
+       <br>
+        <button class="btn btn-nav-green" type="submit" name="Submit">Registrer nå!</button>
+
+       </form>
+      </div>
+      
+    </div>
+  </div>
+     </div>
+ 	
+
+   
+   
+
+   <a data-scroll href="#products" tabindex="4"><span class='mouse hidden'>
+  <span class='wheel'></span>
+</span></a>
+
+   <div class="overlayFilter">
+
+ </div>
+ <div class="box-left">
+     
+      <br>
+      <div class="store-badge">
+       <a href="https://itunes.apple.com/no/artist/mulighet-as/id666790056" target="_blank"><img src="images/frontpage/new/elements/apple-badge.svg"height="110px" width="160px" /></a>
+       <a href="https://play.google.com/store/apps/developer?id=Mulighet+AS" target="_blank"><img src="images/frontpage/new/elements/android-badge.svg"height="80px" width="150px" /></a>
+       <a href="http://www.windowsphone.com/en-us/store/app/checkd-control/edb43520-2ce4-4045-baf7-b51dbc8a59ec" target="_blank"><img src="images/frontpage/new/elements/windows-badge.svg"height="110px" width="180px"  /></a>
+     </div>
+     
+   </div>
+ <div class="center-vp">
+ 		Checkd gir kontroll til 
+    byggeindustrien.
+ 		</div>
+<div id="carousel-example-generic" class="carousel" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <img src="images/frontpage/new/elements/c1.png" alt="Checkd Utstyr">
+      <div class="carousel-caption">
+        Skann QR og du vet hvor utstyret er eller hvem som har det
+      </div>
+    </div>
+    <div class="item">
+      <img src="images/frontpage/new/elements/c2.png" alt="Checkd Time">
+      <div class="carousel-caption">
+        Sjekk inn på prosjekter basert på din posisjon
+      </div>
+    </div>
+    <div class="item">
+      <img src="images/frontpage/new/elements/c3.png" alt="Checkd Floorplan">
+      <div class="carousel-caption">
+        Et bilde og en pil sier mer enn 10.000 ord
+      </div>
+    </div>
+    <div class="item">
+      <img src="images/frontpage/new/elements/c4.png" alt="Checkd Kontroll">
+      <div class="carousel-caption">
+       Ha kontroll på oppgaver, feil og mangler direkte fra smarttelefonen
+      </div>
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+   <span><i class="fa fa-angle-left"></i></span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span><i class="fa fa-angle-right"></i></span>
+  </a>
+</div>
+
+
+  </div> <!-- END FRONT PAGE SECTION -->
+<!-- PRODUCT OVERVIEW SECTION -->
+ <section class="product-overview" id="products">
+   <br>
+    <br>
+   <br>
+   <div class="container">
+  <div class="row">
+    <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
+      <div class="clearfix"></div>
+      <h1 class="module-text">CHECKD<sup>&reg;</sup> Kontroll</h1>
+      <h2 class="section-heading">Hvem skulle gjøre hva, og når?</h2>
+      <a href="control.html"><p class="lead"><span style="color:#19e57f">CHECKD<sup>&reg;</sup> Kontroll</span> </a>  gir deg LIVE oversikt på oppgaver, avvik og sjekklister, slik at du hele tiden har kontroll på prosjektet.</p>
+      <p class="lead">Spar tid og penger på å gjøre oppgaven riktig første gang.</p>
+      <hr>
+      <p>Last ned applikasjonen:</p>
+      <a href="https://itunes.apple.com/us/app/checkd-control/id894543298?mt=8"target="_blank" tabindex="5"><i class="fa fa-apple fa-2x"></i></a>&nbsp;
+        <a href="https://play.google.com/store/apps/details?id=com.checkd.pg.control&hl=not"target="_blank" tabindex="6"><i class="fa fa-android fa-2x"></i></a>
+    </div>
+     <br>
+    <div class="col-lg-5 col-sm-pull-6  col-sm-6">
+      <div class="video-box-green">
+        <div class="embed-container">
+          <button type="button" class="btn1 btn-green btn-large" href="http://player.vimeo.com/video/81027932" data-toggle="lightbox" tabindex="9"><i class="fa fa-play fa-4x"></i></button>
+        </div>
+      </div>
+      <a href="http://player.vimeo.com/video/81027932" class="mobilelink"> Får ikke spilt av video? Klikk her!</a>
+      <a href="control.html" tabindex="1"><button class="info-green" > MER INFO </button></a>
+    </div>
+  </div>
+</div>
+<!-- /.container -->
+  
+<br>
+<hr>
+<br>
+ <div class="container">
+    <div class="row">
+      <div class="col-lg-5 col-sm-6">
+        <div class="clearfix"></div>
+        <h1 class="module-text">CHECKD<sup>&reg;</sup> Utstyr</h1>
+        <h2 class="section-heading">Vet du hvor utstyret er eller hvem som har det?</h2>
+        <p class="lead"><a href="eq.html"> <span style="color:#18a9f0">CHECKD<sup>&reg;</sup> Utstyr</span> </a> gir deg oversikten over hvor ledig utstyr befinner seg, eller hvem som har tatt det ut.</p>
+        <p class="lead">Oversikten er tilgjengelig både på smarttelefon, nettbrett og pc.</p>
+        <hr>
+      <p>Last ned applikasjonen:</p>
+        <a href="https://itunes.apple.com/no/app/checkd-equipment/id816139052?l=nb&mt=8"target="_blank" tabindex="5"><i class="fa fa-apple fa-2x"></i></a>&nbsp;
+        <a href="https://play.google.com/store/apps/details?id=com.checkdequipment"target="_blank" tabindex="6"><i class="fa fa-android fa-2x"></i></a>
+     
+      </div>
+         <br>
+      <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+        <div class="video-box-blue">
+         <div class="embed-container">
+         <!-- Full skjermbilde på video - IKKE CROP!!-->
+          <button type="button" class="btn2 btn-blue btn-large" href="http://player.vimeo.com/video/81194472" data-toggle="lightbox" tabindex="7"><i class="fa fa-play fa-4x"></i></button>
+        </div>
+      </div>
+      <a href="http://player.vimeo.com/video/81194472" class="mobilelink"> Får ikke spilt av video? Klikk her!</a>
+      <a href="eq.html" tabindex="1"><button class="info-blue" > MER INFO </button></a>
+    </div>
+  </div>
+</div>
+<!-- /.container -->
+<br>
+<hr>
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
+      <div class="clearfix"></div>
+      <h1 class="module-text">CHECKD<sup>&reg;</sup> Time</h1>
+      <h2 class="section-heading">Timeregistrering - helt enkelt</h2>
+      <p class="lead">Bare velg prosjekt fra prosjektlisten som genereres på bakgrunn av din posisjon. Legg til arbeidsoppgaver like enkelt som du skriver en SMS. Du blir automatisk sjekket ut når du forlater byggeplassen. <a href="hours.html"><span style="color:#FC6042">CHECKD<sup>&reg;</sup> Timer</span> </a> kommer snart...</p>
+    </div>
+     <br>
+    <div class="col-lg-5 col-sm-pull-6  col-sm-6">
+      <div class="video-box-orange">
+        <div class="embed-container">
+          <button type="button" class="btn1 btn-orange btn-large" href="http://player.vimeo.com/video/102225779" data-toggle="lightbox" tabindex="9"><i class="fa fa-play fa-4x"></i></button>
+        </div>
+      </div>
+      <a href="http://player.vimeo.com/video/102225779" class="mobilelink"> Får ikke spilt av video? Klikk her!</a>
+      <a href="hours.html" tabindex="1"><button class="info-orange" > MER INFO </button></a>
+    </div>
+  </div>
+</div>
+
+<br>
+<hr>
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-5 col-sm-6">
+      <div class="clearfix"></div>
+      <h1 class="module-text">CHECKD<sup>&reg;</sup> Foto</h1>
+      <h2 class="section-heading">Enkelt forklart på 1-2-3.</h2>
+      <p class="lead">1. Ta bilde.</p>
+      <p class="lead">2. Plasser pil.</p>
+      <p class="lead">3. Kommenter.</p>
+      <p class="lead">  Resultatet er en ferdig strukturert og profesjonell rapport med <a href="photo.html"> <span style="color:#f8cb10">CHECKD<sup>&reg;</sup> Foto</span>. </a> </p>
+      <p> Se eksempel på rapport <button type="button" class="example-yellow" href="images/example.jpg" data-toggle="lightbox">her</button></p>
+      <hr>
+      <p>Last ned applikasjonen:</p>
+      <a href="https://itunes.apple.com/no/app/checkd-foto-pro/id668943384?l=nb&mt=8" target="_blank" tabindex="10"><i class="fa fa-apple fa-2x"></i></a>&nbsp;
+
+      <a href="https://play.google.com/store/apps/details?id=com.checkdfotopro" target="_blank"tabindex="11"><i class="fa fa-android fa-2x"></i></a>
+    </div>
+     <br>
+    <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+      <div class="video-box-yellow">
+       <div class="embed-container">
+        <button type="button" class="btn3 btn-yellow btn-large" href="http://player.vimeo.com/video/69550680" data-toggle="lightbox" tabindex="12"><i class="fa fa-play fa-4x"></i></button>
+      </div>
+    </div>
+    <a href="http://player.vimeo.com/video/69550680" class="mobilelink"> Får ikke spilt av video? Klikk her!</a>
+    <a href="photo.html" tabindex="1"><button class="info-yellow" > MER INFO </button></a>
+  </div>
+</div>
+</div>
+</div>
+</section>  <!-- END PRODUCT OVERVIEW SECTION -->
+<!-- REGISTER SECTION -->
+
+
+<!-- FOOTER -->
+<footer>
+  <br>
+  <hr>
+  <br>
+  <h1 class="footer-text"></h1>
+  <br>
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="social-row">
+        <a href="https://www.facebook.com/checkdit?ref_type=bookmark "target="_blank" tabindex="13"> <i class="fa fa-facebook fa-2x"></i></a>
+        <a href="https://twitter.com/Checkdsuite"target="_blank" tabindex="14"> <i class="fa fa-twitter fa-2x"></i></a>
+        <a href="https://www.linkedin.com/profile/view?id=25148638&authType=OUT_OF_NETWORK&authToken=romw&locale=en_US&srchid=2022537561403619882208&srchindex=2&srchtotal=43&trk=vsrp_people_res_name&trkInfo=VSRPsearchId%3A2022537561403619882208%2CVSRPtargetId%3A25148638%2CVSRPcmpt%3Aprimary"target="_blank" tabindex="15"> <i class="fa fa-linkedin fa-2x"></i></a>
+      </div>
+      <div class="faq-link"><a href="support.html">Kundestøtte</a>
+      -
+      <a href="faq.html">FAQ</a></div>
+      -
+      <a href="privacy-policy.html" class="iubenda-white iubenda-embed" title="Privacy Policy">Privacy Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src = "//cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
+    </div>
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+ <script src="js/smooth-scroll.js"></script>
+ <script type="text/javascript" src="js/jquery.validate.js"></script>
+
+<!-- noConflict -->
+<script type="text/javascript" charset="utf-8">
+  var $ = jQuery.noConflict();
+  $(document).ready(function() {
+    //$("#form").validationEngine();
+    $("#form").validate();
+    $("#form1").validate();
+  } );
+</script>
+
+<!-- DEFER JAVASCRIPT -->
+<script type="text/javascript">
+  function downloadJSAtOnload() {
+    var element = document.createElement("script");
+    element.src = "deferredfunctions.js";
+    document.body.appendChild(element);
+  }
+  if (window.addEventListener)
+    window.addEventListener("load", downloadJSAtOnload, false);
+  else if (window.attachEvent)
+    window.attachEvent("onload", downloadJSAtOnload);
+  else window.onload = downloadJSAtOnload;
+</script>
+
+<!-- Modal youtube -->
+<script type="text/javascript">
+  $(document).ready(function ($) {
+
+                // delegate calls to data-toggle="lightbox"
+                $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
+                  event.preventDefault();
+                  return $(this).ekkoLightbox({
+                    onShown: function() {
+                      if (window.console) {
+                        return console.log('Code is checkd? Contact us @ post@checkd.it');
+                      }
+                    }
+                  });
+                });
+
+
+                $('#open-youtube').click(function (e) {
+                  e.preventDefault();
+                  $(this).ekkoLightbox();
+                });
+              });
+</script>
+
+<!-- Navbar form on scroll -->
+<script type="text/javascript">
+
+    $(document).scroll(function () {
+      var y = $(this).scrollTop();
+      
+      if (y > 700) {
+        $('.navbar-form').show();
+        
+      } else {
+        $('.navbar-form').hide();
+        
+      }
+    });
+  </script>
+
+<!-- Navbar on scroll -->
+<script type="text/javascript">
+  $(window).scroll(function() {
+
+    if ($(this).scrollTop() > 100) {
+      $( ".navbar-default" ).fadeIn();
+        
+    } else if ($(this).scrollTop() < 100){
+       $( ".navbar-default" ).fadeOut();
+    }
+});
+</script>
+
+<!-- Mouse transistion -->
+<script type="text/javascript">
+  setTimeout(function () {
+  $('.mouse').removeClass('hidden');
+}, 0);
+setTimeout(function () {
+  $('.mouse').addClass('play');
+}, 2000);
+</script>
+
+<!-- Smooth scroll -->
+<script>
+    smoothScroll.init();
+</script>
+
+
+<!-- JavaScript -->
+
+<script src="js/bootstrap.min.js"></script>
+<script src="js/ekko-lightbox.min.js"></script>
+<script type="text/javascript" src="js/retina.js"></script>
+
+  
+</body>
+</html>
