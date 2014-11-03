@@ -17,10 +17,12 @@ h1, h2 {
 *****************/
 .nav-buttons{
   padding-top: 2px;
-  padding-left:15px;
+  padding-left:0px;
 }
 .nav-lp-btn{
   margin-top:10px;
+  height:36px !important;
+  font-size: 15px;
 }
 .nav-right-icons{
   padding-right:10px;
@@ -33,7 +35,7 @@ h1, h2 {
 .btn-nav-border-hours:hover {
   border: 1px solid #fff;
   background-color: #fff !important;
-  color:rgb(241,98,70);
+  color:rgb(241,98,70) !important;
 }
 .btn-nav-border-floorplan{
   border: 1px solid #fff;
@@ -43,7 +45,7 @@ h1, h2 {
 .btn-nav-border-floorplan:hover {
   border: 1px solid #fff;
   background-color: #fff !important;
-  color:rgb(59,166,221);
+  color:rgb(59,166,221) !important;
 }
 .btn-nav-border-control{
   border: 1px solid #fff;
@@ -53,7 +55,7 @@ h1, h2 {
 .btn-nav-border-control:hover {
   border: 1px solid #fff;
   background-color: #fff !important;
-  color:rgb(25,229,127);
+  color:rgb(25,229,127) !important;
 }
 .btn-nav-border-equipment{
   border: 1px solid #fff;
@@ -63,7 +65,7 @@ h1, h2 {
 .btn-nav-border-equipment:hover {
   border: 1px solid #fff;
   background-color: #fff !important;
-  color:rgb(115,115,115);
+  color:rgb(115,115,115) !important;
 }
 .move-caret{
   margin: 63px 0 0 -142px;
@@ -601,7 +603,7 @@ input[type="submit"] {
 *****************/
 .footBox{
   height: 80px;
-  background-color: rgb(241,98,70);
+  background-color: rgb(85, 85, 85);
 }
 .footLogo{
   margin-top:25px;
@@ -618,6 +620,20 @@ input[type="submit"] {
 .footFAQ, .footSupport{
   float:right;
   padding-right:20px;
+}
+.footer-btn {
+margin-top: 8px;
+margin-bottom: 8px;
+}
+.btn-footer {
+border: 1px solid #fff;
+background-color: rgb(85, 85, 85) !important;
+color: #fff;
+}
+.btn-footer:hover {
+  border: 1px solid #fff;
+  background-color: #fff !important;
+  color:rgb(85, 85, 85);
 }
 /*  END   */
 /*****************
@@ -641,9 +657,12 @@ input[type="submit"] {
 /****** Dropdown Large to Small ******/
 @media screen and (max-width: 1055px) {
   /*NAV*/
+  .fourthIcon{
+    width:100px;
+  }
   .nav-buttons{
     padding-top: 2px;
-    padding-left:4px;
+    padding-left:0px;
   }
   .nav-lp-btn{
     margin-top:0px;
@@ -942,7 +961,8 @@ input[type="email"] {
 }
 }
 /* NAV COLLAPSE BREAKPOINT */
-@media screen and (max-width: 767px){
+/*fix 810 */
+@media screen and (max-width: 767px){ 
   .dropdown-sm-display{
     display:block;
     width:65px;
@@ -955,7 +975,7 @@ input[type="email"] {
 /*.nav-right-icons{
   display:inline;
   }*/
-  .nav-buttons.firstIcon button, .nav-buttons.secondIcon button{
+.nav-buttons.firstIcon a, .nav-buttons.secondIcon a{
     float:right;
     width: 100%;
   }
@@ -973,7 +993,13 @@ input[type="email"] {
     width:35%;
     margin-left: 20px;
   }
+  .row.padded {
+padding-top: 0px;
+padding-bottom: 0px;
 }
+}
+
+
 /*****************
 *  Mobile Size    *
 *****************/
