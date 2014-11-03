@@ -369,7 +369,7 @@ hr.style-two {
 .floorplan-slider-wrapper{
   position: absolute;
   background-color: #ffffff;
-  overflow-x:hidden;
+  overflow-y:hidden;
   height:290px;
   width:238px;
   top:175px;
