@@ -504,6 +504,18 @@ hr.style-two {
 /* Control END */
 /*  END   */
 /*****************
+* SOCIAL MEDIA ICONS*
+*****************/
+.mediaBox{
+  content-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.mediaBox a{
+  padding-left: 20px;
+}
+/*    END    */
+/*****************
 * REGISTER       *
 *****************/
 .register-section-lp{
@@ -582,6 +594,30 @@ input[type="submit"] {
   font-family: "HelveticaNeue-thin", "Helvetica Neue thin", Helvetica, Arial, sans-serif;
   font-size: 1.571em;
   margin-top: 5px;
+}
+/*  END   */
+/*****************
+*  FOOTER        *
+*****************/
+.footBox{
+  height: 80px;
+  background-color: rgb(241,98,70);
+}
+.footLogo{
+  margin-top:25px;
+  padding-left: 20px;
+  position: absolute;
+}
+.footLogo img{
+  width:140px;
+}
+.FAQ-Support-Wrap{
+  padding-top:15px;
+  padding-left:20px;
+}
+.footFAQ, .footSupport{
+  float:right;
+  padding-right:20px;
 }
 /*  END   */
 /*****************
