@@ -12,7 +12,7 @@
  href="favicon.ico"/>
  <title>CHECKD</title>
  <!-- Bootstrap core CSS -->
- <!--     <link href="css/bootstrap_2.css" rel="stylesheet"> -->
+ <!--    <link href="css/bootstrap_2.css" rel="stylesheet"> -->
  <link href="css/bootstrap.css" rel="stylesheet">
  <link href="css/style.css" rel="stylesheet">
  <link rel="stylesheet" type="text/css" href="css/subpages.css"> <!-- LAGT TIL NY -->
@@ -21,7 +21,7 @@
  <link href='http://fonts.googleapis.com/css?family=Roboto:100' rel='stylesheet' type='text/css'>
  <style type="text/css">
 
-/*  input:required:invalid, input:focus:invalid {
+ /* input:required:invalid, input:focus:invalid {
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAeVJREFUeNqkU01oE1EQ/mazSTdRmqSxLVSJVKU9RYoHD8WfHr16kh5EFA8eSy6hXrwUPBSKZ6E9V1CU4tGf0DZWDEQrGkhprRDbCvlpavan3ezu+LLSUnADLZnHwHvzmJlvvpkhZkY7IqFNaTuAfPhhP/8Uo87SGSaDsP27hgYM/lUpy6lHdqsAtM+BPfvqKp3ufYKwcgmWCug6oKmrrG3PoaqngWjdd/922hOBs5C/jJA6x7AiUt8VYVUAVQXXShfIqCYRMZO8/N1N+B8H1sOUwivpSUSVCJ2MAjtVwBAIdv+AQkHQqbOgc+fBvorjyQENDcch16/BtkQdAlC4E6jrYHGgGU18Io3gmhzJuwub6/fQJYNi/YBpCifhbDaAPXFvCBVxXbvfbNGFeN8DkjogWAd8DljV3KRutcEAeHMN/HXZ4p9bhncJHCyhNx52R0Kv/XNuQvYBnM+CP7xddXL5KaJw0TMAF8qjnMvegeK/SLHubhpKDKIrJDlvXoMX3y9xcSMZyBQ+tpyk5hzsa2Ns7LGdfWdbL6fZvHn92d7dgROH/730YBLtiZmEdGPkFnhX4kxmjVe2xgPfCtrRd6GHRtEh9zsL8xVe+pwSzj+OtwvletZZ/wLeKD71L+ZeHHWZ/gowABkp7AwwnEjFAAAAAElFTkSuQmCC);
     background-position: right top ;
     background-repeat: no-repeat;
@@ -36,11 +36,11 @@
 </style>
 </head>
 <body>
-  <nav class="navbar navbar-default navbar-fixed-top navbar-ctrl" role="navigation"> <!-- style="display:block" -->
+  <nav class="navbar navbar-default navbar-fixed-top navbar-floorplan" role="navigation"> <!-- style="display:block" -->
     <div class="container-fluid">
       <div class="navbar-header">
 
-        <button type="button" class="navbar-toggle control collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <button type="button" class="navbar-toggle floorplan collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar white"></span>
           <span class="icon-bar white"></span>
@@ -53,31 +53,32 @@
           <li class="dropdown dropdown-size-sm">
             
             <div href="#" class="dropdown-button dropdown-toggle-sm dropdown-size" data-toggle="dropdown">
-              <img src="images/subpages/new/logo/Kontroll_logo_strip.png"/><span class="caret caret-sm white"></span></div>
+              <img src="images/subpages/new/logo/Floorplan_logo_strip.png"/><span class="caret caret-sm white"></span></div>
               <ul class="dropdown-menu dropdown-remove-padding-sm" role="menu">
 
-                <li id="utstyrHead-sm"><a href="equipment.html"><img src="images/subpages/new/logo/Utstyr_logo_strip.png"/></a></li>
+                <li id="kontrollHead-sm"><a href="control.html"><img src="images/subpages/new/logo/Kontroll_logo_strip.png"/></a></li>
                 <li id="timeHead-sm"><a href="hours.html"><img src="images/subpages/new/logo/Time_logo_strip.png"/></a></li>
-                <li id="floorHead-sm"><a href="floorplan.html"><img src="images/subpages/new/logo/Floorplan_logo_strip.png"/></a></li>
+                <li id="utstyrHead-sm"><a href="equipment.html"><img src="images/subpages/new/logo/Utstyr_logo_strip.png"/></a></li>
 
               </ul>
             </li>
           </ul>   
-          <!-- Liten END -->
+          <!--  Liten END -->
         </div>
-        <div class="collapse navbar-collapse collapse-lp" id="bs-example-navbar-collapse-1">
 
+        <div class="collapse navbar-collapse collapse-lp" id="bs-example-navbar-collapse-1">
+          
           <!-- ******** STOR ******** -->
-          <ul class="nav-lp navbar-nav navbar-left  dropdown-lg-display">
+          <ul class="nav-lp navbar-nav navbar-left dropdown-lg-display">
             <li class="dropdown dropdown-size">
               
               <div href="#" class="dropdown-button dropdown-size" data-toggle="dropdown">
-                <img class="nav-lp-logo" src="images/subpages/new/logo/NavHeaderKontroll.png"/><span class="caret move-caret white"></span></div>
+                <img class="nav-lp-logo" src="images/subpages/new/logo/NavHeaderFloorplan.png"/><span class="caret move-caret white"></span></div>
                 <ul class="dropdown-menu dropdown-remove-padding nav-lp-dropdown" role="menu">
 
-                  <li id="utstyrHead"><a href="equipment.html"><img src="images/subpages/new/logo/NavHeaderUtstyr.png"/></a></li>
+                  <li id="kontrollHead"><a href="control.html"><img src="images/subpages/new/logo/NavHeaderKontroll.png"/></a></li>
                   <li id="timeHead"><a href="hours.html"><img src="images/subpages/new/logo/NavHeaderTime.png"/></a></li>
-                  <li id="floorHead"><a href="floorplan.html"><img src="images/subpages/new/logo/NavHeaderFloorplan.png"/></a></li>
+                  <li id="utstyrHead"><a href="equipment.html"><img src="images/subpages/new/logo/NavHeaderUtstyr.png"/></a></li>
 
                 </ul>
               </li>
@@ -85,18 +86,17 @@
             <!-- STOR END -->
 
             <ul class="nav navbar-nav navbar-right">
-              <li class="nav-buttons firstIcon nav-lp-btn"><button  href="http://admin.checkdd.com/admin/" class="btn navbar-btn btn-nav-border-control" >Login</button></li>
+              <li class="nav-buttons firstIcon nav-lp-btn"><button  href="http://admin.checkdd.com/admin/" class="btn navbar-btn btn-nav-border-floorplan" >Login</button></li>
 
-              <li class="nav-buttons secondIcon nav-lp-btn"><button href="english/index-en.html" type="button" class="btn btn-nav-border-control navbar-btn"> English</button></li>
-              
+              <li class="nav-buttons secondIcon nav-lp-btn"><button href="english/index-en.html" type="button" class="btn btn-nav-border-floorplan navbar-btn"> English</button></li>
             </ul>
-            <div class="register-icons">
-              <form method="post" name="form" id="form" class="navbar-form navbar-right" action="registration_process.php" style="display:block">
-               <input type="text" id="email" name="email" placeholder="E-mail her" style="input" tabindex="1" class="form-control thirdIcon nav-lp-btn" required>
-               <input type="hidden" name="task" value="registrationNew" />
-               <button class="btn btn-nav-border-control fourthIcon nav-lp-btn" type="submit" name="Submit">Registerer deg nå!</button>
-             </form>
-           </div>
+
+            <form method="post" name="form" id="form" class="navbar-form navbar-right" action="registration_process.php" style="display:block">
+             <input type="text" id="email" name="email" placeholder="E-mail her" style="input" tabindex="1" class="form-control thirdIcon nav-lp-btn" required>
+             <input type="hidden" name="task" value="registrationNew" />
+             <button class="btn btn-nav-border-floorplan fourthIcon nav-lp-btn" type="submit" name="Submit">Registerer deg nå!</button>
+           </form>
+           
          </div><!-- /.navbar-collapse -->
        </div><!-- /.container-fluid -->
      </nav>
@@ -110,45 +110,50 @@
       </div>
       
       <div class="video-overlay-image" id="overlay-image">
-        <img class="bilde control img-responsive" src="images/subpages/new/kontroll-bakgrunn.jpg">
+        <img class="bilde img-responsive" src="images/subpages/new/floorplan-bakgrunn.gif">
         <div class="bounce-r"id="play-icon-lp" onclick="spillAv()"> </div>
       </div>   
     </div>
     <!-- VIDEO SECTION END -->
+    <!-- SHOWCASE SECTION -->
     <section> 
-     <div class="row">
-      <div class="col-md-12 intro middle">
-        <h2>Hva er Control?</h2>
-        <div class="textBox">
-          CHECKD<sup>&reg;</sup> Kontroll gir deg oversikt over blandt annet oppgaver, avvik og sjekklister slik at du har full kontroll over din arbeidsplass!
-        </div>
-        <div class="store-icon-container">
-          <a href="https://itunes.apple.com/no/app/checkd-control/id894543298?l=nb&mt=8"target="_blank" tabindex="2"><image class="store-icon" src="images/subpages/new/apple-badge.svg"></a>&nbsp;
-          <a href="https://play.google.com/store/apps/details?id=com.checkd.pg.control"target="_blank" tabindex="3"><image class="store-icon" src="images/subpages/new/android-badge.svg"></a>
+      <div class="row">
+        <div class="col-md-12 intro middle">
+          <h2>Hva er Floorplan?</h2>
+          <div class="textBox">
+            CHECKD<sup>&reg;</sup> Floorplan lar deg enkelt annotere feil og mangler på plantegningen din rett på mobilen!
+          </div>
+          <div class="store-icon-container">
+            <a href="https://itunes.apple.com/no/app/checkd-hours/id919092948?mt=8"target="_blank" tabindex="5"><image class="store-icon" src="images/subpages/new/apple-badge.svg"></a>&nbsp;
+            <a href="https://play.google.com/store/apps/details?id=com.checkd.hours"target="_blank" tabindex="6"><image class="store-icon" src="images/subpages/new/android-badge.svg"></a>
+          </div>
         </div>
       </div>
-    </div>    
-  </section>
-  <!-- FIRST SHOWCASE -->
-  <section>
-    <div class="container">
-      <div class="row padded"><div class="col-md-12"><hr class="style-two"></div>
-    </div>
-    <div class="row">
-     <div class="col-md-6 first left text">
-       <h2>
-        Hvem skulle gjør hva, og når?
-      </h2>
-      <div class="textBox">
-       Kontroll gir deg LIVE oversikt over oppgaver, avvik og sjekklister, slik at du hele tiden har kontroll på prosjektet.
-       <br>
-       Spar tid og penger på å gjøre oppgaven riktig første gang!
+    </section>
+    <!-- FIRST SHOWCASE -->
+    <section>
+      <div class="container">
+        <div class="row padded"><div class="col-md-12"><hr class="style-two"></div>
+      </div>
+      <div class="row">
+       <div class="col-md-6 first left text">
+         <h2>
+          Prosjektkontroll
+        </h2>
+        <div class="textBox">
+         Bla i liste eller søk i databasen. Se direkte hvor ny informasjon befinner seg. Se brukere, planer og oppgaver for hvert enkelt prosjekt.
+       </div>
      </div>
-   </div>
-   <div class="col-md-6 first right image">
-    BILDE
+     <div class="col-md-6 first right image">
+       
+      <div class="floorplan-slider-wrapper">
+        <div id="floorplan-slider-wrap">
+          <img src="images/subpages/new/floorplan-slider.png" class="slider-floorplan">
+        </div>
+      </div>
+      <img src="images/subpages/new/floorplan-anim-catphone-cut.png" alt="" class="catphone-floorplan-first">
+    </div>
   </div>
-</div>
 </div>
 <br>
 <!-- Second Showcase -->
@@ -164,9 +169,18 @@
      Trykk på stedet som trenger utbedring. Legg inn beskrivelse av ønsket endring og/eller ta bilde. Send direkte til entreprenør.
    </div>
  </div>
- <div class="col-md-6 second left image"> 
-  BILDE
-</div>
+ <div class="col-md-6 second left image">
+  
+  <div class="shell-wrap-floorplan">
+    <div class="shell-container-floorplan">
+      <video id="videoId" class="video-floorplan"  loop autoplay>
+        <source src="images/subpages/new/floorplan-video.webm" type="video/webm">
+        </video>
+      </div>
+      <img class="htc-floorplan-first" src="images/subpages/new/htc-floorplan-cut.png">
+    </div>
+
+  </div>
 </div>
 <div class="row padded"><div class="col-md-12"></div>
 </div>
@@ -174,16 +188,15 @@
 </section ><!-- END SHOWCASE SECTION -->
 
 <!-- REGISTER SECTION -->
-<section class="register-section-lp control">
+<section class="register-section-lp floorplan">
 
   <form class="reg-box-lp" method="post" action="registration_process.php"> 
     <input type="email" placeholder="e-mail her" required></input>
     <input type="submit" value="register deg nå"></input>
   </form>
 </section> <!-- END REGISTER SECTION -->
-<footer>
+<footer>  
   <br>
-  <hr>
   <br>
   <h1 class="footer-text">Vi gleder oss til å høre fra deg!</h1>
   <br>
