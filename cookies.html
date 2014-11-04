@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="description" content="Checkd">
+ <meta name="author" content="">
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <link rel="shortcut icon" href="favicon.ico"/> 
+ <title>CHECKD</title>
+ <!-- Bootstrap core CSS and stylesheets -->
+ <!-- <link href="css/main.css" rel="stylesheet"> -->
+ <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+ <!-- <link href="css/ekko-lightbox.min.css" rel="stylesheet"> -->
+ <!-- FONTS -->
+ <link rel="stylesheet" href="css/css/font-awesome.min.css">
+ <link href='http://fonts.googleapis.com/css?family=Lato:100,300' rel='stylesheet' type='text/css'>
+
+ <!-- Scripts -->
+ <!-- JQuery -->
+ <script src="js/jquery-1.10.2.js"></script>
+ <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<!-- Google analytics -->
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-52741783-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+ <!-- Add custom CSS here -->
+ <style>.embed-container { position: relative; padding-bottom: 56.25%; padding-top: 35px height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
+  <style type="text/css">
+  input.error{ border:1px solid red;}
+  label.error{ display:none !important; }
+</style>
+ <style type="text/css">
+  input:required:invalid, input:focus:invalid {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAeVJREFUeNqkU01oE1EQ/mazSTdRmqSxLVSJVKU9RYoHD8WfHr16kh5EFA8eSy6hXrwUPBSKZ6E9V1CU4tGf0DZWDEQrGkhprRDbCvlpavan3ezu+LLSUnADLZnHwHvzmJlvvpkhZkY7IqFNaTuAfPhhP/8Uo87SGSaDsP27hgYM/lUpy6lHdqsAtM+BPfvqKp3ufYKwcgmWCug6oKmrrG3PoaqngWjdd/922hOBs5C/jJA6x7AiUt8VYVUAVQXXShfIqCYRMZO8/N1N+B8H1sOUwivpSUSVCJ2MAjtVwBAIdv+AQkHQqbOgc+fBvorjyQENDcch16/BtkQdAlC4E6jrYHGgGU18Io3gmhzJuwub6/fQJYNi/YBpCifhbDaAPXFvCBVxXbvfbNGFeN8DkjogWAd8DljV3KRutcEAeHMN/HXZ4p9bhncJHCyhNx52R0Kv/XNuQvYBnM+CP7xddXL5KaJw0TMAF8qjnMvegeK/SLHubhpKDKIrJDlvXoMX3y9xcSMZyBQ+tpyk5hzsa2Ns7LGdfWdbL6fZvHn92d7dgROH/730YBLtiZmEdGPkFnhX4kxmjVe2xgPfCtrRd6GHRtEh9zsL8xVe+pwSzj+OtwvletZZ/wLeKD71L+ZeHHWZ/gowABkp7AwwnEjFAAAAAElFTkSuQmCC);
+    background-position: right top ;
+    background-repeat: no-repeat;
+    -moz-box-shadow: none;
+  }
+  input:required:valid {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAepJREFUeNrEk79PFEEUx9/uDDd7v/AAQQnEQokmJCRGwc7/QeM/YGVxsZJQYI/EhCChICYmUJigNBSGzobQaI5SaYRw6imne0d2D/bYmZ3dGd+YQKEHYiyc5GUyb3Y+77vfeWNpreFfhvXfAWAAJtbKi7dff1rWK9vPHx3mThP2Iaipk5EzTg8Qmru38H7izmkFHAF4WH1R52654PR0Oamzj2dKxYt/Bbg1OPZuY3d9aU82VGem/5LtnJscLxWzfzRxaWNqWJP0XUadIbSzu5DuvUJpzq7sfYBKsP1GJeLB+PWpt8cCXm4+2+zLXx4guKiLXWA2Nc5ChOuacMEPv20FkT+dIawyenVi5VcAbcigWzXLeNiDRCdwId0LFm5IUMBIBgrp8wOEsFlfeCGm23/zoBZWn9a4C314A1nCoM1OAVccuGyCkPs/P+pIdVIOkG9pIh6YlyqCrwhRKD3GygK9PUBImIQQxRi4b2O+JcCLg8+e8NZiLVEygwCrWpYF0jQJziYU/ho2TUuCPTn8hHcQNuZy1/94sAMOzQHDeqaij7Cd8Dt8CatGhX3iWxgtFW/m29pnUjR7TSQcRCIAVW1FSr6KAVYdi+5Pj8yunviYHq7f72po3Y9dbi7CxzDO1+duzCXH9cEPAQYAhJELY/AqBtwAAAAASUVORK5CYII=);
+    background-position: right top ;
+    background-repeat: no-repeat;
+  }
+</style>
+
+
+
+
+</head>
+<!--<body onload="changeText()">-->
+
+<body onload="startQ();startQ2();">
+
+<!-- NAV SECTION -->
+<nav class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a  class="navbar-toggle"  href="http://admin.checkdd.com/admin/">
+        LOGIN
+      </a>
+      
+      <a class="navbar-brand" href="index.html"><img src="images/frontpage/new/elements/logo.png"></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+      	<ul class="nav navbar-nav navbar-right">
+        	<li ><a  href="http://admin.checkdd.com/admin/" class="login-nav" >LOGIN</a></li>
+        	<li ><a  href="english/index-en.html" class="login-nav" >ENG</a></li>
+        	<!-- <li><a class="flags-nav" href="index.html"><img src="images/Norway.png" alt="English webpage"></a></li> -->
+       	</ul>
+
+        <form method="post" name="form" id="form" class="navbar-form navbar-right" action="registration_process.php">
+       <input type="text" id="email" name="email" placeholder="E-mail here" style="input" tabindex="3" class="form-control">
+       <input type="hidden" name="task" value="registrationNew" />
+        <button class="btn btn-nav-green" type="submit" name="Submit">Registerer deg nå!</button>
+       </form>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<!-- NAV SECTION END -->
+  <!-- FRONT PAGE SECTION -->
+
+ <div class="container">
+ <div class="row">
+ <div class="privacy">
+ <div class="col-lg-12">
+   <br>
+ <h1>COOKIES POLICY</h1>
+<br>
+</div>
+<br>
+<br>
+<div class="col-lg-12">
+IMPORTANT NOTICE: PLEASE READ CAREFULLY BEFORE USING THIS WEBSITE:<br> This policy explains how cookies are used on this website. The policy may be amended from time to time. When we do, we will let you know by appropriate means such as by posting the revised policy on this page with a new “Last Updated” date. By using this site you agree to the placement of cookies on your computer in accordance with the terms of this policy. If you do not wish to accept cookies from this site please either disable cookies or refrain from using this site.
+ <div style="padding: 10px"></div>
+</div>
+<br>
+<br>
+<div class="col-lg-12">
+<strong>1. What are Cookies?</strong><br>
+A cookie is a text-only string of information that a website transfers to the cookie file of the browser on your computer's hard disk so that the website can recognise you when you revisit and remember certain information about you. This can include which pages you have visited, choices you have made from menus, any specific information you have entered into forms and the time and date of your visit.
+ <div style="padding: 10px"></div>
+</div>
+<br>
+<br>
+<div class="col-lg-12">
+<strong>2. Types of Cookies</strong><br>
+There are two main types of cookies:
+<br>
+<strong>Session cookies:</strong> these are temporary cookies that expire at the end of a browser session; that is, when you leave the site. Session cookies allow the website to recognise you as you navigate between pages during a single browser session and allow you to use the website most efficiently. For example, session cookies enable a website to remember that a user has placed items in an online shopping basket.
+<br>
+<strong>Persistent cookies:</strong> in contrast to session cookies, persistent cookies are stored on your equipment between browsing sessions until expiry or deletion. They therefore enable the website to "recognise" you on your return, remember your preferences, and tailor services to you.
+In addition to session cookies and persistent cookies, there may be other cookies which are set by the website which you have chosen to visit, such as this website, in order to provide us or third parties with information.
+ <div style="padding: 10px"></div>
+</div>
+<br>
+<br>
+<div class="col-lg-12">
+<strong>3. Our use of Cookies</strong>
+<br>
+Many cookies are designed to give you optimal usage of the web. For example, we use cookies to enable you to improve your user experience when using our website, e.g. a cookie which recognises if your browser supports specific technology features. This helps, for example, in enabling web pages to be loaded more quickly when you request the download of a large file.
+<br>
+As with first party cookies, you are able to block third party cookies through your browser settings.
+<br>
+Some of our cookies may collect and store your personal information, such as your name or email address. We are committed to respecting and protecting your privacy and will ensure that all personal information collected by us is kept and treated in accordance with our privacy policy.
+<div style="padding: 10px"></div>
+</div>
+<br>
+<br>
+<div class="col-lg-12">
+<strong>4. Refusing Cookies on this Site</strong>
+<br>
+Most browsers are initially set to accept cookies. However, you have the ability to disable cookies if you wish, generally through changing your internet software browsing settings. It may also be possible to configure your browser settings to enable acceptance of specific cookies or to notify you each time a new cookie is about to be stored on your computer enabling you to decide whether to accept or reject the cookie. To manage your use of cookies there are various resources available to you, for example the “Help” section on your browser may assist you. You can also disable or delete the stored data used by technology similar to cookies, such as Local Shared Objects or Flash cookies, by managing your browser’s “add-on settings” or visiting the website of its manufacturer. As our cookies allow you to access some of our website’s features we recommend that you leave cookies enabled. Otherwise, if cookies are disabled, it may mean that you experience reduced functionality or will be prevented from using this site altogether.
+<div style="padding: 10px"></div>
+</div>
+<br>
+<br>
+<div class="col-lg-12">
+
+<div style="padding: 10px"></div>
+</div>
+<br>
+<br>
+<div class="col-lg-12">
+
+<br>
+<br>
+</div>
+ </div>
+ </div>
+ </div>
+<!-- FOOTER -->
+<footer>
+  
+      <div class="faq-link"><a href="support.html">Kundestøtte</a>
+      -
+      <a href="faq.html">FAQ</a></div>
+      -
+      <a href="//www.iubenda.com/privacy-policy/907388" class="iubenda-white iubenda-embed" title="Privacy Policy">Privacy Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src = "//cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
+    </div>
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+ <script src="js/smooth-scroll.js"></script>
+ <script type="text/javascript" src="js/jquery.validate.js"></script>
+
+<!-- noConflict -->
+<script type="text/javascript" charset="utf-8">
+  var $ = jQuery.noConflict();
+  $(document).ready(function() {
+    //$("#form").validationEngine();
+    $("#form").validate();
+    $("#form1").validate();
+  } );
+</script>
+
+<!-- DEFER JAVASCRIPT -->
+<script type="text/javascript">
+  function downloadJSAtOnload() {
+    var element = document.createElement("script");
+    element.src = "deferredfunctions.js";
+    document.body.appendChild(element);
+  }
+  if (window.addEventListener)
+    window.addEventListener("load", downloadJSAtOnload, false);
+  else if (window.attachEvent)
+    window.attachEvent("onload", downloadJSAtOnload);
+  else window.onload = downloadJSAtOnload;
+</script>
+
+<!-- Modal youtube -->
+<script type="text/javascript">
+  $(document).ready(function ($) {
+
+                // delegate calls to data-toggle="lightbox"
+                $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
+                  event.preventDefault();
+                  return $(this).ekkoLightbox({
+                    onShown: function() {
+                      if (window.console) {
+                        return console.log('Code is checkd? Contact us @ post@checkd.it');
+                      }
+                    }
+                  });
+                });
+
+
+                $('#open-youtube').click(function (e) {
+                  e.preventDefault();
+                  $(this).ekkoLightbox();
+                });
+              });
+</script>
+
+<!-- Navbar form on scroll -->
+<script type="text/javascript">
+
+    $(document).scroll(function () {
+      var y = $(this).scrollTop();
+      
+      if (y > 700) {
+        $('.navbar-form').show();
+        
+      } else {
+        $('.navbar-form').hide();
+        
+      }
+    });
+  </script>
+
+<!-- Navbar on scroll -->
+<script type="text/javascript">
+  $(window).scroll(function() {
+
+    if ($(this).scrollTop() > 100) {
+      $( ".navbar-default" ).fadeIn();
+        
+    } else if ($(this).scrollTop() < 100){
+       $( ".navbar-default" ).fadeOut();
+    }
+});
+</script>
+
+<!-- Mouse transistion -->
+<script type="text/javascript">
+  setTimeout(function () {
+  $('.mouse').removeClass('hidden');
+}, 0);
+setTimeout(function () {
+  $('.mouse').addClass('play');
+}, 2000);
+</script>
+
+<!-- Smooth scroll -->
+<script>
+    smoothScroll.init();
+</script>
+
+
+<!-- JavaScript -->
+
+<script src="js/bootstrap.min.js"></script>
+<script src="js/ekko-lightbox.min.js"></script>
+<script type="text/javascript" src="js/retina.js"></script>
+
+  
+</body>
+</html>
