@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="description" content="CHECKD gives about to the construction industry trough modern and innovative software">
+ <meta name="author" content="CHECKD">
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <link rel="shortcut icon" href="favicon.ico"/> 
+ <title>CHECKD Construction Software | about for the construction industry</title>
+ <!-- Bootstrap core CSS and stylesheets -->
+ <!-- <link href="css/main.css" rel="stylesheet"> -->
+ <link href="css/bootstrap-beta.css" rel="stylesheet">
+  <link href="css/style-about.css" rel="stylesheet">
+ <!--  <link href="css/style.min.css" rel="stylesheet"> -->
+  <!-- <link href="css/flags/css/flag-icon.css" rel="stylesheet"> -->
+ <!--  <link href="css/animate.css" rel="stylesheet"> -->
+ <!-- <link href="css/ekko-lightbox.min.css" rel="stylesheet"> -->
+ <!-- FONTS -->
+ <link rel="stylesheet" href="css/css/font-awesome.min.css">
+ <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300' rel='stylesheet' type='text/css'>
+ <link href='http://fonts.googleapis.com/css?family=Roboto:100' rel='stylesheet' type='text/css'>
+<!--  <link href='http://fonts.googleapis.com/css?family=Lato:100,300' rel='stylesheet' type='text/css'> -->
+
+
+<!--[if IE]>
+  <link rel="stylesheet" type="text/css" href="css/ie-only.css" />
+<![endif]-->
+
+
+ <!-- Scripts -->
+
+ <!-- JQuery -->
+ <script src="js/jquery-1.10.2.js"></script>
+ <script src="js/modernizr.js"></script>
+<script>
+    $(document).ready(function(){
+        if (Modernizr.touch) {
+            // show the close overlay button
+            $(".close-overlay").removeClass("hidden");
+            // handle the adding of hover class when clicked
+            $(".rounded-img-border").click(function(e){
+                if (!$(this).hasClass("hover")) {
+                    $(this).addClass("hover");
+                }
+            });
+            // handle the closing of the overlay
+            $(".close-overlay").click(function(e){
+                e.preventDefault();
+                e.stopPropagation();
+                if ($(this).closest(".rounded-img-border").hasClass("hover")) {
+                    $(this).closest(".rounded-img-border").removeClass("hover");
+                }
+            });
+        } else {
+            // handle the mouseenter functionality
+            $(".rounded-img-border").mouseenter(function(){
+                $(this).addClass("hover");
+            })
+            // handle the mouseleave functionality
+            .mouseleave(function(){
+                $(this).removeClass("hover");
+            });
+        }
+    });
+</script>
+ 
+
+	<!-- Google analytics -->
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-52741783-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script type="text/javascript">
+//   if ($(window).width() < 1200) {
+//     $('.nav').addClass('.navbar-fixed-top');
+// } else {
+//     $('.nav').removeClass('.navbar-fixed-top');
+// }
+</script>
+
+<noscript>
+    <style>
+        .loader-wrapper {display:none;}
+        .loader {display:none;}
+        .loader-section {display:none;}
+        .dlogo {display:none;}
+    </style>
+</noscript>
+
+</head>
+<!--<body onload="changeText()">-->
+
+<body>
+
+
+
+ <!-- <div id="preloader"></div> -->
+<!--  <div id="loader-wrapper">
+
+  <div id="loader"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   width="469.89px" height="450.57px" viewBox="0 0 469.89 450.57" enable-background="new 0 0 469.89 450.57" xml:space="preserve" shape-rendering="optimizeSpeed" class="dlogo">
+<path class="d1" fill="#FFFFFF" stroke="#FFFFFF" id="path1" d="M366.182,222.747v10.93c0,47.52-18.83,92.146-56.465,133.856C268.284,405.186,223.359,424,174.937,424
+  H58.396V32.428h107.433c60.126,0,110.812,22.17,152.103,66.484C350.077,137.459,366.182,178.747,366.182,222.747z M163.76,74.587
+  H97.709v309.199h95.942c15.214-1.6,29.078-5.375,41.672-11.279c6.015-1.615,17.819-8.893,35.394-21.811
+  c37.74-34.183,56.596-74.543,56.596-121.096c0-41.715-15.988-79.661-47.96-113.843l-19.657-16.137
+  c-24.254-14.814-47.582-22.896-69.974-24.223L163.76,74.587z"/>
+<path class="d2" fill="#EF4136" stroke="#EF4136" d="M96.932,214.139l94.729,54.297c0,0,59.924-78.443,115.974-139.793C373.397,56.663,449,15.236,449,15.236
+  s-73.104,76.997-120.152,138.462c-47.044,61.442-120.101,195.064-120.101,195.064L96.932,214.139z"/>
+</svg></div>
+  
+  <div class="loader-section section-left"></div>
+
+  <div class="loader-section section-right"></div>
+  
+</div> -->
+
+
+
+  <!-- FRONT PAGE SECTION -->
+<section class="intro-checkd">
+  <div class="container">
+    <div class="row">
+      <div class="about-header"><h1>What is </h1>
+      <img src="images/frontpage/new/elements/logo-white.svg" class="img-responsive">
+      <div class="about-header"><h1>?</h1>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- END FRONT PAGE SECTION -->
+  <!-- NAV SECTION -->
+
+<nav class="navbar  navbar-inverse" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+     <!--  <a  class="navbar-toggle"  href="http://admin.checkdd.com/admin/">
+        LOGIN
+      </a> -->
+      <button type="button" class="navbar-toggle main collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" data-scroll href="#top"><img src="images/frontpage/new/elements/logo.png" height="auto" width="auto" class="img-responsive" alt="CHECKD Logo"></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+      <ul class="nav navbar-nav navbar-left">
+          <li class="link-line" ><a  data-scroll href="#about" class="my-nav">about</a></li>
+          <li class="link-line"><a data-scroll href="#time" class="my-nav">hours</a></li>
+          <li class="link-line" ><a  data-scroll href="#floorplan" class="my-nav">floorplan</a></li>
+          <li class="link-line"><a data-scroll href="#equipment" class="my-nav">equipment</a></li>
+          <li class="link-line" ><a  data-scroll href="#dashboard" class="my-nav">dashboard</a></li>
+          <li class="link-line"><a data-scroll href="#contact" class="my-nav">kontakt</a></li>
+         
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li class="nav-buttons"><form action="http://admin.checkdd.com/admin/">
+   
+<button href="http://admin.checkdd.com/admin/" class="btn btn-nav-border navbar-btn" type="submit" name="Submit" id="regi" >LOGIN</button></form></li>
+          <li  class="nav-buttons"><a href="english/index-en.html" type="button" class="btn btn-flag-eng navbar-btn"> </a></li>
+         
+        </ul>
+
+        <form method="post" name="form" id="form" class="navbar-form navbar-right" action="registration_process.php">
+       <input type="text" id="email" name="email" placeholder="E-mail here" style="input" tabindex="3" class="form-about-nav" required>
+       <input type="hidden" name="task" value="registrationNew" />
+        <button class="btn btn-nav-border" type="submit" name="Submit" id="regi" >Registrer deg nå!</button>
+       </form>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<!-- NAV SECTION END -->
+
+<!-- PARALLAX 1 SECTION -->
+<section class="parallax-1">
+
+ <div class="overlayFilter">
+<div class="container">
+ <div class="row">
+      <div class="col-xs-6 col-sm-6 col-md-3 col-lg-6" >  
+
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   width="541.89px" height="295.275px" viewBox="100 200 541.89 295.275" enable-background="new 0 0 841.89 595.275"
+   xml:space="preserve">
+
+
+  <path fill="#939598" class="line-1" stroke="#FFFFFF" d="M360.992,318.949v29.098c0,5.252,4.293,9.545,9.545,9.545H471.35c5.252,0,9.549-4.293,9.549-9.545v-29.098
+    H360.992z"/>
+  <path fill="#FFD600" class="line-1" stroke="#FFFFFF" d="M471.35,237.684H370.537c-5.252,0-9.545,4.297-9.545,9.547v71.719h119.907V247.23
+    C480.898,241.98,476.602,237.684,471.35,237.684z"/>
+  <g>
+    <g>
+      <path class="line-2" stroke="#FFFFFF" fill="#262626" d="M465.188,277.257c0.809,0,1.465-0.656,1.465-1.466v-6.896c0-0.809-0.656-1.465-1.465-1.465h-25.908
+        c-0.809,0-1.465,0.656-1.465,1.465v6.896c0,0.81,0.656,1.466,1.465,1.466H465.188z"/>
+    </g>
+    <path class="line-2" stroke="#FFFFFF" fill="#262626" d="M426.057,266.431c0-5.941,4.818-10.758,10.758-10.758l28.514-0.006c0.807,0,1.465,0.655,1.465,1.465v6.945
+      c0,0.81-0.658,1.466-1.465,1.466l-26.068-0.005c-1.842,0-3.336,1.494-3.336,3.337l0.002,30.625c0,0.811-0.654,1.467-1.463,1.467
+      h-6.938c-0.811,0-1.467-0.656-1.467-1.467L426.057,266.431z"/>
+    <path class="line-2" stroke="#FFFFFF" fill="#262626" d="M399.839,267.996c0.826-1.471,2.4-2.463,4.207-2.463l6.918,0.005c1.844,0,3.338,1.494,3.338,3.337
+      l-0.004,30.625c0,0.811,0.654,1.467,1.463,1.467h6.938c0.811,0,1.467-0.656,1.467-1.467v-33.069
+      c0-5.941-4.819-10.758-10.758-10.758l-9.385,0.005c-5.541,0-10.365,3.063-12.871,7.591l-19.809,35.567
+      c-0.109,0.203-0.17,0.436-0.17,0.682c0,0.797,0.645,1.443,1.443,1.443l8.023-0.002c0.545,0,1.018-0.301,1.262-0.744
+      L399.839,267.996z"/>
+    <path class="line-2" stroke="#FFFFFF" fill="#262626" d="M384.837,298.836c-0.107,0.203-0.17,0.436-0.17,0.682c0,0.797,0.645,1.443,1.441,1.443l8.025-0.002
+      c0.545,0,1.018-0.301,1.262-0.744l12.371-22.224c0.246-0.438,0.717-0.734,1.254-0.734h1.939c0.811,0,1.467-0.656,1.467-1.466
+      v-6.896c0-0.809-0.656-1.465-1.467-1.465h-6.908c-1.104,0-2.064,0.607-2.566,1.506L384.837,298.836z"/>
+  </g>
+  <g>
+    <path class="line-2" stroke="#FFFFFF" fill="#FFFFFF" d="M378.453,341.057l-0.687,3.338h-1.983l2.861-12.855h2.384l2.651,12.855h-1.984l-0.687-3.338H378.453z
+       M380.798,339.454l-0.534-2.956c-0.172-0.84-0.344-2.021-0.477-2.918h-0.057c-0.134,0.896-0.324,2.136-0.477,2.937l-0.572,2.938
+      H380.798z"/>
+    <path class="line-2" stroke="#FFFFFF" fill="#FFFFFF" d="M386.549,331.539h5.283v1.773h-3.243v3.834h3.033v1.697h-3.033v5.551h-2.041V331.539z"/>
+    <path class="line-2" stroke="#FFFFFF" fill="#FFFFFF" d="M405.264,344.051c-0.553,0.229-1.602,0.458-2.499,0.458c-1.316,0-2.403-0.362-3.262-1.259
+      c-1.011-1.049-1.621-2.899-1.602-5.169c0.038-4.825,2.67-6.656,5.188-6.656c0.896,0,1.583,0.171,1.983,0.381l-0.4,1.755
+      c-0.343-0.19-0.82-0.305-1.469-0.305c-1.659,0-3.185,1.221-3.185,4.844c0,3.491,1.335,4.674,2.689,4.674
+      c0.343,0,0.553-0.038,0.667-0.096v-3.604h-1.374v-1.679h3.262V344.051z"/>
+    <path class="line-2" stroke="#FFFFFF" fill="#FFFFFF" d="M408.662,331.729c0.706-0.172,1.602-0.248,2.441-0.248c1.335,0,2.441,0.229,3.185,0.935
+      c0.725,0.687,0.973,1.545,0.973,2.613c0,1.487-0.725,2.651-2.021,3.242v0.038c0.916,0.324,1.373,1.183,1.64,2.709
+      c0.267,1.563,0.572,2.938,0.782,3.376h-2.117c-0.153-0.362-0.439-1.621-0.648-3.128c-0.248-1.679-0.725-2.213-1.755-2.213h-0.458
+      v5.341h-2.021V331.729z M410.684,337.489h0.534c1.221,0,1.984-0.953,1.984-2.27c0-1.259-0.515-2.117-1.831-2.136
+      c-0.267,0-0.515,0.019-0.687,0.076V337.489z"/>
+    <path class="line-2" stroke="#FFFFFF" fill="#FFFFFF" d="M420.476,331.539v8.469c0,2.078,0.648,2.746,1.45,2.746c0.897,0,1.488-0.648,1.488-2.746v-8.469h2.041
+      v8.125c0,3.318-1.316,4.883-3.529,4.883c-2.346,0-3.491-1.603-3.491-4.787v-8.221H420.476z"/>
+    <path class="line-2" stroke="#FFFFFF" fill="#FFFFFF" d="M429.074,331.729c0.648-0.152,1.487-0.248,2.384-0.248c1.354,0,2.46,0.248,3.224,0.973
+      c0.686,0.648,1.029,1.641,1.029,2.747c0,1.297-0.362,2.174-0.953,2.86c-0.764,0.896-2.003,1.336-3.09,1.336
+      c-0.21,0-0.382,0-0.572-0.02v5.017h-2.021V331.729z M431.096,337.699c0.152,0.038,0.285,0.038,0.496,0.038
+      c1.334,0,2.078-0.915,2.078-2.384c0-1.202-0.496-2.213-1.869-2.213c-0.285,0-0.533,0.038-0.705,0.096V337.699z"/>
+    <path class="line-2" stroke="#FFFFFF" fill="#FFFFFF" d="M438.609,331.729c0.648-0.152,1.488-0.248,2.385-0.248c1.354,0,2.461,0.248,3.223,0.973
+      c0.688,0.648,1.03,1.641,1.03,2.747c0,1.297-0.362,2.174-0.954,2.86c-0.762,0.896-2.002,1.336-3.09,1.336
+      c-0.209,0-0.381,0-0.572-0.02v5.017h-2.021V331.729z M440.631,337.699c0.153,0.038,0.287,0.038,0.496,0.038
+      c1.336,0,2.08-0.915,2.08-2.384c0-1.202-0.496-2.213-1.869-2.213c-0.287,0-0.535,0.038-0.707,0.096V337.699z"/>
+    <path class="line-2" stroke="#FFFFFF"fill="#FFFFFF" d="M453.238,338.539h-3.051v4.081h3.471v1.774h-5.512v-12.855h5.283v1.773h-3.242v3.528h3.051V338.539z"/>
+    <path class="line-2" stroke="#FFFFFF" fill="#FFFFFF" d="M456.672,344.395v-12.855h1.869l2.174,5.493c0.457,1.163,1.106,2.822,1.507,4.062h0.038
+      c-0.114-1.641-0.229-3.624-0.229-5.913v-3.643h1.793v12.855h-1.869l-2.193-5.475c-0.478-1.183-1.05-2.728-1.412-4.081h-0.038
+      c0.095,1.487,0.153,3.3,0.153,5.97v3.586H456.672z"/>
+</svg>
+      </div>
+      <div class="col-xs-6 col-sm-6 col-md-3 col-lg-6" > 
+      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+         width="462px" height="231px" viewBox="0 0 462 231" enable-background="new 0 0 462 231" xml:space="preserve">
+      <g>
+        <path fill-rule="evenodd" clip-rule="evenodd" class="line-1" stroke="#FFFFFF" d="M361.613,91.97c0-2.737,2.162-4.97,4.971-4.97c2.736,0,4.896,2.233,4.896,4.97
+          c0,2.737-2.16,4.898-4.896,4.898C363.775,96.868,361.613,94.707,361.613,91.97L361.613,91.97z M362.406,91.97
+          c0,2.305,1.873,4.105,4.178,4.105c2.232,0,4.105-1.8,4.105-4.105c0-2.376-1.873-4.105-4.105-4.105
+          C364.279,87.865,362.406,89.593,362.406,91.97L362.406,91.97z"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" class="line-1" stroke="#FFFFFF" d="M168.299,136.77h10.732v-13.757h6.122c9.436,0,14.693-4.321,14.693-14.117
+          c0-9.507-6.122-13.612-15.053-13.612h-16.494V136.77L168.299,136.77z M179.031,103.926h1.8c4.25,0,7.851,0.072,7.851,5.33
+          c0,5.042-3.89,5.042-7.851,5.042h-1.8V103.926L179.031,103.926z"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" class="line-1" stroke="#FFFFFF" d="M224.623,129.566l2.665,7.203h11.523l-15.628-41.486h-11.74l-15.917,41.486h11.38
+          l2.881-7.203H224.623L224.623,129.566z M221.67,121.284h-8.931l4.465-13.181L221.67,121.284L221.67,121.284z"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" class="line-1" stroke="#FFFFFF" d="M354.412,109.256c-2.234-2.953-5.834-4.538-9.508-4.538
+          c-6.555,0-11.02,4.97-11.02,11.38c0,6.554,4.537,11.235,11.236,11.235c3.457,0,6.986-1.656,9.291-4.394v12.965
+          c-3.602,1.08-6.195,1.872-9.508,1.872c-5.762,0-11.309-2.16-15.559-6.05c-4.537-4.178-6.625-9.507-6.625-15.629
+          c0-5.69,2.088-11.092,6.051-15.125c4.105-4.177,9.939-6.771,15.773-6.771c3.457,0,6.625,0.792,9.867,2.089V109.256L354.412,109.256
+          z"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" class="line-1" stroke="#FFFFFF" d="M296.863,93.915c-11.883,0-22.904,8.787-22.904,21.319
+          c0,13.397,9.652,22.904,22.904,22.904s22.832-9.507,22.832-22.904C319.695,102.702,308.748,93.915,296.863,93.915L296.863,93.915z
+           M296.863,104.358c6.41,0,11.668,5.257,11.668,10.947c0,7.131-5.258,12.389-11.668,12.389s-11.668-5.258-11.668-12.389
+          C285.195,109.616,290.453,104.358,296.863,104.358L296.863,104.358z"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" class="line-1" stroke="#FFFFFF" d="M261.715,119.844c5.906-1.081,9.076-6.05,9.076-11.812
+          c0-8.859-6.195-12.748-14.406-12.748h-16.133v41.486h10.805v-15.918l10.299,15.918h13.396L261.715,119.844L261.715,119.844z
+           M251.057,103.566h1.008c3.529,0,7.562,0.648,7.562,5.186c0,4.466-4.033,5.186-7.562,5.186h-1.008V103.566L251.057,103.566z"/>
+        <polygon fill-rule="evenodd" clip-rule="evenodd" class="line-1" stroke="#FFFFFF" points="110.391,87 131.783,115.09 110.391,143.323 89,115.018 110.391,87  "/>
+        <polygon fill-rule="evenodd" clip-rule="evenodd" class="line-1" stroke="#FFFFFF" points="117.882,87 125.084,87 146.404,115.09 125.084,143.252 117.954,143.252 
+          139.201,115.09 117.882,87   "/>
+        <polygon fill-rule="evenodd" clip-rule="evenodd" class="line-1" stroke="#FFFFFF" points="132.503,87 139.706,87 161.025,115.09 139.706,143.252 132.575,143.252 
+          153.822,115.09 132.503,87   "/>
+        <path fill-rule="evenodd" clip-rule="evenodd" class="line-1" stroke="#FFFFFF" d="M365.574,90.169v1.296h0.793c0.648,0,1.656,0.072,1.656-0.576
+          c0-0.648-0.576-0.72-1.225-0.72H365.574L365.574,90.169z M368.672,94.563h-0.863l-1.297-2.377h-0.938v2.377h-0.791v-5.114h2.16
+          c0.938,0,1.801,0.216,1.801,1.296c0,1.009-0.721,1.441-1.367,1.441L368.672,94.563L368.672,94.563z"/>
+      </g>
+      </svg>
+      </div>
+    </div>
+    </div>
+ </div>
+
+</section>
+<!-- PARALLAX 1 SECTION END -->
+<!-- about SECTION -->
+<section class="about-section" id="about">
+<div class="container">
+    <div class="row">
+        <h1 class="section-heading">About</h1>
+        <p class="about-content">CHECKD AS wishes to raise awareness regarding the enormous costs related to the various mistakes, errors and misplacements that occur in the construction industry on a daily basis. </p>
+        <p class="about-content">We provide a simple and easy-to-understand method of regaining control through our cloud-based virtual toolkit, which allows users to log all critical and non-critical activities, file reports, coordinate subcontractors and track essential equipment.</p>
+    </div>
+    <br>
+    </div>
+    <div class="container-fluid" style="padding-bottom: 50px">
+    <div class="row">
+     
+    </div>
+  </div>
+
+</div>
+
+</section>
+<!-- about SECTION END -->
+<!-- PARALLAX 2 SECTION -->
+<section class="parallax-2">
+ <div class="overlayFilter">
+
+ </div>
+</section>
+<!-- PARALLAX 2 SECTION END -->
+<section class="team-section">
+  
+  <div class="container">
+    <div class="row">
+        <h1 class="section-heading">TEAM</h1>
+        </div>
+       <div class="row" style="padding-bottom: 50px;">
+         <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 text-center sf-animation">
+           <div class="rounded-img-border"><img src="http://placehold.it/150x150">
+           <div class="overlay">
+            <a href="#" class="expand">+</a>
+            <a class="close-overlay hidden">x</a>
+        </div>
+        </div>
+           <p class="name">Name Nameson</p>
+           <p class="job-position">worker</p>
+         </div>
+         <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 text-center sf-animation">
+           <div class="rounded-img-border"><img src="http://placehold.it/150x150"></div>
+           <p class="name">Name Nameson</p>
+           <p class="job-position">worker</p>
+         </div>
+         <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 text-center sf-animation">
+           <div class="rounded-img-border"><img src="http://placehold.it/150x150"></div>
+           <p class="name">Name Nameson</p>
+           <p class="job-position">worker</p>
+         </div>
+         <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 text-center sf-animation">
+           <div class="rounded-img-border"><img src="http://placehold.it/150x150"></div>
+           <p class="name">Name Nameson</p>
+           <p class="job-position">worker</p>
+         </div>
+         <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 text-center sf-animation">
+           <div class="rounded-img-border"><img src="http://placehold.it/150x150"></div>
+           <p class="name">Name Nameson</p>
+           <p class="job-position">worker</p>
+         </div>
+         <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 text-center sf-animation">
+           <div class="rounded-img-border"><img src="http://placehold.it/150x150"></div>
+           <p class="name">Name Nameson</p>
+           <p class="job-position">worker</p>
+         </div>
+         <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 text-center sf-animation">
+           <div class="rounded-img-border"><img src="http://placehold.it/150x150"></div>
+           <p class="name">Name Nameson</p>
+           <p class="job-position">worker</p>
+         </div>
+         <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 text-center sf-animation">
+           <div class="rounded-img-border"><img src="http://placehold.it/150x150"></div>
+           <p class="name">Name Nameson</p>
+           <p class="job-position">worker</p>
+         </div>
+       </div>
+    <br>
+    </div>
+
+</section>
+<!-- CONTACT SECTION END -->
+<!-- FOOTER -->
+<footer class="footer-section">
+   <div class="container-fluid">
+       
+<br><br>
+<div class="container">
+<div class="row">
+<div class="col-lg-12 col-sm-12 col-xs-12">
+  <ul class="footer-links">
+          <a  href="about.html" class="footer-link-line">about</a>
+         <a href="hours.html" class="footer-link-line">hours</a>
+          <a  href="floorplan.html" class="footer-link-line">floorplan</a>
+         <a href="equipment.html" class="footer-link-line">equipment</a>
+          <a  href="dashboard.html" class="footer-link-line">dashboard</a>
+         <a href="support.html" class="footer-link-line">kundestøtte</a>
+          <a href="faq-panel.html" class="footer-link-line">faq</a>
+          
+         <hr>
+          <a  href="pricing.html" class="footer-link-line">priser</a>
+         <a href="blog.html" class="footer-link-line">blog</a>
+          <a  href="register.html" class="footer-link-line">registrer</a>
+         <a href="http://admin.checkdd.com/admin/" class="footer-link-line">login</a>
+          <a  href="terms.html" class="footer-link-line">terms and condition</a>
+         <a href="privacy.html" class="footer-link-line">privacy</a>
+         <a href="cookies.html" class="footer-link-line">cookies</a>
+
+ </ul>        
+  </div>    
+</div>
+</div>
+<div class="row">
+  <div class="copyright"><p>CHECKD<sup>&reg;</sup> 2014</p></div>
+</div>
+</footer>
+
+<!-- SCRIPTS -->
+ <script src="js/smooth-scroll.js"></script>
+ 
+
+
+
+
+<!-- JavaScript -->
+<script src="js/waypoints.js"></script>
+<script src="js/waypoints-sticky.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!-- <script src="js/ekko-lightbox.min.js"></script> -->
+<!-- <script type="text/javascript" src="js/retina.js"></script> -->
+<script src="js/plugins.js"></script> <!-- Contains: jPreloader, jQuery Easing, jQuery ScrollTo, jQuery One Page Navi -->
+<script type="text/javascript" src="js/jquery.validate.js"></script>
+<script src="js/custom.min.js"></script>
+
+  
+</body>
+</html>
