@@ -393,16 +393,46 @@ hr.style-two {
 }
 /* Floorplan END */
 /* Equipment */
-.video-equipment{
+.video-equipment-1 {
   position: absolute;
-  top: 37px;
-  left: -42px;
-  width: 304px;
-  height: 387px;
+  top: -133px;
+  left: 0px;
+  width: 220px;
+  height: 657px;
+}
+.shell-container-equipment {
+  position: absolute;
+  width: 219px;
+  height: 386px;
+  top: 56px;
+  left: 19px;
+  overflow: hidden;
 }
 /* Equipment END */
 /* Control */
-
+.control-slider-wrapper-1 {
+  position: absolute;
+  height: 425px;
+  width: 230px;
+  top: 57px;
+  left: 29px;
+}
+.sony-control-first{
+  width:260px;
+}
+#control-slider-wrap {
+  height: 408px;
+  width: 230px;
+  overflow: hidden;
+}
+.slider-control{
+  position: relative;
+  width: 690px;
+  left: -229px;
+  top: 0px;
+  animation: slider-control 10s infinite;
+  -webkit-animation: slider-control 10s infinite;
+}
 /* Control END */
 /*  END  */
 /*****************
@@ -498,7 +528,38 @@ hr.style-two {
 }
 /* Equipment END */
 /* Control */
-
+.control-slider-wrapper-2 {
+  position: absolute;
+  background-color: #ffffff;
+  overflow-y: hidden;
+  height: 380px;
+  width: 218px;
+  top: 54px;
+  left: 177px;
+}
+.iphone-control-second-2{
+  width:250px;
+}
+.iphone-control-second-bar-2 {
+  position: absolute;
+  height: 54px;
+  top: 193px;
+  left: -9px;
+  z-index: 10;
+  animation: slider-control-bar 10s infinite linear;
+  -webkit-animation: slider-control-bar 10s infinite linear;
+}
+#control-slider-wrap-2{
+  height:374px;
+  width:217px;
+}
+.slider-control-2 {
+  position: relative;
+  width: 216px;
+  top: -2px;
+  left: 0px;
+  z-index: 5;
+}
 /* Control END */
 /*  END   */
 /*****************
@@ -532,6 +593,29 @@ hr.style-two {
 
 /* Floorplan END */
 /* Equipment */
+.equipment-backend-wrapper{
+  position: absolute;
+  background-color: #ffffff;
+  overflow:hidden;
+  height:243px;
+  width:461px;
+  top:10px;
+  left:25px;
+}
+#slider-wrap3{
+  height:360px;
+  width:510px;
+}
+.equipment-backend-cut{
+  height:369px;
+}
+.video-equipment-2 {
+  position: absolute;
+  top: -193px;
+  left: 0px;
+  width: 461px;
+  height: 657px;
+}
 
 /* Equipment END */
 /* Control */
@@ -749,6 +833,7 @@ input[type="submit"] {
     height:371px;
     top:0px;
     left:20px;
+    overflow:hidden;
   }
   .video{
     top:-114px;
@@ -786,15 +871,34 @@ input[type="submit"] {
   }
   /* Floorplan END */
   /* Equipment */
-  .video-equipment{
-    top: 20px;
+  .video-equipment-1{
+    top: -36px;
     left: -3px;
     width: 178px;
     height: 387px;
   }
   /* Equipment END */
   /* Control */
-
+  .control-slider-wrapper-1 {
+    height: 330px;
+    width: 186px;
+    top: 46px;
+    left: 71px;
+  }
+  .sony-control-first{
+    width:210px;
+  }
+  #control-slider-wrap {
+    height: 329px;
+    width: 186px;
+  }
+  .slider-control{
+    width: 556px;
+    left:-185px;
+    top:0px;
+    animation: slider-control-sm 10s infinite;
+    -webkit-animation: slider-control-sm 10s infinite;
+  }
   /* Control END */
   /* Section 2 */
   /* Hours */
@@ -843,48 +947,72 @@ input[type="submit"] {
   /* Floorplan END */
   /* Equipment */
   .equipment-slider-wrapper{
-  height: 268px;
-  width: 185px;
-  top:83px;
-  left:62px;
-}
-.htc-equipment-second{
-  width:210px;
-}
-.htc-equipment-second-bar {
-  width: 372px;
-  height: 30px;
-  left:0px;
-  animation: slider-equipment-bar-sm 10s infinite linear;
-  -webkit-animation: slider-equipment-bar-sm 10s infinite linear;
-}
-.slider-equipment{
-  width: 371px;
-  top: -64px;
-  left:0px;
-  animation: slider-equipment-sm 10s infinite linear;
-  -webkit-animation: slider-equipment-sm 10s infinite linear;
-}
+    height: 268px;
+    width: 185px;
+    top:83px;
+    left:62px;
+  }
+  .htc-equipment-second{
+    width:210px;
+  }
+  .htc-equipment-second-bar {
+    width: 372px;
+    height: 30px;
+    left:0px;
+    animation: slider-equipment-bar-sm 10s infinite linear;
+    -webkit-animation: slider-equipment-bar-sm 10s infinite linear;
+  }
+  .slider-equipment{
+    width: 371px;
+    top: -64px;
+    left:0px;
+    animation: slider-equipment-sm 10s infinite linear;
+    -webkit-animation: slider-equipment-sm 10s infinite linear;
+  }
   /* Equipment END */
   /* Control */
-
-  /* Control END */
-  /* Section 3 */
-  /* Hours */
-  .left.third{
-    padding-top:20px;
+  .control-slider-wrapper-2 {
+    height: 321px;
+    width: 181px;
+    top: 45px;
+    left: 66px;
   }
-  .right.third.image{
-    width: 320px;
-    padding-left:50px;
+  .iphone-control-second-2{
+    width:210px;
   }
-  .hours-backend-wrapper{
-   height:129px;
-   width:198px;
-   top:7px;
-   left:93px;
- }
- #slider-wrap2{
+  .iphone-control-second-bar-2 {
+    height: 46px;
+    top: 159px;
+    left: -9px;
+  animation: slider-control-bar-sm 10s infinite linear;
+  -webkit-animation: slider-control-bar-sm 10s infinite linear;
+}
+#control-slider-wrap-2 {
+  height: 319px;
+  width: 182px;
+}
+.slider-control-2 {
+  width: 182px;
+  top: -2px;
+  left: 0px;
+}
+/* Control END */
+/* Section 3 */
+/* Hours */
+.left.third{
+  padding-top:20px;
+}
+.right.third.image{
+  width: 320px;
+  padding-left:50px;
+}
+.hours-backend-wrapper{
+ height:129px;
+ width:198px;
+ top:7px;
+ left:93px;
+}
+#slider-wrap2{
   height:240px;
   width:211px;
 }
@@ -901,7 +1029,25 @@ input[type="submit"] {
 
 /* Floorplan END */
 /* Equipment */
-
+.video-equipment-2 {
+  top: 0px;
+  left: -3px;
+  width: 262px;
+  height: 164px;
+}
+.equipment-backend-wrapper {
+  height: 136px;
+  width: 259px;
+  top: 6px;
+  left: 56px;
+}
+#slider-wrap3{
+  height:360px;
+  width:260px;
+}
+.equipment-backend-cut{
+  height:207px;
+}
 /* Equipment END */
 /* Control */
 
@@ -1067,6 +1213,52 @@ input[type="email"] {
   25%{left:-187px;}
   97%{left:-187px;}
   100%{left:0px;}
+}
+@keyframes slider-control-sm {
+  0%{left: -185px;}
+  33%{left:-185px;}
+  35%{left:0px;}
+  70%{left:0px;}
+  73%{left:-370px;}
+  98%{left:-370px;}
+}
+@-webkit-keyframes slider-control-sm {
+  0%{left: -185px;}
+  33%{left:-185px;}
+  35%{left:0px;}
+  70%{left:0px;}
+  73%{left:-370px;}
+  98%{left:-370px;}
+}
+@-moz-keyframes slider-control-sm {
+  0%{left: -185px;}
+  33%{left:-185px;}
+  35%{left:0px;}
+  70%{left:0px;}
+  73%{left:-370px;}
+  98%{left:-370px;}
+}
+
+@keyframes slider-control-bar-sm {
+  0%{left:-9px;}
+  47%{left:-9px;}
+  53%{left:-199px;}
+  97%{left:-199px;}
+  100%{left:-9px;}
+}
+@-webkit-keyframes slider-control-bar-sm {
+  0%{left:-9px;}
+  47%{left:-9px;}
+  53%{left:-199px;}
+  97%{left:-199px;}
+  100%{left:-9px;}
+}
+@-moz-keyframes slider-control-bar-sm {
+  0%{left:-9px;}
+  47%{left:-9px;}
+  53%{left:-199px;}
+  97%{left:-199px;}
+  100%{left:-9px;}
 }
 }
 /* NAV COLLAPSE BREAKPOINT */
@@ -1340,6 +1532,53 @@ input[type="email"] {
   25%{left:-214px;}
   97%{left:-214px;}
   100%{left:0px;}
+}
+
+@keyframes slider-control {
+  0%{left: -229px;}
+  33%{left:-229px;}
+  35%{left:0px;}
+  70%{left:0px;}
+  73%{left:-460px;}
+  98%{left:-460px;}
+}
+@-webkit-keyframes slider-control {
+  0%{left: -229px;}
+  33%{left:-229px;}
+  35%{left:0px;}
+  70%{left:0px;}
+  73%{left:-460px;}
+  98%{left:-460px;}
+}
+@-moz-keyframes slider-control {
+  0%{left: -229px;}
+  33%{left:-229px;}
+  35%{left:0px;}
+  70%{left:0px;}
+  73%{left:-460px;}
+  98%{left:-460px;}
+}
+
+@keyframes slider-control-bar {
+  0%{left:-9px;}
+  47%{left:-9px;}
+  53%{left:-229px;}
+  97%{left:-229px;}
+  100%{left:-9px;}
+}
+@-webkit-keyframes slider-control-bar {
+  0%{left:-9px;}
+  47%{left:-9px;}
+  53%{left:-229px;}
+  97%{left:-229px;}
+  100%{left:-9px;}
+}
+@-moz-keyframes slider-control-bar {
+  0%{left:-9px;}
+  47%{left:-9px;}
+  53%{left:-229px;}
+  97%{left:-229px;}
+  100%{left:-9px;}
 }
 /****END****/
 
