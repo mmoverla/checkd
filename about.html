@@ -31,38 +31,7 @@
 
  <!-- JQuery -->
  <script src="js/jquery-1.10.2.js"></script>
- <script src="js/modernizr.js"></script>
-<script>
-    $(document).ready(function(){
-        if (Modernizr.touch) {
-            // show the close overlay button
-            $(".close-overlay").removeClass("hidden");
-            // handle the adding of hover class when clicked
-            $(".rounded-img-border").click(function(e){
-                if (!$(this).hasClass("hover")) {
-                    $(this).addClass("hover");
-                }
-            });
-            // handle the closing of the overlay
-            $(".close-overlay").click(function(e){
-                e.preventDefault();
-                e.stopPropagation();
-                if ($(this).closest(".rounded-img-border").hasClass("hover")) {
-                    $(this).closest(".rounded-img-border").removeClass("hover");
-                }
-            });
-        } else {
-            // handle the mouseenter functionality
-            $(".rounded-img-border").mouseenter(function(){
-                $(this).addClass("hover");
-            })
-            // handle the mouseleave functionality
-            .mouseleave(function(){
-                $(this).removeClass("hover");
-            });
-        }
-    });
-</script>
+ 
  
 
 	<!-- Google analytics -->
@@ -324,17 +293,24 @@
         </div>
        <div class="row" style="padding-bottom: 50px;">
          <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 text-center sf-animation">
-           <div class="rounded-img-border"><img src="http://placehold.it/150x150">
-           <div class="overlay">
-            <a href="#" class="expand">+</a>
-            <a class="close-overlay hidden">x</a>
-        </div>
-        </div>
+           <div class="rounded-img-border">
+           <div id="team-box-1">
+              <div id="overlay-team">
+              <span id="overlay-plus"> <a href="#"> <i class="fa fa-envelope"></i></a></span>
+              </div>
+          </div>
+           </div>
            <p class="name">Name Nameson</p>
            <p class="job-position">worker</p>
          </div>
          <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 text-center sf-animation">
-           <div class="rounded-img-border"><img src="http://placehold.it/150x150"></div>
+           <div class="rounded-img-border">
+              <div id="team-box-2">
+              <div id="overlay-team">
+              <span id="overlay-plus"> <a href="#"> <i class="fa fa-envelope"></i></a></span>
+              </div>
+          </div>
+           </div>
            <p class="name">Name Nameson</p>
            <p class="job-position">worker</p>
          </div>
@@ -374,6 +350,42 @@
 
 </section>
 <!-- CONTACT SECTION END -->
+<!-- PARALLAX 3 SECTION -->
+<section class="parallax-3">
+ <div class="overlayFilter">
+
+ </div>
+</section>
+<!-- PARALLAX 3 SECTION END -->
+<section class="media-section">
+  <div class="row">
+        <h1 class="section-heading">IN THE MEDIA</h1>
+        </div>
+</section>
+<!-- PARALLAX 4 SECTION -->
+<section class="parallax-4">
+ <div class="overlayFilter">
+
+ </div>
+</section>
+<!-- PARALLAX 4 SECTION END -->
+<section class="work-section">
+  <div class="row">
+        <h1 class="section-heading">HOW WE WORK</h1>
+        </div>
+</section>
+<!-- PARALLAX 5 SECTION -->
+<section class="parallax-5">
+ <div class="overlayFilter">
+
+ </div>
+</section>
+<!-- PARALLAX 5 SECTION END -->
+<section class="cred-section">
+  <div class="row">
+        <h1 class="section-heading">WHAT DO OTHERS SAY ABOUT CHECKD?</h1>
+        </div>
+</section>
 <!-- FOOTER -->
 <footer class="footer-section">
    <div class="container-fluid">
