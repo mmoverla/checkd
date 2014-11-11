@@ -216,7 +216,7 @@ hr.style-two {
   padding-right: 55px;
 }
 .left.text {
-  padding-left: 55px;
+  padding-left: 0px;
 }
 .left{
   float: left;
@@ -249,8 +249,8 @@ hr.style-two {
   padding-left:160px;
 }
 .right.second{
-  margin-top: 70px;
-  padding-right:287px;
+  margin-top: 120px;
+ /*  padding-right:287px; */
 }
 .left.third{
   padding-top:80px;
@@ -531,7 +531,7 @@ hr.style-two {
 .control-slider-wrapper-2 {
   position: absolute;
   background-color: #ffffff;
-  overflow-y: hidden;
+  overflow: hidden;
   height: 380px;
   width: 218px;
   top: 54px;
@@ -846,7 +846,7 @@ input[type="submit"] {
     max-height:420px;
   }
   .right.first {
-    padding-left: 60px;
+    padding-left: 50px;
   }
   /* Hours END */
   /* Floorplan */
@@ -883,7 +883,7 @@ input[type="submit"] {
     height: 330px;
     width: 186px;
     top: 46px;
-    left: 71px;
+    left: 62px;
   }
   .sony-control-first{
     width:210px;
@@ -1004,7 +1004,7 @@ input[type="submit"] {
 }
 .right.third.image{
   width: 320px;
-  padding-left:50px;
+  padding-left:20px;
 }
 .hours-backend-wrapper{
  height:129px;
@@ -1014,7 +1014,7 @@ input[type="submit"] {
 }
 #slider-wrap2{
   height:240px;
-  width:211px;
+  width:223px;
 }
 .backend-hours{
   width: 198px;
@@ -1039,7 +1039,7 @@ input[type="submit"] {
   height: 136px;
   width: 259px;
   top: 6px;
-  left: 56px;
+  left: 26px;
 }
 #slider-wrap3{
   height:360px;
@@ -1302,15 +1302,27 @@ input[type="email"] {
 *  Mobile Size    *
 *****************/
 @media screen and (max-width: 500px){
-  .right.first {
+ /*  .right.first {
     padding-left: 50px;
-  }
+  } */
   .right.third.image{
     padding-left:36px;
   }
   .hours-backend-wrapper{
-    left:52px;
+    left:64px;
   }
+  .right.first {
+padding-left: 50px;
+}
+  .right.first.fp{
+  padding-left: 25px !important;
+  }
+  .floorplan-slider-wrapper {
+left: 56px;
+}
+.equipment-backend-wrapper {
+left: 42px;
+}
   #play-icon-lp {
     height: 50px;
     width: 50px;
