@@ -1307,7 +1307,10 @@ input[type="email"] {
 *****************/
 @media screen and (max-width: 500px){
   .right.first {
-    padding-left: 50px;
+    padding-left: 60px;
+  }
+  .dropdown-size-sm{
+  left:-20px;
   }
   .right.third.image{
     padding-left:36px;
@@ -1323,6 +1326,10 @@ input[type="email"] {
     left: 0;
     right: 0;
   }
+  .footFAQ, .footSupport {
+float: right;
+padding-right: 5px;
+}
 }
 /* END */
 /*****************
