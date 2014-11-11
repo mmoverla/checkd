@@ -531,11 +531,7 @@ hr.style-two {
 .control-slider-wrapper-2 {
   position: absolute;
   background-color: #ffffff;
-<<<<<<< HEAD
   overflow: hidden;
-=======
-  overflow-y: hidden;
->>>>>>> eirikBranch
   height: 380px;
   width: 218px;
   top: 54px;
