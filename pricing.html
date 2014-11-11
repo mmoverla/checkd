@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="description" content="Checkd">
+ <meta name="author" content="">
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <link rel="shortcut icon" href="favicon.ico"/> 
+ <title>CHECKD</title>
+ <!-- Bootstrap core CSS and stylesheets -->
+ <!-- <link href="css/main.css" rel="stylesheet"> -->
+ <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+ <!-- <link href="css/ekko-lightbox.min.css" rel="stylesheet"> -->
+ <!-- FONTS -->
+ <link rel="stylesheet" href="css/css/font-awesome.min.css">
+ <link href='http://fonts.googleapis.com/css?family=Lato:100,300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css"  href="css/smart-pricing.css">
+ <!-- Scripts -->
+ <!-- JQuery -->
+ <script src="js/jquery-1.10.2.js"></script>
+ <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<!-- Google analytics -->
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-52741783-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+ <!-- Add custom CSS here -->
+ <style>.embed-container { position: relative; padding-bottom: 56.25%; padding-top: 35px height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
+  <style type="text/css">
+  input.error{ border:1px solid red;}
+  label.error{ display:none !important; }
+</style>
+ <style type="text/css">
+  input:required:invalid, input:focus:invalid {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAeVJREFUeNqkU01oE1EQ/mazSTdRmqSxLVSJVKU9RYoHD8WfHr16kh5EFA8eSy6hXrwUPBSKZ6E9V1CU4tGf0DZWDEQrGkhprRDbCvlpavan3ezu+LLSUnADLZnHwHvzmJlvvpkhZkY7IqFNaTuAfPhhP/8Uo87SGSaDsP27hgYM/lUpy6lHdqsAtM+BPfvqKp3ufYKwcgmWCug6oKmrrG3PoaqngWjdd/922hOBs5C/jJA6x7AiUt8VYVUAVQXXShfIqCYRMZO8/N1N+B8H1sOUwivpSUSVCJ2MAjtVwBAIdv+AQkHQqbOgc+fBvorjyQENDcch16/BtkQdAlC4E6jrYHGgGU18Io3gmhzJuwub6/fQJYNi/YBpCifhbDaAPXFvCBVxXbvfbNGFeN8DkjogWAd8DljV3KRutcEAeHMN/HXZ4p9bhncJHCyhNx52R0Kv/XNuQvYBnM+CP7xddXL5KaJw0TMAF8qjnMvegeK/SLHubhpKDKIrJDlvXoMX3y9xcSMZyBQ+tpyk5hzsa2Ns7LGdfWdbL6fZvHn92d7dgROH/730YBLtiZmEdGPkFnhX4kxmjVe2xgPfCtrRd6GHRtEh9zsL8xVe+pwSzj+OtwvletZZ/wLeKD71L+ZeHHWZ/gowABkp7AwwnEjFAAAAAElFTkSuQmCC);
+    background-position: right top ;
+    background-repeat: no-repeat;
+    -moz-box-shadow: none;
+  }
+  input:required:valid {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAepJREFUeNrEk79PFEEUx9/uDDd7v/AAQQnEQokmJCRGwc7/QeM/YGVxsZJQYI/EhCChICYmUJigNBSGzobQaI5SaYRw6imne0d2D/bYmZ3dGd+YQKEHYiyc5GUyb3Y+77vfeWNpreFfhvXfAWAAJtbKi7dff1rWK9vPHx3mThP2Iaipk5EzTg8Qmru38H7izmkFHAF4WH1R52654PR0Oamzj2dKxYt/Bbg1OPZuY3d9aU82VGem/5LtnJscLxWzfzRxaWNqWJP0XUadIbSzu5DuvUJpzq7sfYBKsP1GJeLB+PWpt8cCXm4+2+zLXx4guKiLXWA2Nc5ChOuacMEPv20FkT+dIawyenVi5VcAbcigWzXLeNiDRCdwId0LFm5IUMBIBgrp8wOEsFlfeCGm23/zoBZWn9a4C314A1nCoM1OAVccuGyCkPs/P+pIdVIOkG9pIh6YlyqCrwhRKD3GygK9PUBImIQQxRi4b2O+JcCLg8+e8NZiLVEygwCrWpYF0jQJziYU/ho2TUuCPTn8hHcQNuZy1/94sAMOzQHDeqaij7Cd8Dt8CatGhX3iWxgtFW/m29pnUjR7TSQcRCIAVW1FSr6KAVYdi+5Pj8yunviYHq7f72po3Y9dbi7CxzDO1+duzCXH9cEPAQYAhJELY/AqBtwAAAAASUVORK5CYII=);
+    background-position: right top ;
+    background-repeat: no-repeat;
+  }
+</style>
+
+
+
+
+</head>
+<!--<body onload="changeText()">-->
+
+<body onload="startQ();startQ2();">
+
+<!-- NAV SECTION -->
+<nav class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a  class="navbar-toggle"  href="http://admin.checkdd.com/admin/">
+        LOGIN
+      </a>
+      
+      <a class="navbar-brand" href="index.html"><img src="images/frontpage/new/elements/logo.png"></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+      	<ul class="nav navbar-nav navbar-right">
+        	<li ><a  href="http://admin.checkdd.com/admin/" class="login-nav" >LOGIN</a></li>
+        	<li ><a  href="english/index-en.html" class="login-nav" >ENG</a></li>
+        	<!-- <li><a class="flags-nav" href="index.html"><img src="images/Norway.png" alt="English webpage"></a></li> -->
+       	</ul>
+
+        <form method="post" name="form" id="form" class="navbar-form navbar-right" action="registration_process.php">
+       <input type="text" id="email" name="email" placeholder="E-mail here" style="input" tabindex="3" class="form-control">
+       <input type="hidden" name="task" value="registrationNew" />
+        <button class="btn btn-nav-green" type="submit" name="Submit">Registerer deg nå!</button>
+       </form>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<!-- NAV SECTION END -->
+  <!-- FRONT PAGE SECTION -->
+
+ <div class="container">
+ <div class="row">
+ <div class="privacy">
+<br>
+<br>
+<section>
+
+  <div class="row">
+    <h1 class="header-text">Priser</h1>
+
+   </div> 
+    <hr>
+   <br>
+   <div class="container" >
+  <div class="smart-grids">
+    
+        <div class="smart-wrapper" id="hei" >
+            <div class="smart-pricing">
+                <div class="pricing-tables elegant-style comparison-table six-colm">
+                    <div class="colm">
+                        <div class="colm-list features-list">
+                            <div class="pricing-header">
+                                <h2><span>Pakker</span>Sammenligne pakker</h2>
+                            </div><!-- end .pricing-header section -->
+                            <ul>
+                                <li data-feature="Storage Space">Brukere
+                                <span class="sptip">
+                                      <i class="fa fa-question-circle"></i>
+                                      <span class="sptip-content">Antall personer i bedriften som kan bruke Checkd</span>                                    
+                                    </span> 
+                                    </li>                               
+                                <li data-feature="Email Accounts">Aktive prosjekter
+                                 <span class="sptip">
+                                      <i class="fa fa-question-circle"></i>
+                                      <span class="sptip-content">Antall samtidige prosjekter du kan bruke Checkd til</span>                                    
+                                    </span> 
+                                    </li>
+                                <li data-feature="Monthly Bandwidth">Plantegninger
+                                 <span class="sptip">
+                                      <i class="fa fa-question-circle"></i>
+                                      <span class="sptip-content">Antall plantegninger du har tilgjengelig for prosjekter du jobber med</span>                                    
+                                    </span> 
+                                    </li>
+                                <li data-feature="Control Panel">Rapporter
+                                 <span class="sptip">
+                                      <i class="fa fa-question-circle"></i>
+                                      <span class="sptip-content">Skriv rapporter for å holde styr på dine prosjekter</span>                                    
+                                    </span> 
+                                    </li>
+                                <li data-feature="Multi-user">Flerbruker-login
+                                 <span class="sptip">
+                                      <i class="fa fa-question-circle"></i>
+                                      <span class="sptip-content">Logg inn fra flere plattformer samtidig</span>                                    
+                                    </span> 
+                                    </li>
+
+                                    <li data-feature="Sub-contractor admin">Underentreprenør
+                                    <span class="sptip">
+                                      <i class="fa fa-question-circle"></i>
+                                      <span class="sptip-content">Kommuniser med underentreprenører gjennom Checkd</span>                                    
+                                    </span> 
+                                    </li>
+                                  
+                            </ul>                                              
+                        </div><!-- end .colm-list section -->
+                    </div><!-- end .colm section -->
+                    <div class="colm">
+                        <div class="colm-list">
+                            <div class="pricing-header header-colored">
+                                <h1 class="orange-lite">Start</h1>
+                                <h2 class="orange-dark"><span>599,-</span>per mnd</h2>
+                            </div><!-- end .pricing-header section -->
+                            <ul>
+                                <li data-feature="Storage Space">5</li>
+                                <li data-feature="Email Accounts">1</li>
+                                <li data-feature="Monthly Bandwidth">10</li>
+                                <li data-feature="Control Panel">100</li>
+                                <li data-feature="Multi-user"><i class="fa fa-minus"></i></li>
+                                <li data-feature="Sub-contractor admin"><i class="fa fa-minus"></i></li>
+                               
+                            </ul> 
+
+                            <div class="pricing-footer">
+                                <button type="button" class="pricing-button orange-btn"> Sign up </button>
+                            </div><!-- end .pricing-footer section -->                                                                    
+                        </div><!-- end .colm-list section -->                
+                    </div><!-- end .colm section -->
+                    <div class="colm">
+                        <div class="colm-list">
+                            <div class="pricing-header header-colored">
+                                <h1 class="green-lite">Kontroll</h1>
+                                <h2 class="green-dark"><span>1899,-</span>per mnd</h2>                                 
+                            </div><!-- end .pricing-header section -->
+                            <ul>
+                                <li data-feature="Storage Space">10</li>
+                                <li data-feature="Email Accounts">5</li>
+                                <li data-feature="Monthly Bandwidth">100</li>
+                                <li data-feature="Control Panel">250</li>
+                                <li data-feature="Multi-user"><i class="fa fa-check"></i></li>
+                                <li data-feature="Sub-contractor admin"><i class="fa fa-minus"></i></li>
+                               
+                            </ul>
+                            <div class="pricing-footer">
+                                <button type="button" class="pricing-button green-btn"> Sign up </button>
+                            </div><!-- end .pricing-footer section -->                                 
+                        </div><!-- end .colm-list section -->                
+                    </div><!-- end .colm section -->
+                    <div class="colm">
+                        <div class="colm-list">
+                            <div class="pricing-header header-colored">
+                                <h1 class="blue-lite">Bra kontroll</h1>
+                                <h2 class="blue-dark"><span>3899,-</span>per mnd</h2>
+                            </div><!-- end .pricing-header section -->
+                            <ul>
+                                <li data-feature="Storage Space">25</li>
+                                <li data-feature="Email Accounts">20</li>
+                                <li data-feature="Monthly Bandwidth">250</li>
+                                <li data-feature="Control Panel">500</li>
+                                <li data-feature="Multi-user"><i class="fa fa-check"></i></li>
+                                <li data-feature="Sub-contractor admin"><i class="fa fa-check"></i></li>
+                                
+                            </ul>
+                            <div class="pricing-footer">
+                                <a href="#" class="pricing-button blue-btn">Sign up</a>
+                            </div><!-- end .pricing-footer section -->                                 
+                        </div><!-- end .colm-list section -->                
+                    </div><!-- end .colm section -->
+                    <div class="colm">
+                        <div class="colm-list featured-package">
+                            <div class="pricing-header header-colored">
+                                <h1 class="grey-lite">Full kontroll</h1>
+                                <h2 class="grey-dark"><span>8999,-</span>per mnd</h2>
+                                <div class="ribbon-large"> 
+                                  <div class="ribbon-inner ribbon-inner-yellow">VALUE</div> 
+                                </div><!-- end .ribbon-large section -->
+                            </div><!-- end .pricing-header section -->
+                            
+                            <ul>
+                                <li data-feature="Storage Space">50</li>
+                                <li data-feature="Email Accounts">200</li>
+                                <li data-feature="Monthly Bandwidth">2500</li>
+                                <li data-feature="Control Panel">10 000</li>
+                                <li data-feature="Multi-user"><i class="fa fa-check"></i></li>
+                                <li data-feature="Sub-contractor admin"><i class="fa fa-check"></i></li>
+                               
+                            </ul>
+                            <div class="pricing-footer">
+                                <a href="#" class="pricing-button grey-btn">Sign up</a>
+                            </div><!-- end .pricing-footer section -->                                 
+                        </div><!-- end .colm-list section -->                
+                    </div><!-- end .colm section -->
+                    <div class="colm">
+                        <div class="colm-list">
+                            <div class="pricing-header header-colored">
+                                <h1 class="red-lite">Enterprise</h1>
+                                <h2 class="red-dark"><span>Pris</span>per forespørsel</h2>
+                            </div><!-- end .pricing-header section -->
+                            <ul>
+                                <li data-feature="Storage Space">50</li>
+                                <li data-feature="Email Accounts">200</li>
+                                <li data-feature="Monthly Bandwidth">2500</li>
+                                <li data-feature="Control Panel">10 000</li>
+                                <li data-feature="Multi-user"><i class="fa fa-check"></i></li>
+                                <li data-feature="Sub-contractor admin"><i class="fa fa-check"></i></li>
+                                
+                            </ul>
+
+                            <div class="pricing-footer">
+                                <a href="#" class="pricing-button red-btn">Kontakt oss</a>
+                            </div><!-- end .pricing-footer section -->                                 
+                        </div><!-- end .colm-list section -->                
+                    </div><!-- end .colm section -->
+                </div><!-- end .pricing-tables section -->
+            </div><!-- end .smart-pricing section -->
+        </div><!-- end .smart-wrapper section -->
+</div> <!-- END CONTAINER -->
+<div class="row">
+<div class="svg-wrapper">
+  <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
+    <rect class="shape" height="60" width="320" />
+  </svg>
+<div class="text">
+<button  onclick ="myFunction()"><center>Se full prisliste</center></button>
+</div>
+</div>
+  
+
+   </div> 
+
+   <div class="container" >
+  <div class="smart-grids">
+    
+        <div class="smart-wrapper" id="hei2" style="display:none">
+            <div class="smart-pricing">
+                <div class="pricing-tables elegant-style comparison-table six-colm">
+                    <div class="colm">
+                        <div class="colm-list features-list">
+                            <ul>
+                                <li data-feature="Databases"><strong>Support</strong>
+                                
+                                    </li>
+                                 <li data-feature="E-mail">E-post
+                                <span class="sptip">
+                                      <i class="fa fa-question-circle"></i>
+                                      <span class="sptip-content">Svar på spørsmål per e-post</span>                                    
+                                    </span> 
+                                    </li>                               
+                                <li data-feature="Chat">Chat
+                                 <span class="sptip">
+                                      <i class="fa fa-question-circle"></i>
+                                      <span class="sptip-content">Svar på chat på nettsiden</span>                                    
+                                    </span> 
+                                    </li>
+                                <li data-feature="Telefon">Telefon
+                                 <span class="sptip">
+                                      <i class="fa fa-question-circle"></i>
+                                      <span class="sptip-content">Svar på spørsmål per telefon</span>                                    
+                                    </span> 
+                                    </li>
+                                <li data-feature="Support tickets">Support tickets
+                                 <span class="sptip">
+                                      <i class="fa fa-question-circle"></i>
+                                      <span class="sptip-content">Hvor mange ganger du kan kontakte oss for spørsmål</span>                                    
+                                    </span> 
+                                    </li>
+                                <li data-feature="2nd line support">2nd line support
+                                 <span class="sptip">
+                                      <i class="fa fa-question-circle"></i>
+                                      <span class="sptip-content">Teknisk hjelp som fikser 99% av dine problemer</span>                                    
+                                    </span> 
+                                    </li>
+
+                                    <li data-feature="Priority support">Prioritets support
+                                    <span class="sptip">
+                                      <i class="fa fa-question-circle"></i>
+                                      <span class="sptip-content">Vi prioriterer deg når du kommer til oss for spørsmål</span>                                    
+                                    </span> 
+                                    </li>
+                                    <li data-feature="24/7 support">24/7 support
+                                 <span class="sptip">
+                                      <i class="fa fa-question-circle"></i>
+                                      <span class="sptip-content">Kontakt oss døgnet rundt</span>                                    
+                                    </span> 
+                                    </li>
+                                <li data-feature="Incident tickets">Ulykkes billetter
+                                 <span class="sptip">
+                                      <i class="fa fa-question-circle"></i>
+                                      <span class="sptip-content">Har det skjedd en skade kommer vi og hjelper til med problemet</span>                                    
+                                    </span> 
+                                    </li>
+
+                                    <li data-feature="Response time">Responstid
+                                    <span class="sptip">
+                                      <i class="fa fa-question-circle"></i>
+                                      <span class="sptip-content">Hvor lang tid det vil ta før vi er på saken</span>                                    
+                                    </span> 
+                                    </li>
+                                    <li data-feature="Developer support">Utvikler support
+                                    <span class="sptip">
+                                      <i class="fa fa-question-circle"></i>
+                                      <span class="sptip-content">Den mest tekniske formen for hjelp. Problemet ditt løses direkte av våre utviklere</span>                                    
+                                    </span> 
+                                    </li>
+                                    <li data-feature="Set-up help">Oppsett-help
+                                    <span class="sptip">
+                                      <i class="fa fa-question-circle"></i>
+                                      <span class="sptip-content">Hjelp til å sette opp Checkd</span>                                    
+                                    </span> 
+                                    </li>
+                                    <li data-feature="Checkd validation">Sjekk-validasjon
+                                    <span class="sptip">
+                                      <i class="fa fa-question-circle"></i>
+                                      <span class="sptip-content">This is the tooltip content which will be displayed</span>                                    
+                                    </span> 
+                                    </li>
+                                    <li data-feature="Guidence">Practice guidence
+                                    <span class="sptip">
+                                      <i class="fa fa-question-circle"></i>
+                                      <span class="sptip-content">Vi går igjennom hvordan du har brukt Checkd og tipser om mulige forbedringer</span>                                    
+                                    </span> 
+                                    </li>
+                                    <li data-feature="Monthly review">Mnd gjennomgang
+                                    <span class="sptip">
+                                      <i class="fa fa-question-circle"></i>
+                                      <span class="sptip-content">Hver måned vil en representant fra Checkd gå igjennom din bruk og vise til viktig statistikk</span>                                    
+                                    </span> 
+                                    </li>
+                                    <li data-feature="On-site user traning">On-site user traning
+                                    <span class="sptip">
+                                      <i class="fa fa-question-circle"></i>
+                                      <span class="sptip-content">Vi kommer til din bedrift for å hjelpe deg å komme igang med Checkd-pakken</span>                                    
+                                    </span> 
+                                    </li>
+                            </ul>                                              
+                        </div><!-- end .colm-list section -->
+                    </div><!-- end .colm section -->
+                    <div class="colm">
+                        <div class="colm-list">
+                            
+                            <ul>
+                                
+                                <li data-feature="Databases"><strong>Bronse</strong></li>
+                                <li data-feature="Sub-contractor admin"><i class="fa fa-check"></i></li>
+                                <li data-feature="Sub-contractor admin"><i class="fa fa-check"></i></li>
+                                <li data-feature="Sub-contractor admin"><i class="fa fa-minus"></i></li>
+                                <li data-feature="Sub-contractor admin">Uendelig</li>
+                                <li data-feature="Sub-contractor admin"><i class="fa fa-minus"></i></li>
+                                <li data-feature="Sub-contractor admin"><i class="fa fa-minus"></i></li>
+                                <li data-feature="Sub-contractor admin"><i class="fa fa-minus"></i></li>
+                                <li data-feature="Sub-contractor admin"><i class="fa fa-minus"></i></li>
+                                <li data-feature="Sub-contractor admin"><i class="fa fa-minus"></i></li>
+                                <li data-feature="Sub-contractor admin"><i class="fa fa-minus"></i></li>
+                                <li data-feature="Sub-contractor admin"><i class="fa fa-minus"></i></li>
+                                <li data-feature="Sub-contractor admin"><i class="fa fa-minus"></i></li>
+                                <li data-feature="Sub-contractor admin"><i class="fa fa-minus"></i></li>
+                                <li data-feature="Sub-contractor admin"><i class="fa fa-minus"></i></li>
+                                <li data-feature="Sub-contractor admin"><i class="fa fa-minus"></i></li>
+                            </ul> 
+
+                            <div class="pricing-footer">
+                                <button type="button" class="pricing-button orange-btn"> Sign up </button>
+                            </div><!-- end .pricing-footer section -->                                                                    
+                        </div><!-- end .colm-list section -->                
+                    </div><!-- end .colm section -->
+                    <div class="colm">
+                        <div class="colm-list">
+                        
+                            <ul>
+                           
+                                <li data-feature="Databases"><strong>Bronse</strong></li>
+                                <li data-feature="Sub-contractor admin"><i class="fa fa-check"></i></li>
+                                <li data-feature="Sub-contractor admin"><i class="fa fa-check"></i></li>
+                                <li data-feature="Sub-contractor admin"><i class="fa fa-minus"></i></li>
+                                <li data-feature="Sub-contractor admin">Uendelig</li>
+                                <li data-feature="Sub-contractor admin"><i class="fa fa-minus"></i></li>
+                                <li data-feature="Sub-contractor admin"><i class="fa fa-minus"></i></li>
+                                <li data-feature="Sub-contractor admin"><i class="fa fa-minus"></i></li>
+                                <li data-feature="Sub-contractor admin"><i class="fa fa-minus"></i></li>
+                                <li data-feature="Sub-contractor admin"><i class="fa fa-minus"></i></li>
+                                <li data-feature="Sub-contractor admin"><i class="fa fa-minus"></i></li>
+                                <li data-feature="Sub-contractor admin"><i class="fa fa-minus"></i></li>
+                                <li data-feature="Sub-contractor admin"><i class="fa fa-minus"></i></li>
+                                <li data-feature="Sub-contractor admin"><i class="fa fa-minus"></i></li>
+                                <li data-feature="Sub-contractor admin"><i class="fa fa-minus"></i></li>
+                                <li data-feature="Sub-contractor admin"><i class="fa fa-minus"></i></li>
+                            </ul>
+                            <div class="pricing-footer">
+                                <button type="button" class="pricing-button green-btn"> Sign up </button>
+                            </div><!-- end .pricing-footer section -->                                 
+                        </div><!-- end .colm-list section -->                
+                    </div><!-- end .colm section -->
+                    <div class="colm">
+                        <div class="colm-list">
+                           
+                            <ul>
+                            
+                                <li data-feature="Databases"><strong>Bronse</strong></li>
+                                <li data-feature="Sub-contractor admin"><i class="fa fa-check"></i></li>
+                                <li data-feature="Sub-contractor admin"><i class="fa fa-check"></i></li>
+                                <li data-feature="Sub-contractor admin"><i class="fa fa-minus"></i></li>
+                                <li data-feature="Sub-contractor admin">Uendelig</li>
+                                <li data-feature="Sub-contractor admin"><i class="fa fa-minus"></i></li>
+                                <li data-feature="Sub-contractor admin"><i class="fa fa-minus"></i></li>
+                                <li data-feature="Sub-contractor admin"><i class="fa fa-minus"></i></li>
+                                <li data-feature="Sub-contractor admin"><i class="fa fa-minus"></i></li>
+                                <li data-feature="Sub-contractor admin"><i class="fa fa-minus"></i></li>
+                                <li data-feature="Sub-contractor admin"><i class="fa fa-minus"></i></li>
+                                <li data-feature="Sub-contractor admin"><i class="fa fa-minus"></i></li>
+                                <li data-feature="Sub-contractor admin"><i class="fa fa-minus"></i></li>
+                                <li data-feature="Sub-contractor admin"><i class="fa fa-minus"></i></li>
+                                <li data-feature="Sub-contractor admin"><i class="fa fa-minus"></i></li>
+                                <li data-feature="Sub-contractor admin"><i class="fa fa-minus"></i></li>
+                            </ul>
+                            <div class="pricing-footer">
+                                <a href="#" class="pricing-button blue-btn">Sign up</a>
+                            </div><!-- end .pricing-footer section -->                                 
+                        </div><!-- end .colm-list section -->                
+                    </div><!-- end .colm section -->
+                    <div class="colm">
+                        <div class="colm-list featured-package">
+                           
+                            
+                            <ul>
+                             
+                                <li data-feature="Databases"><strong>Sølv</strong></li>
+                                <li data-feature="Sub-contractor admin"><i class="fa fa-check"></i></li>
+                                <li data-feature="Sub-contractor admin"><i class="fa fa-check"></i></li>
+                                <li data-feature="Sub-contractor admin"><i class="fa fa-check"></i></li>
+                                <li data-feature="Sub-contractor admin">Uendelig</li>
+                                <li data-feature="Sub-contractor admin">Alltid</li>
+                                <li data-feature="Sub-contractor admin">8t SLA</li>
+                                <li data-feature="Sub-contractor admin"><i class="fa fa-minus"></i></li>
+                                <li data-feature="Sub-contractor admin"><i class="fa fa-minus"></i></li>
+                                <li data-feature="Sub-contractor admin"><i class="fa fa-minus"></i></li>
+                                <li data-feature="Sub-contractor admin"><i class="fa fa-minus"></i></li>
+                                <li data-feature="Sub-contractor admin">1t</li>
+                                <li data-feature="Sub-contractor admin">50</li>
+                                <li data-feature="Sub-contractor admin"><i class="fa fa-check"></i></li>
+                                <li data-feature="Sub-contractor admin"><i class="fa fa-minus"></i></li>
+                                <li data-feature="Sub-contractor admin"><i class="fa fa-minus"></i></li>
+                            </ul>
+                            <div class="pricing-footer">
+                                <a href="#" class="pricing-button grey-btn">Sign up</a>
+                            </div><!-- end .pricing-footer section -->                                 
+                        </div><!-- end .colm-list section -->                
+                    </div><!-- end .colm section -->
+                    <div class="colm">
+                        <div class="colm-list">
+                  
+                            <ul>
+                        
+                                <li data-feature="Databases"><strong>Gull|Platinum</strong></li>
+                                <li data-feature="Sub-contractor admin"><i class="fa fa-check"></i></li>
+                                <li data-feature="Sub-contractor admin"><i class="fa fa-check"></i></li>
+                                <li data-feature="Sub-contractor admin"><i class="fa fa-check"></i></li>
+                                <li data-feature="Sub-contractor admin">Uendelig</li>
+                                <li data-feature="Sub-contractor admin">Alltid</li>
+                                <li data-feature="Sub-contractor admin">4t SLA</li>
+                                <li data-feature="Sub-contractor admin"><i class="fa fa-check"></i></li>
+                                <li data-feature="Sub-contractor admin">2/mnd   |   5/mnd</li>
+                                <li data-feature="Sub-contractor admin">4t   |   1t</li>
+                                <li data-feature="Sub-contractor admin"><i class="fa fa-check"></i></li>
+                                <li data-feature="Sub-contractor admin">4t   |   8t</li>
+                                <li data-feature="Sub-contractor admin">200   |   500</li>
+                                <li data-feature="Sub-contractor admin"><i class="fa fa-check"></i></li>
+                                <li data-feature="Sub-contractor admin">Kun platinum support</li>
+                                <li data-feature="Sub-contractor admin"><i class="fa fa-check"></i></li>
+                            </ul>
+
+                            <div class="pricing-footer">
+                                <a href="#" class="pricing-button red-btn">Kontakt oss</a>
+                            </div><!-- end .pricing-footer section -->                                 
+                        </div><!-- end .colm-list section -->                
+                    </div><!-- end .colm section -->
+                </div><!-- end .pricing-tables section -->
+            </div><!-- end .smart-pricing section -->
+        </div><!-- end .smart-wrapper section -->
+    </div>
+  </div>
+</div> <!-- END CONTAINER -->
+ </div>
+ </div>
+
+ </div>
+ <!-- PRICING SECTION -->
+<br>
+<!-- END PRICING SECTION -->
+<!-- FOOTER -->
+<footer>
+  
+      <div class="faq-link"><a href="support.html">Kundestøtte</a>
+      -
+      <a href="faq.html">FAQ</a></div>
+      -
+      <a href="//www.iubenda.com/privacy-policy/907388" class="iubenda-white iubenda-embed" title="Privacy Policy">Privacy Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src = "//cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
+    </div>
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+ <script src="js/smooth-scroll.js"></script>
+ <script type="text/javascript" src="js/jquery.validate.js"></script>
+
+<!-- noConflict -->
+<script type="text/javascript" charset="utf-8">
+  var $ = jQuery.noConflict();
+  $(document).ready(function() {
+    //$("#form").validationEngine();
+    $("#form").validate();
+    $("#form1").validate();
+  } );
+</script>
+
+<!-- DEFER JAVASCRIPT -->
+<script type="text/javascript">
+  function downloadJSAtOnload() {
+    var element = document.createElement("script");
+    element.src = "deferredfunctions.js";
+    document.body.appendChild(element);
+  }
+  if (window.addEventListener)
+    window.addEventListener("load", downloadJSAtOnload, false);
+  else if (window.attachEvent)
+    window.attachEvent("onload", downloadJSAtOnload);
+  else window.onload = downloadJSAtOnload;
+</script>
+
+<!-- Modal youtube -->
+<script type="text/javascript">
+  $(document).ready(function ($) {
+
+                // delegate calls to data-toggle="lightbox"
+                $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
+                  event.preventDefault();
+                  return $(this).ekkoLightbox({
+                    onShown: function() {
+                      if (window.console) {
+                        return console.log('Code is checkd? Contact us @ post@checkd.it');
+                      }
+                    }
+                  });
+                });
+
+
+                $('#open-youtube').click(function (e) {
+                  e.preventDefault();
+                  $(this).ekkoLightbox();
+                });
+              });
+</script>
+
+
+
+<!-- Navbar on scroll -->
+<script type="text/javascript">
+  $(document).ready(function($) {
+
+    
+      $( ".navbar-default" ).fadeIn();
+        
+  
+});
+</script>
+
+<!-- Mouse transistion -->
+<script type="text/javascript">
+  setTimeout(function () {
+  $('.mouse').removeClass('hidden');
+}, 0);
+setTimeout(function () {
+  $('.mouse').addClass('play');
+}, 2000);
+</script>
+
+<!-- Smooth scroll -->
+<script>
+    smoothScroll.init();
+</script>
+<script type="text/javascript">
+  function myFunction() {
+    document.getElementById("hei2").style.display = "inline";
+}
+</script>
+
+<!-- JavaScript -->
+
+<script src="js/bootstrap.min.js"></script>
+<script src="js/ekko-lightbox.min.js"></script>
+<script type="text/javascript" src="js/retina.js"></script>
+
+  
+</body>
+</html>
