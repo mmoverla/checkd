@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="icon" type="image/ico" href="favicon.ico"/>
+  <link rel="shortcut icon" href="favicon.ico"/> 
+  <link rel="icon" type="image/x-icon"
+  href="favicon.ico"/>
+  <title>CHECKD</title>
+  <!-- Bootstrap core CSS -->
+  <!--     <link href="css/bootstrap_2.css" rel="stylesheet"> -->
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/subpages.css"> <!-- LAGT TIL NY -->
+  <link rel="stylesheet" href="css/css/font-awesome.min.css">
+  <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Roboto:100' rel='stylesheet' type='text/css'>
+  <style type="text/css">
+
+ /* input:required:invalid, input:focus:invalid {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAeVJREFUeNqkU01oE1EQ/mazSTdRmqSxLVSJVKU9RYoHD8WfHr16kh5EFA8eSy6hXrwUPBSKZ6E9V1CU4tGf0DZWDEQrGkhprRDbCvlpavan3ezu+LLSUnADLZnHwHvzmJlvvpkhZkY7IqFNaTuAfPhhP/8Uo87SGSaDsP27hgYM/lUpy6lHdqsAtM+BPfvqKp3ufYKwcgmWCug6oKmrrG3PoaqngWjdd/922hOBs5C/jJA6x7AiUt8VYVUAVQXXShfIqCYRMZO8/N1N+B8H1sOUwivpSUSVCJ2MAjtVwBAIdv+AQkHQqbOgc+fBvorjyQENDcch16/BtkQdAlC4E6jrYHGgGU18Io3gmhzJuwub6/fQJYNi/YBpCifhbDaAPXFvCBVxXbvfbNGFeN8DkjogWAd8DljV3KRutcEAeHMN/HXZ4p9bhncJHCyhNx52R0Kv/XNuQvYBnM+CP7xddXL5KaJw0TMAF8qjnMvegeK/SLHubhpKDKIrJDlvXoMX3y9xcSMZyBQ+tpyk5hzsa2Ns7LGdfWdbL6fZvHn92d7dgROH/730YBLtiZmEdGPkFnhX4kxmjVe2xgPfCtrRd6GHRtEh9zsL8xVe+pwSzj+OtwvletZZ/wLeKD71L+ZeHHWZ/gowABkp7AwwnEjFAAAAAElFTkSuQmCC);
+    background-position: right top ;
+    background-repeat: no-repeat;
+    -moz-box-shadow: none;
+  }*/
+  input:required:valid {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAepJREFUeNrEk79PFEEUx9/uDDd7v/AAQQnEQokmJCRGwc7/QeM/YGVxsZJQYI/EhCChICYmUJigNBSGzobQaI5SaYRw6imne0d2D/bYmZ3dGd+YQKEHYiyc5GUyb3Y+77vfeWNpreFfhvXfAWAAJtbKi7dff1rWK9vPHx3mThP2Iaipk5EzTg8Qmru38H7izmkFHAF4WH1R52654PR0Oamzj2dKxYt/Bbg1OPZuY3d9aU82VGem/5LtnJscLxWzfzRxaWNqWJP0XUadIbSzu5DuvUJpzq7sfYBKsP1GJeLB+PWpt8cCXm4+2+zLXx4guKiLXWA2Nc5ChOuacMEPv20FkT+dIawyenVi5VcAbcigWzXLeNiDRCdwId0LFm5IUMBIBgrp8wOEsFlfeCGm23/zoBZWn9a4C314A1nCoM1OAVccuGyCkPs/P+pIdVIOkG9pIh6YlyqCrwhRKD3GygK9PUBImIQQxRi4b2O+JcCLg8+e8NZiLVEygwCrWpYF0jQJziYU/ho2TUuCPTn8hHcQNuZy1/94sAMOzQHDeqaij7Cd8Dt8CatGhX3iWxgtFW/m29pnUjR7TSQcRCIAVW1FSr6KAVYdi+5Pj8yunviYHq7f72po3Y9dbi7CxzDO1+duzCXH9cEPAQYAhJELY/AqBtwAAAAASUVORK5CYII=);
+    background-position: right top ;
+    background-repeat: no-repeat;
+  }
+
+</style>
+</head>
+
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top navbar-hours" role="navigation" > <!-- style="display:block" -->
+    <div class="container-fluid">
+      <div class="navbar-header">
+
+        <a type="button" class="navbar-toggle hours collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar white"></span>
+          <span class="icon-bar white"></span>
+          <span class="icon-bar white"></span>
+        </a>
+
+        <a class="navbar-brand" href="index-beta-norsk.html"><img class="nav-lp-logo logo-size" src="images/frontpage/new/elements/checkd_logo_white.png"></a>
+        <!-- ******** LITEN ******** -->
+        <ul class="nav navbar-nav navbar-brand navbar-left  dropdown-sm-display">
+          <li class="dropdown dropdown-size-sm">
+
+            <div href="#" class="dropdown-button dropdown-toggle-sm dropdown-size" data-toggle="dropdown">
+              <img src="images/subpages/new/logo/Time_logo_strip.png"/><span class="caret caret-sm white"></span></div>
+              <ul class="dropdown-menu dropdown-remove-padding-sm" role="menu">
+
+                <li id="kontrollHead-sm"><a href="control.html"><img src="images/subpages/new/logo/Kontroll_logo_strip.png"/></a></li>
+                <li id="utstyrHead-sm"><a href="equipment.html"><img src="images/subpages/new/logo/Utstyr_logo_strip.png"/></a></li>
+                <li id="floorHead-sm"><a href="floorplan.html"><img src="images/subpages/new/logo/Floorplan_logo_strip.png"/></a></li>
+
+              </ul>
+            </li>
+          </ul>   
+          <!--  LITEN END -->
+        </div>
+
+        <div class="collapse navbar-collapse collapse-lp" id="bs-example-navbar-collapse-1">
+
+          <!-- ******** STOR ******** -->
+          <ul class="nav-lp navbar-nav navbar-left  dropdown-lg-display">
+            <li class="dropdown dropdown-size">
+
+              <div href="#" class="dropdown-button dropdown-size" data-toggle="dropdown">
+                <img class="nav-lp-logo" src="images/subpages/new/logo/NavHeaderTime.png"/><span class="caret move-caret white"></span></div>
+                <ul class="dropdown-menu dropdown-remove-padding nav-lp-dropdown" role="menu">
+
+                  <li id="kontrollHead"><a href="control.html"><img src="images/subpages/new/logo/NavHeaderKontroll.png"/></a></li>
+                  <li id="utstyrHead"><a href="equipment.html"><img src="images/subpages/new/logo/NavHeaderUtstyr.png"/></a></li>
+                  <li id="floorHead"><a href="floorplan.html"><img src="images/subpages/new/logo/NavHeaderFloorplan.png"/></a></li>
+
+                </ul>
+              </li>
+            </ul>
+            <!-- STOR END -->
+            
+            <ul class="nav navbar-nav navbar-right">
+              <li class="nav-buttons firstIcon nav-lp-btn"><a  href="http://admin.checkdd.com/admin/" class="btn navbar-btn btn-nav-border-hours" >Login</a></li>
+
+              <li class="nav-buttons secondIcon nav-lp-btn"><a href="english/index-en.html" class="btn btn-nav-border-hours navbar-btn"> Norsk</a></li>
+              
+            </ul>
+
+            <form method="post" name="form" id="form" class="navbar-form navbar-right" action="registration_process.php" style="display:block">
+             <input type="text" id="email" name="email" placeholder="E-mail her" style="input" tabindex="1" class="form-control navbar-btn thirdIcon nav-lp-btn" required>
+             <input type="hidden" name="task" value="registrationNew" />
+             <a class="btn navbar-btn btn-nav-border-hours fourthIcon nav-lp-btn" type="submit" name="Submit">Register</a>
+           </form>
+         </div><!-- /.navbar-collapse -->
+       </div><!-- /.container-fluid -->
+     </nav>
+     <!-- NAV SECTION END -->
+     <!-- VIDEO SECTION-->
+     <div class="video-section-wrap">
+      <div class="video-wrapper" id="wrap">
+        <div class="responsive-container">
+          <iframe id="playvid" src='http://player.vimeo.com/video/102225779?autoplay=0' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+        </div>
+      </div>
+      
+      <div class="video-overlay-image" id="overlay-image">
+        <img class="bilde img-responsive" src="images/subpages/new/hours.jpg">
+        <div class="bounce-r"id="play-icon-lp" onclick="spillAv()"> </div>
+      </div>   
+    </div>
+    <!-- VIDEO SECTION END -->
+    <!-- SHOWCASE SECTION -->
+    <section> 
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 intro middle">
+          <h2>What is Hours?</h2>
+          <div class="textBox">
+            CHECKD<sup>&reg;</sup> Hours lets you log your work hours effectivly and easily.
+          </div>
+          <div class="store-icon-container">
+            <a href="https://itunes.apple.com/no/app/checkd-hours/id919092948?mt=8"target="_blank" tabindex="5"><image class="store-icon" src="images/subpages/new/apple-badge.svg"></a>&nbsp;
+            <a href="https://play.google.com/store/apps/details?id=com.checkd.hours"target="_blank" tabindex="6"><image class="store-icon" src="images/subpages/new/android-badge.svg"></a>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+    <!-- FIRST Showcase -->
+    <section>
+      <div class="container">
+        <div class="row padded"><div class="col-md-12"><hr class="style-two"></div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 left first text">
+          <h2>
+            Timesheets:
+          </h2>
+          <div class="textBox">
+            Choose project based on GPS location or from a list.
+            Create task, and you are on your way!
+          </div>
+        </div>
+        <div class="col-md-6 right first image">
+         <div class="shell-wrap">
+          <div class="shell-container">
+            <video id="videoId" class="video" loop autoplay>
+              <source src="images/subpages/new/hours-login.webm" type="video/webm"/>
+              <source src="images/subpages/new/hours-login.mp4" type="video/mp4"/>
+              <img class="img-fallback" src="images/subpages/new/screenshot.png" title="Your browser does not support the <video> tag"/>
+            </video>
+          </div>
+          <img class="iphone-hours-second" src="images/subpages/new/Hours-anim-iphone-cut.png">
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <!-- Second Showcase -->
+  <div class="container">
+    <div class="row padded"><div class="col-md-12"><hr class="style-two"></div>
+  </div>
+  <div class="row">
+   <div class="col-md-6 right second text">
+    <h2>
+      Overview
+    </h2>
+    <div class="textBox">
+      See how many hours you worked per week and month. Simple list of time spent per task.
+    </div>
+  </div>
+  <div class="col-md-6 left second image">
+    <div class="hours-slider-wrapper">
+      <div id="slider-wrap">
+        <img class="slider-hours" src="images/subpages/new/Hours-anim-top-slider.jpg">
+      </div>
+    </div>
+    <img class="iphone-hours-first" src="images/subpages/new/Hours-anim-iphone-cut-half.png">
+  </div>
+</div>
+</div>
+<br>
+<!-- Third Showcase -->
+<div class="container">
+  <div class="row padded"><div class="col-md-12"><hr class="style-two"></div>
+</div>
+<div class="row">
+  <div class="col-md-6 left third text">
+    <h2>
+      Back-End
+    </h2>
+    <div class="textBox">
+      Detailed information of your worskspace. See where you spent an excessive amount of time so that you can streamline. 	
+    </div>
+  </div>
+  <div class="col-md-6 right third image">
+
+    <div class="hours-backend-wrapper">
+      <div id="slider-wrap2">
+        <img class="backend-hours" src="images/subpages/new/hours-backend.png">
+      </div>
+    </div>
+    <img class="hours-backend-cut" src="images/subpages/new/backend-cut.png">
+  </div>
+</div>
+</div>
+<br>
+</section ><!-- END SHOWCASE SECTION -->
+<!-- PRICE LIST SECTION-->
+<!-- <section>
+<div class="container">
+  <div class="row padded"><div class="col-md-12"><hr class="style-two"></div>
+  <div class="row">
+    <div class="col-md-12 middle">
+      PRICE LIST
+    </div>
+  </div>
+  </div> -->
+</section> <!-- END Price list section-->
+<!-- REGISTER SECTION -->
+<section class="register-section-lp hours">
+  <form class="reg-box-lp" method="post" action="registration_process.php"> 
+    <input type="email" placeholder="e-mail her" required></input>
+    <input type="submit" value="register deg nå"></input>
+  </form>
+</section> <!-- END REGISTER SECTION -->
+<!-- SOCIAL MEDIA -->
+<section>
+<div class="container">
+  <div class="row padded"><div class="col-md-12">
+</div>
+<div class="row">
+  <div class="col-md-12 middle">
+    <h2>Follow Checkd!</h2>
+    <div class="mediaBox">
+      <a href="https://www.facebook.com/checkdit"target="_blank" tabindex="5"><img src="images/frontpage/new/social/facebook.png" height="auto" width="auto" class="grayscale" alt="CHECKD Facebook Link"></a>
+      <a href="https://twitter.com/Checkdsuite"target="_blank" tabindex="5"><img src="images/frontpage/new/social/twitter.png" height="auto" width="auto" class="grayscale" alt="CHECKD Twitter Link"></a>
+      <a href="https://www.linkedin.com/company/5050072?trk=tyah&trkInfo=tarId%3A1414498235467%2Ctas%3Acheckd%20as%2Cidx%3A1-1-1"target="_blank" tabindex="5"><img src="images/frontpage/new/social/linkedin.png" height="auto" width="auto" class="grayscale" alt="CHECKD Linkedin Link"></a>
+      <a href="http://vimeo.com/checkd"target="_blank" tabindex="5"><img src="images/frontpage/new/social/vimeo.png" height="auto" width="auto" class="grayscale" alt="CHECKD Vimeo Link"></a>
+    </div>
+  </div>
+</div>
+</div>
+</section> <!-- END  -->
+
+<footer>
+  <div class="footBox">
+    <div class="footLogo">
+      <img src="images/frontpage/new/elements/checkd_logo_white.png">
+    </div>
+    <div class="FAQ-Support-Wrap">
+      <div class="footFAQ">
+      <a  href="faq-panel.html" class="btn footer-btn btn-footer">FAQ</a>
+      </div>
+      <div class="footSupport">
+      <a  href="support.html" class="btn footer-btn btn-footer">Support</a>
+      </div>
+      </div>
+  </div>
+</footer>
+<!-- <footer>
+<br>
+<br>
+    <h1 class="footer-text">Vi gleder oss til å høre fra deg!</h1>
+<br>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="social-row">
+            <a href="https://www.facebook.com/checkdit?ref_type=bookmark "target="_blank"> <i class="fa fa-facebook fa-2x"></i></a>
+            <a href="https://twitter.com/Checkdsuite"target="_blank"> <i class="fa fa-twitter fa-2x"></i></a>
+            <a href="https://www.linkedin.com/profile/view?id=25148638&authType=OUT_OF_NETWORK&authToken=romw&locale=en_US&srchid=2022537561403619882208&srchindex=2&srchtotal=43&trk=vsrp_people_res_name&trkInfo=VSRPsearchId%3A2022537561403619882208%2CVSRPtargetId%3A25148638%2CVSRPcmpt%3Aprimary"target="_blank"> <i class="fa fa-linkedin fa-2x"></i></a>
+        </div>
+    </div>
+</div>
+<div class="faq-link"><a href="support.html">Kundestøtte</a>
+      -
+      <a href="faq.html">FAQ</a></div>
+    </footer> -->
+    <script type="text/javascript">
+      function downloadJSAtOnload() {
+        var element = document.createElement("script");
+        element.src = "deferredfunctions.js";
+        document.body.appendChild(element);
+      }
+
+      if (window.addEventListener)
+        window.addEventListener("load", downloadJSAtOnload, false);
+      else if (window.attachEvent)
+        window.attachEvent("onload", downloadJSAtOnload);
+      else window.onload = downloadJSAtOnload;
+    </script>
+    <script>
+      function spillAv() {
+        document.getElementById('wrap').style.cssText = 'display: block;';
+        document.getElementById('overlay-image').style.cssText = 'display:none;';
+        document.getElementById('playvid').src = 
+        document.getElementById('playvid').src.replace('autoplay=0','autoplay=1');
+      }
+    </script>
+    <script type="text/javascript">
+      function downloadJSAtOnload() {
+        var element = document.createElement("script");
+        element.src = "deferredfunctions.js";
+        document.body.appendChild(element);
+      }
+      if (window.addEventListener)
+        window.addEventListener("load", downloadJSAtOnload, false);
+      else if (window.attachEvent)
+        window.attachEvent("onload", downloadJSAtOnload);
+      else window.onload = downloadJSAtOnload;
+    </script>
+    <script type="text/javascript">
+
+      var forms = document.getElementsByTagName('form');
+      for (var i = 0; i < forms.length; i++) {
+        forms[i].noValidate = true;
+
+        forms[i].addEventListener('submit', function(event) {
+        //Prevent submission if checkValidity on the form returns false.
+        if (!event.target.checkValidity()) {
+          event.preventDefault();
+            //Implement you own means of displaying error messages to the user here.
+          }
+        }, false);
+      }
+    </script>
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/ekko-lightbox.min.js"></script>
+  </body>
+
+  </html>
