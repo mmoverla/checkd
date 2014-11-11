@@ -21,12 +21,6 @@
   <link href='http://fonts.googleapis.com/css?family=Roboto:100' rel='stylesheet' type='text/css'>
   <style type="text/css">
 
- /* input:required:invalid, input:focus:invalid {
-    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAeVJREFUeNqkU01oE1EQ/mazSTdRmqSxLVSJVKU9RYoHD8WfHr16kh5EFA8eSy6hXrwUPBSKZ6E9V1CU4tGf0DZWDEQrGkhprRDbCvlpavan3ezu+LLSUnADLZnHwHvzmJlvvpkhZkY7IqFNaTuAfPhhP/8Uo87SGSaDsP27hgYM/lUpy6lHdqsAtM+BPfvqKp3ufYKwcgmWCug6oKmrrG3PoaqngWjdd/922hOBs5C/jJA6x7AiUt8VYVUAVQXXShfIqCYRMZO8/N1N+B8H1sOUwivpSUSVCJ2MAjtVwBAIdv+AQkHQqbOgc+fBvorjyQENDcch16/BtkQdAlC4E6jrYHGgGU18Io3gmhzJuwub6/fQJYNi/YBpCifhbDaAPXFvCBVxXbvfbNGFeN8DkjogWAd8DljV3KRutcEAeHMN/HXZ4p9bhncJHCyhNx52R0Kv/XNuQvYBnM+CP7xddXL5KaJw0TMAF8qjnMvegeK/SLHubhpKDKIrJDlvXoMX3y9xcSMZyBQ+tpyk5hzsa2Ns7LGdfWdbL6fZvHn92d7dgROH/730YBLtiZmEdGPkFnhX4kxmjVe2xgPfCtrRd6GHRtEh9zsL8xVe+pwSzj+OtwvletZZ/wLeKD71L+ZeHHWZ/gowABkp7AwwnEjFAAAAAElFTkSuQmCC);
-    background-position: right top ;
-    background-repeat: no-repeat;
-    -moz-box-shadow: none;
-  }*/
   input:required:valid {
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAepJREFUeNrEk79PFEEUx9/uDDd7v/AAQQnEQokmJCRGwc7/QeM/YGVxsZJQYI/EhCChICYmUJigNBSGzobQaI5SaYRw6imne0d2D/bYmZ3dGd+YQKEHYiyc5GUyb3Y+77vfeWNpreFfhvXfAWAAJtbKi7dff1rWK9vPHx3mThP2Iaipk5EzTg8Qmru38H7izmkFHAF4WH1R52654PR0Oamzj2dKxYt/Bbg1OPZuY3d9aU82VGem/5LtnJscLxWzfzRxaWNqWJP0XUadIbSzu5DuvUJpzq7sfYBKsP1GJeLB+PWpt8cCXm4+2+zLXx4guKiLXWA2Nc5ChOuacMEPv20FkT+dIawyenVi5VcAbcigWzXLeNiDRCdwId0LFm5IUMBIBgrp8wOEsFlfeCGm23/zoBZWn9a4C314A1nCoM1OAVccuGyCkPs/P+pIdVIOkG9pIh6YlyqCrwhRKD3GygK9PUBImIQQxRi4b2O+JcCLg8+e8NZiLVEygwCrWpYF0jQJziYU/ho2TUuCPTn8hHcQNuZy1/94sAMOzQHDeqaij7Cd8Dt8CatGhX3iWxgtFW/m29pnUjR7TSQcRCIAVW1FSr6KAVYdi+5Pj8yunviYHq7f72po3Y9dbi7CxzDO1+duzCXH9cEPAQYAhJELY/AqBtwAAAAASUVORK5CYII=);
     background-position: right top ;
@@ -89,14 +83,14 @@
             <ul class="nav navbar-nav navbar-right">
               <li class="nav-buttons firstIcon nav-lp-btn"><a  href="http://admin.checkdd.com/admin/" class="btn navbar-btn btn-nav-border-hours" >Login</a></li>
 
-              <li class="nav-buttons secondIcon nav-lp-btn"><a href="english/index-en.html" class="btn btn-nav-border-hours navbar-btn"> English</a></li>
+              <li class="nav-buttons secondIcon nav-lp-btn"><a href="english/hours.html" class="btn btn-nav-border-hours navbar-btn"> English</a></li>
               
             </ul>
 
             <form method="post" name="form" id="form" class="navbar-form navbar-right" action="registration_process.php" style="display:block">
              <input type="text" id="email" name="email" placeholder="E-mail her" style="input" tabindex="1" class="form-control navbar-btn thirdIcon nav-lp-btn" required>
              <input type="hidden" name="task" value="registrationNew" />
-             <a class="btn navbar-btn btn-nav-border-hours fourthIcon nav-lp-btn" type="submit" name="Submit">Register</a>
+             <a class="btn navbar-btn btn-nav-border-hours fourthIcon nav-lp-btn" type="submit" name="Submit">Registrer</a>
            </form>
          </div><!-- /.navbar-collapse -->
        </div><!-- /.container-fluid -->
@@ -141,12 +135,10 @@
       <div class="row">
         <div class="col-md-6 left first text">
           <h2>
-            Timelister:
+            Overblikk:
           </h2>
           <div class="textBox">
-            Velg prosjekt ut fra GPS posisjon eller liste.
-            Sett oppgave, og du er i gang!
-          </div>
+            Velg prosjekt fra prosjektlisten som genereres på bakgrunn av din posisjon. Legg til arbeidsoppgaver like enkelt som å sende en SMS. Du blir automatisk sjekket ut når du forlater byggeplassen.
         </div>
         <div class="col-md-6 right first image">
          <div class="shell-wrap">
@@ -170,10 +162,10 @@
   <div class="row">
    <div class="col-md-6 right second text">
     <h2>
-      Overblikk
+      Timelister
     </h2>
     <div class="textBox">
-      Se hvor mange timer du har jobbet i uka og måneden. Enkel liste over tid brukt per oppgave.
+      Oversikt over timene dine, enten det er daglige, månedlige eller totale timer. Se hvor lang tid du bruker på hver enkelt oppgave.
     </div>
   </div>
   <div class="col-md-6 left second image">
@@ -197,7 +189,7 @@
       Back-End
     </h2>
     <div class="textBox">
-      Detaljert informasjon over din arbeidsplass. Se hvor tiden blir mest brukt. Fullt overblikk, eller på nært hold.
+      Detaljert informasjon over din arbeidsplass. Se hvor mesteparten av tiden blir brukt.
     </div>
   </div>
   <div class="col-md-6 right third image">
@@ -260,29 +252,11 @@
       <a  href="faq-panel.html" class="btn footer-btn btn-footer">FAQ</a>
       </div>
       <div class="footSupport">
-      <a  href="support.html" class="btn footer-btn btn-footer">Kundestøtte</a>
+      <a  href="support.html" class="btn footer-btn btn-footer">Kundesupport</a>
       </div>
       </div>
   </div>
 </footer>
-<!-- <footer>
-<br>
-<br>
-    <h1 class="footer-text">Vi gleder oss til å høre fra deg!</h1>
-<br>
-<div class="row">
-    <div class="col-lg-12">
-        <div class="social-row">
-            <a href="https://www.facebook.com/checkdit?ref_type=bookmark "target="_blank"> <i class="fa fa-facebook fa-2x"></i></a>
-            <a href="https://twitter.com/Checkdsuite"target="_blank"> <i class="fa fa-twitter fa-2x"></i></a>
-            <a href="https://www.linkedin.com/profile/view?id=25148638&authType=OUT_OF_NETWORK&authToken=romw&locale=en_US&srchid=2022537561403619882208&srchindex=2&srchtotal=43&trk=vsrp_people_res_name&trkInfo=VSRPsearchId%3A2022537561403619882208%2CVSRPtargetId%3A25148638%2CVSRPcmpt%3Aprimary"target="_blank"> <i class="fa fa-linkedin fa-2x"></i></a>
-        </div>
-    </div>
-</div>
-<div class="faq-link"><a href="support.html">Kundestøtte</a>
-      -
-      <a href="faq.html">FAQ</a></div>
-    </footer> -->
     <script type="text/javascript">
       function downloadJSAtOnload() {
         var element = document.createElement("script");
