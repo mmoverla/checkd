@@ -11,6 +11,8 @@
  <!-- <link href="css/main.css" rel="stylesheet"> -->
  <link href="css/bootstrap-beta.css" rel="stylesheet">
   <link href="css/style-about.css" rel="stylesheet">
+    <link href="fancybox/source/jquery.fancybox.css" rel="stylesheet">
+    <link href="fancybox/source/helpers/jquery.fancybox-buttons.css" rel="stylesheet">
  <!--  <link href="css/style.min.css" rel="stylesheet"> -->
   <!-- <link href="css/flags/css/flag-icon.css" rel="stylesheet"> -->
  <!--  <link href="css/animate.css" rel="stylesheet"> -->
@@ -30,7 +32,7 @@
  <!-- Scripts -->
 
  <!-- JQuery -->
- <script src="js/jquery-1.10.2.js"></script>
+<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
  
  
 
@@ -45,13 +47,7 @@
   ga('send', 'pageview');
 
 </script>
-<script type="text/javascript">
-//   if ($(window).width() < 1200) {
-//     $('.nav').addClass('.navbar-fixed-top');
-// } else {
-//     $('.nav').removeClass('.navbar-fixed-top');
-// }
-</script>
+
 
 <noscript>
     <style>
@@ -93,14 +89,20 @@
 
   <!-- FRONT PAGE SECTION -->
 <section class="intro-checkd">
-  <div class="container">
+   <div class="overlayFilter">
+        <div class="container">
     <div class="row">
-      <div class="about-header"><h1>What is </h1>
+      <div class="about-header"><h1>We are </h1>
       <img src="images/frontpage/new/elements/logo-white.svg" class="img-responsive">
-      <div class="about-header"><h1>?</h1>
+      <div class="about-header"><h1></h1>
       </div>
     </div>
+        
   </div>
+</div>
+    </div>
+ 
+     
 </section>
 <!-- END FRONT PAGE SECTION -->
   <!-- NAV SECTION -->
@@ -156,106 +158,40 @@
 <section class="parallax-1">
 
  <div class="overlayFilter">
-<div class="container">
- <div class="row">
-      <div class="col-xs-6 col-sm-6 col-md-3 col-lg-6" >  
-
-        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-   width="541.89px" height="295.275px" viewBox="100 200 541.89 295.275" enable-background="new 0 0 841.89 595.275"
-   xml:space="preserve">
-
-
-  <path fill="#939598" class="line-1" stroke="#FFFFFF" d="M360.992,318.949v29.098c0,5.252,4.293,9.545,9.545,9.545H471.35c5.252,0,9.549-4.293,9.549-9.545v-29.098
-    H360.992z"/>
-  <path fill="#FFD600" class="line-1" stroke="#FFFFFF" d="M471.35,237.684H370.537c-5.252,0-9.545,4.297-9.545,9.547v71.719h119.907V247.23
-    C480.898,241.98,476.602,237.684,471.35,237.684z"/>
-  <g>
-    <g>
-      <path class="line-2" stroke="#FFFFFF" fill="#262626" d="M465.188,277.257c0.809,0,1.465-0.656,1.465-1.466v-6.896c0-0.809-0.656-1.465-1.465-1.465h-25.908
-        c-0.809,0-1.465,0.656-1.465,1.465v6.896c0,0.81,0.656,1.466,1.465,1.466H465.188z"/>
-    </g>
-    <path class="line-2" stroke="#FFFFFF" fill="#262626" d="M426.057,266.431c0-5.941,4.818-10.758,10.758-10.758l28.514-0.006c0.807,0,1.465,0.655,1.465,1.465v6.945
-      c0,0.81-0.658,1.466-1.465,1.466l-26.068-0.005c-1.842,0-3.336,1.494-3.336,3.337l0.002,30.625c0,0.811-0.654,1.467-1.463,1.467
-      h-6.938c-0.811,0-1.467-0.656-1.467-1.467L426.057,266.431z"/>
-    <path class="line-2" stroke="#FFFFFF" fill="#262626" d="M399.839,267.996c0.826-1.471,2.4-2.463,4.207-2.463l6.918,0.005c1.844,0,3.338,1.494,3.338,3.337
-      l-0.004,30.625c0,0.811,0.654,1.467,1.463,1.467h6.938c0.811,0,1.467-0.656,1.467-1.467v-33.069
-      c0-5.941-4.819-10.758-10.758-10.758l-9.385,0.005c-5.541,0-10.365,3.063-12.871,7.591l-19.809,35.567
-      c-0.109,0.203-0.17,0.436-0.17,0.682c0,0.797,0.645,1.443,1.443,1.443l8.023-0.002c0.545,0,1.018-0.301,1.262-0.744
-      L399.839,267.996z"/>
-    <path class="line-2" stroke="#FFFFFF" fill="#262626" d="M384.837,298.836c-0.107,0.203-0.17,0.436-0.17,0.682c0,0.797,0.645,1.443,1.441,1.443l8.025-0.002
-      c0.545,0,1.018-0.301,1.262-0.744l12.371-22.224c0.246-0.438,0.717-0.734,1.254-0.734h1.939c0.811,0,1.467-0.656,1.467-1.466
-      v-6.896c0-0.809-0.656-1.465-1.467-1.465h-6.908c-1.104,0-2.064,0.607-2.566,1.506L384.837,298.836z"/>
-  </g>
-  <g>
-    <path class="line-2" stroke="#FFFFFF" fill="#FFFFFF" d="M378.453,341.057l-0.687,3.338h-1.983l2.861-12.855h2.384l2.651,12.855h-1.984l-0.687-3.338H378.453z
-       M380.798,339.454l-0.534-2.956c-0.172-0.84-0.344-2.021-0.477-2.918h-0.057c-0.134,0.896-0.324,2.136-0.477,2.937l-0.572,2.938
-      H380.798z"/>
-    <path class="line-2" stroke="#FFFFFF" fill="#FFFFFF" d="M386.549,331.539h5.283v1.773h-3.243v3.834h3.033v1.697h-3.033v5.551h-2.041V331.539z"/>
-    <path class="line-2" stroke="#FFFFFF" fill="#FFFFFF" d="M405.264,344.051c-0.553,0.229-1.602,0.458-2.499,0.458c-1.316,0-2.403-0.362-3.262-1.259
-      c-1.011-1.049-1.621-2.899-1.602-5.169c0.038-4.825,2.67-6.656,5.188-6.656c0.896,0,1.583,0.171,1.983,0.381l-0.4,1.755
-      c-0.343-0.19-0.82-0.305-1.469-0.305c-1.659,0-3.185,1.221-3.185,4.844c0,3.491,1.335,4.674,2.689,4.674
-      c0.343,0,0.553-0.038,0.667-0.096v-3.604h-1.374v-1.679h3.262V344.051z"/>
-    <path class="line-2" stroke="#FFFFFF" fill="#FFFFFF" d="M408.662,331.729c0.706-0.172,1.602-0.248,2.441-0.248c1.335,0,2.441,0.229,3.185,0.935
-      c0.725,0.687,0.973,1.545,0.973,2.613c0,1.487-0.725,2.651-2.021,3.242v0.038c0.916,0.324,1.373,1.183,1.64,2.709
-      c0.267,1.563,0.572,2.938,0.782,3.376h-2.117c-0.153-0.362-0.439-1.621-0.648-3.128c-0.248-1.679-0.725-2.213-1.755-2.213h-0.458
-      v5.341h-2.021V331.729z M410.684,337.489h0.534c1.221,0,1.984-0.953,1.984-2.27c0-1.259-0.515-2.117-1.831-2.136
-      c-0.267,0-0.515,0.019-0.687,0.076V337.489z"/>
-    <path class="line-2" stroke="#FFFFFF" fill="#FFFFFF" d="M420.476,331.539v8.469c0,2.078,0.648,2.746,1.45,2.746c0.897,0,1.488-0.648,1.488-2.746v-8.469h2.041
-      v8.125c0,3.318-1.316,4.883-3.529,4.883c-2.346,0-3.491-1.603-3.491-4.787v-8.221H420.476z"/>
-    <path class="line-2" stroke="#FFFFFF" fill="#FFFFFF" d="M429.074,331.729c0.648-0.152,1.487-0.248,2.384-0.248c1.354,0,2.46,0.248,3.224,0.973
-      c0.686,0.648,1.029,1.641,1.029,2.747c0,1.297-0.362,2.174-0.953,2.86c-0.764,0.896-2.003,1.336-3.09,1.336
-      c-0.21,0-0.382,0-0.572-0.02v5.017h-2.021V331.729z M431.096,337.699c0.152,0.038,0.285,0.038,0.496,0.038
-      c1.334,0,2.078-0.915,2.078-2.384c0-1.202-0.496-2.213-1.869-2.213c-0.285,0-0.533,0.038-0.705,0.096V337.699z"/>
-    <path class="line-2" stroke="#FFFFFF" fill="#FFFFFF" d="M438.609,331.729c0.648-0.152,1.488-0.248,2.385-0.248c1.354,0,2.461,0.248,3.223,0.973
-      c0.688,0.648,1.03,1.641,1.03,2.747c0,1.297-0.362,2.174-0.954,2.86c-0.762,0.896-2.002,1.336-3.09,1.336
-      c-0.209,0-0.381,0-0.572-0.02v5.017h-2.021V331.729z M440.631,337.699c0.153,0.038,0.287,0.038,0.496,0.038
-      c1.336,0,2.08-0.915,2.08-2.384c0-1.202-0.496-2.213-1.869-2.213c-0.287,0-0.535,0.038-0.707,0.096V337.699z"/>
-    <path class="line-2" stroke="#FFFFFF"fill="#FFFFFF" d="M453.238,338.539h-3.051v4.081h3.471v1.774h-5.512v-12.855h5.283v1.773h-3.242v3.528h3.051V338.539z"/>
-    <path class="line-2" stroke="#FFFFFF" fill="#FFFFFF" d="M456.672,344.395v-12.855h1.869l2.174,5.493c0.457,1.163,1.106,2.822,1.507,4.062h0.038
-      c-0.114-1.641-0.229-3.624-0.229-5.913v-3.643h1.793v12.855h-1.869l-2.193-5.475c-0.478-1.183-1.05-2.728-1.412-4.081h-0.038
-      c0.095,1.487,0.153,3.3,0.153,5.97v3.586H456.672z"/>
-</svg>
-      </div>
-      <div class="col-xs-6 col-sm-6 col-md-3 col-lg-6" > 
-      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-         width="462px" height="231px" viewBox="0 0 462 231" enable-background="new 0 0 462 231" xml:space="preserve">
-      <g>
-        <path fill-rule="evenodd" clip-rule="evenodd" class="line-1" stroke="#FFFFFF" d="M361.613,91.97c0-2.737,2.162-4.97,4.971-4.97c2.736,0,4.896,2.233,4.896,4.97
-          c0,2.737-2.16,4.898-4.896,4.898C363.775,96.868,361.613,94.707,361.613,91.97L361.613,91.97z M362.406,91.97
-          c0,2.305,1.873,4.105,4.178,4.105c2.232,0,4.105-1.8,4.105-4.105c0-2.376-1.873-4.105-4.105-4.105
-          C364.279,87.865,362.406,89.593,362.406,91.97L362.406,91.97z"/>
-        <path fill-rule="evenodd" clip-rule="evenodd" class="line-1" stroke="#FFFFFF" d="M168.299,136.77h10.732v-13.757h6.122c9.436,0,14.693-4.321,14.693-14.117
-          c0-9.507-6.122-13.612-15.053-13.612h-16.494V136.77L168.299,136.77z M179.031,103.926h1.8c4.25,0,7.851,0.072,7.851,5.33
-          c0,5.042-3.89,5.042-7.851,5.042h-1.8V103.926L179.031,103.926z"/>
-        <path fill-rule="evenodd" clip-rule="evenodd" class="line-1" stroke="#FFFFFF" d="M224.623,129.566l2.665,7.203h11.523l-15.628-41.486h-11.74l-15.917,41.486h11.38
-          l2.881-7.203H224.623L224.623,129.566z M221.67,121.284h-8.931l4.465-13.181L221.67,121.284L221.67,121.284z"/>
-        <path fill-rule="evenodd" clip-rule="evenodd" class="line-1" stroke="#FFFFFF" d="M354.412,109.256c-2.234-2.953-5.834-4.538-9.508-4.538
-          c-6.555,0-11.02,4.97-11.02,11.38c0,6.554,4.537,11.235,11.236,11.235c3.457,0,6.986-1.656,9.291-4.394v12.965
-          c-3.602,1.08-6.195,1.872-9.508,1.872c-5.762,0-11.309-2.16-15.559-6.05c-4.537-4.178-6.625-9.507-6.625-15.629
-          c0-5.69,2.088-11.092,6.051-15.125c4.105-4.177,9.939-6.771,15.773-6.771c3.457,0,6.625,0.792,9.867,2.089V109.256L354.412,109.256
-          z"/>
-        <path fill-rule="evenodd" clip-rule="evenodd" class="line-1" stroke="#FFFFFF" d="M296.863,93.915c-11.883,0-22.904,8.787-22.904,21.319
-          c0,13.397,9.652,22.904,22.904,22.904s22.832-9.507,22.832-22.904C319.695,102.702,308.748,93.915,296.863,93.915L296.863,93.915z
-           M296.863,104.358c6.41,0,11.668,5.257,11.668,10.947c0,7.131-5.258,12.389-11.668,12.389s-11.668-5.258-11.668-12.389
-          C285.195,109.616,290.453,104.358,296.863,104.358L296.863,104.358z"/>
-        <path fill-rule="evenodd" clip-rule="evenodd" class="line-1" stroke="#FFFFFF" d="M261.715,119.844c5.906-1.081,9.076-6.05,9.076-11.812
-          c0-8.859-6.195-12.748-14.406-12.748h-16.133v41.486h10.805v-15.918l10.299,15.918h13.396L261.715,119.844L261.715,119.844z
-           M251.057,103.566h1.008c3.529,0,7.562,0.648,7.562,5.186c0,4.466-4.033,5.186-7.562,5.186h-1.008V103.566L251.057,103.566z"/>
-        <polygon fill-rule="evenodd" clip-rule="evenodd" class="line-1" stroke="#FFFFFF" points="110.391,87 131.783,115.09 110.391,143.323 89,115.018 110.391,87  "/>
-        <polygon fill-rule="evenodd" clip-rule="evenodd" class="line-1" stroke="#FFFFFF" points="117.882,87 125.084,87 146.404,115.09 125.084,143.252 117.954,143.252 
-          139.201,115.09 117.882,87   "/>
-        <polygon fill-rule="evenodd" clip-rule="evenodd" class="line-1" stroke="#FFFFFF" points="132.503,87 139.706,87 161.025,115.09 139.706,143.252 132.575,143.252 
-          153.822,115.09 132.503,87   "/>
-        <path fill-rule="evenodd" clip-rule="evenodd" class="line-1" stroke="#FFFFFF" d="M365.574,90.169v1.296h0.793c0.648,0,1.656,0.072,1.656-0.576
-          c0-0.648-0.576-0.72-1.225-0.72H365.574L365.574,90.169z M368.672,94.563h-0.863l-1.297-2.377h-0.938v2.377h-0.791v-5.114h2.16
-          c0.938,0,1.801,0.216,1.801,1.296c0,1.009-0.721,1.441-1.367,1.441L368.672,94.563L368.672,94.563z"/>
-      </g>
-      </svg>
-      </div>
+     <!-- SECTION CLIENTS -->
+		<div class="section-page-landing section-grey" id="client">
+			<div class="inner-section">
+				<div class="container text-center">
+					<h2 class="text-center">Our Clients</h2>
+					
+					<div class="clients">
+						<div class="row">
+							<div class="col-md-2 col-xs-6">
+								<a href="#fakelink"><img src="http://diliat.in/wrapbootstrap/Teplok/1.0/OnePageParallax/images/client-logo/google-logo.png" alt="Image client"></a>
+							</div>
+							<div class="col-md-2 col-xs-6">
+								<a href="#fakelink"><img src="http://diliat.in/wrapbootstrap/Teplok/1.0/OnePageParallax/images/client-logo/wordpress-logo.png" alt="Image client"></a>
+							</div>
+							<div class="col-md-2 col-xs-6">
+								<a href="#fakelink"><img src="http://diliat.in/wrapbootstrap/Teplok/1.0/OnePageParallax/images/client-logo/yahoo-logo.png" alt="Image client"></a>
+							</div>
+							<div class="col-md-2 col-xs-6">
+								<a href="#fakelink"><img src="http://diliat.in/wrapbootstrap/Teplok/1.0/OnePageParallax/images/client-logo/marlboro-logo.png" alt="Image client"></a>
+							</div>
+							<div class="col-md-2 col-xs-6">
+								<a href="#fakelink"><img src="http://diliat.in/wrapbootstrap/Teplok/1.0/OnePageParallax/images/client-logo/microsoft-logo.png" alt="Image client"></a>
+							</div>
+							<div class="col-md-2 col-xs-6">
+								<a href="#fakelink"><img src="http://diliat.in/wrapbootstrap/Teplok/1.0/OnePageParallax/images/client-logo/nokia-logo.png" alt="Image client"></a>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		<!-- END SECTION COLUMN -->
     </div>
-    </div>
- </div>
-
 </section>
 <!-- PARALLAX 1 SECTION END -->
 <!-- about SECTION -->
@@ -264,6 +200,7 @@
     <div class="row">
         <h1 class="section-heading">About</h1>
         <p class="about-content">CHECKD AS wishes to raise awareness regarding the enormous costs related to the various mistakes, errors and misplacements that occur in the construction industry on a daily basis. </p>
+        <hr class="hr-line">
         <p class="about-content">We provide a simple and easy-to-understand method of regaining control through our cloud-based virtual toolkit, which allows users to log all critical and non-critical activities, file reports, coordinate subcontractors and track essential equipment.</p>
     </div>
     <br>
@@ -273,8 +210,6 @@
      
     </div>
   </div>
-
-</div>
 
 </section>
 <!-- about SECTION END -->
@@ -324,6 +259,7 @@
            <p class="name">Name Nameson</p>
            <p class="job-position">worker</p>
          </div>
+           
          <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 text-center sf-animation">
            <div class="rounded-img-border"><img src="http://placehold.it/150x150"></div>
            <p class="name">Name Nameson</p>
@@ -357,10 +293,155 @@
  </div>
 </section>
 <!-- PARALLAX 3 SECTION END -->
+    
+    
+ 
+
+    
 <section class="media-section">
   <div class="row">
         <h1 class="section-heading">IN THE MEDIA</h1>
         </div>
+    
+<!--
+    <div class="row">
+        
+        <div class="media-grid"> 
+            <div id="galleryTab " class="tab-links">
+              <a data-rel="all"  href="javascript:;" class="filter active">View all</a>
+              <a data-rel="inter" href="javascript:;" class="filter">International</a>
+              <a data-rel="nor" href="javascript:;" class="filter">Norway</a>
+            </div>
+            <div class="galleryWrap">
+            
+              <a class="fancybox" data-fancybox-group="gallery" data-filter="inter" href="http://placehold.it/450x450"><img src="http://placehold.it/150x150" alt="" /></a>
+
+          
+              <a class="fancybox" data-fancybox-group="gallery" data-filter="inter" href="http://placehold.it/450x450"><img src="http://placehold.it/150x150" alt="" /></a>
+              <a class="fancybox" data-fancybox-group="gallery" data-filter="inter" href="http://placehold.it/150x150"><img src="http://placehold.it/150x150" alt="" /></a>
+              <a class="fancybox" data-fancybox-group="gallery" data-filter="nor" href="http://placehold.it/150x150"><img src="http://placehold.it/150x150" alt="" /></a>
+              <a class="fancybox" data-fancybox-group="gallery" data-filter="nor" href="images/frontpage/new/elements/c1.png"><img src="http://placehold.it/150x150" alt="" /></a>
+              <a class="fancybox" data-fancybox-group="gallery" data-filter="nor" href="images/frontpage/new/background/forside4.png"><img src="http://placehold.it/150x150" alt="" /></a>
+            </div>
+        </div>
+        
+    </div>
+-->
+    <div class="row" style="padding-bottom: 50px">
+
+<div id="filters" class="portfolio-filters">
+  <ul class="list-inline">
+            <li><a id="all" data-filter="*" class="active"><h5>All</h5></a></li>	
+            <li><a data-filter=".nor"><h5>Norway</h5></a></li>
+            <li><a data-filter=".inter"><h5>International</h5></a></li>
+          </ul>
+</div>
+
+<div id="Portfolio" class="portfolio">
+  
+  <!-- portfolio item-->
+  <div class="portfolio-item nor">
+    <div class="portfolio-image">
+      <img src="http://lorempixel.com/600/450/fashion/1" alt="image" />
+    </div>
+    <a href="#">
+      <div class="project-overlay">
+        <div class="project-info">
+          <i class="fa fa-search"></i>
+          <h3 class="project-name">Project name 1</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </div>
+      </div>
+    </a>
+  </div>
+  <!-- /portfolio item-->
+  
+  <!-- portfolio item-->
+  <div class="portfolio-item nor">
+    <div class="portfolio-image">
+      <img src="http://lorempixel.com/600/450/fashion/2" alt="image" />
+    </div>
+    <a href="#">
+      <div class="project-overlay">
+        <div class="project-info">
+          <i class="fa fa-search"></i>
+          <h3 class="project-name">Project name 2</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </div>
+      </div>
+    </a>
+  </div>
+  <!-- /portfolio item-->
+  
+  <!-- portfolio item-->
+  <div class="portfolio-item nor">
+    <div class="portfolio-image">
+      <img src="http://lorempixel.com/600/450/fashion/3" alt="image" />
+    </div>
+    <a href="#">
+      <div class="project-overlay">
+        <div class="project-info">
+          <i class="fa fa-search"></i>
+          <h3 class="project-name">Project name 3</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </div>
+      </div>
+    </a>
+  </div>
+  <!-- /portfolio item-->
+  
+  <!-- portfolio item-->
+  <div class="portfolio-item inter">
+    <div class="portfolio-image">
+      <img src="http://lorempixel.com/600/450/fashion/4" alt="image" />
+    </div>
+    <a href="#">
+      <div class="project-overlay">
+        <div class="project-info">
+          <i class="fa fa-search"></i>
+          <h3 class="project-name">Project name 4</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </div>
+      </div>
+    </a>
+  </div>
+  <!-- /portfolio item-->
+     <!-- portfolio item-->
+  <div class="portfolio-item inter">
+    <div class="portfolio-image">
+      <img src="http://lorempixel.com/600/450/fashion/3" alt="image" />
+    </div>
+    <a href="#">
+      <div class="project-overlay">
+        <div class="project-info">
+          <i class="fa fa-search"></i>
+          <h3 class="project-name">Project name 5</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </div>
+      </div>
+    </a>
+  </div>
+  <!-- /portfolio item-->
+  
+  <!-- portfolio item-->
+  <div class="portfolio-item nor">
+    <div class="portfolio-image">
+      <img src="http://lorempixel.com/600/450/fashion/4" alt="image" />
+    </div>
+    <a href="#">
+      <div class="project-overlay">
+        <div class="project-info">
+          <i class="fa fa-search"></i>
+          <h3 class="project-name">Project name 6</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </div>
+      </div>
+    </a>
+  </div>
+  <!-- /portfolio item-->
+  
+</div>
+    </div>
 </section>
 <!-- PARALLAX 4 SECTION -->
 <section class="parallax-4">
@@ -385,10 +466,46 @@
   <div class="row">
         <h1 class="section-heading">WHAT DO OTHERS SAY ABOUT CHECKD?</h1>
         </div>
+    <div class="container">
+    <div class="row">
+        
+    <div class="testimonial-quote group">
+        <img src="http://placehold.it/120x120">
+        <div class="quote-container">
+            <blockquote>
+                <p>Overall, fantastic! I'd recommend them to anyone looking for a creative, thoughtful, and professional team.”</p>
+            </blockquote>  
+            <cite><span>Kristi Bruno</span><br>
+                Social Media Specialist<br>
+                American College of Chest Physicians
+            </cite>
+        </div>
+    </div>    
+        
+    <hr class="hr-line">
+    
+    <div class="testimonial-quote group right">
+        <img src="http://placehold.it/120x120">
+        <div class="quote-container">
+            <div>
+                <blockquote>
+                    <p>Overall, fantastic! I'd recommend them to anyone looking for a creative, thoughtful, and professional team.”</p>
+                </blockquote>  
+                <cite><span>Kristi Bruno</span><br>
+                    Social Media Specialist<br>
+                    American College of Chest Physicians
+                </cite>
+            </div>
+        </div>
+    </div>     
+
+    </div>
+    </div>
 </section>
 <!-- FOOTER -->
+    
 <footer class="footer-section">
-   <div class="container-fluid">
+
        
 <br><br>
 <div class="container">
@@ -419,7 +536,14 @@
 <div class="row">
   <div class="copyright"><p>CHECKD<sup>&reg;</sup> 2014</p></div>
 </div>
+    
 </footer>
+
+<div id="back-top" style="display: block">
+    <a href="#top">
+        <i class="fa fa-chevron-up"></i>
+    </a>
+</div>
 
 <!-- SCRIPTS -->
  <script src="js/smooth-scroll.js"></script>
@@ -429,6 +553,9 @@
 
 
 <!-- JavaScript -->
+<script src="js/isotope.pkgd.min.js"></script>
+<script type='text/javascript' src="js/bootbox.min.js"></script>
+<script src="js/jquery.quicksand.js"></script>
 <script src="js/waypoints.js"></script>
 <script src="js/waypoints-sticky.js"></script>
 <script src="js/bootstrap.min.js"></script>
@@ -437,7 +564,70 @@
 <script src="js/plugins.js"></script> <!-- Contains: jPreloader, jQuery Easing, jQuery ScrollTo, jQuery One Page Navi -->
 <script type="text/javascript" src="js/jquery.validate.js"></script>
 <script src="js/custom.min.js"></script>
+<script src="fancybox/source/jquery.fancybox.js"></script>
+    <script src="fancybox/source/jquery.fancybox.pack.js"></script>
+    <script src="fancybox/source/helpers/jquery.fancybox-buttons.js"></script>
+<script>
 
+    jQuery(function($){
+    // fancybox
+    $(".fancybox").fancybox({
+        // disable regular nav and close buttons
+        // add buttons helper (requires buttons helper js and css files)
+        helpers: {
+            
+        } 
+    });
+         // filter selector
+    $(".filter").on("click", function () {
+        var $this = $(this);
+        // if we click the active tab, do nothing
+        if ( !$this.hasClass("active") ) {
+            $(".filter").removeClass("active");
+            $this.addClass("active"); // set the active tab
+            // get the data-rel value from selected tab and set as filter
+            var $filter = $this.data("rel"); 
+            // if we select view all, return to initial settings and show all
+            $filter == 'all' ? 
+                $(".fancybox")
+                .attr("data-fancybox-group", "gallery")
+                .not(":visible")
+                .fadeIn() 
+            : // otherwise
+                $(".fancybox")
+                .fadeOut(0)
+                .filter(function () {
+                    // set data-filter value as the data-rel value of selected tab
+                    return $(this).data("filter") == $filter; 
+                })
+                // set data-fancybox-group and show filtered elements
+                .attr("data-fancybox-group", $filter)
+                .fadeIn(1000); 
+        } // if
+    }); // on
+}); // ready
+</script>
+    
+<script>
+   $(window).load(function(){ 
+$(function(){
+  var $container = $('#Portfolio');
+
+  $container.isotope({
+    itemSelector: '.portfolio-item',
+    layoutMode: 'fitRows',
+  });
+
+  $('#filters').on( 'click', 'a', function() {
+    var filterValue = $(this).attr('data-filter');
+    $('#filters a').removeClass('active');
+    $(this).addClass('active');
+    $container.isotope({ filter: filterValue });
+  });
+});
+ });   
+</script>
   
+    
 </body>
 </html>
