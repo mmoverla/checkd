@@ -15,10 +15,7 @@ h1, h2 {
 /*****************
 * BOOTSTRAP NAV  *
 *****************/
-/* Denne skal visst fikse iOS problemet med hamburger */
-.dropdown-backdrop {
-position: static;
-}
+
 .nav-buttons{
   padding-top: 2px;
   padding-left:0px;
