@@ -883,11 +883,7 @@ input[type="submit"] {
     height: 330px;
     width: 186px;
     top: 46px;
-<<<<<<< HEAD
     left: 62px;
-=======
-    left: 71px;
->>>>>>> eirikBranch
   }
   .sony-control-first{
     width:210px;
@@ -1008,17 +1004,14 @@ input[type="submit"] {
 }
 .right.third.image{
   width: 320px;
-<<<<<<< HEAD
   padding-left:20px;
-=======
-  padding-left:50px;
->>>>>>> eirikBranch
+  /* padding-left:50px;  */ 
 }
 .hours-backend-wrapper{
  height:129px;
  width:198px;
  top:7px;
- left:93px;
+ left:55px;
 }
 #slider-wrap2{
   height:240px;
@@ -1343,8 +1336,31 @@ left: 42px;
     left: 0;
     right: 0;
   }
+  .dropdown-size-sm{
+  left:-18px;
+  }
 }
 /* END */
+/*****************
+*  Iphone 6    *
+*****************/
+@media only screen 
+    and (min-device-width : 375px) 
+    and (max-device-width : 667px) 
+    and (orientation : landscape) 
+    and (-webkit-min-device-pixel-ratio : 2)
+{ }
+
+@media only screen 
+    and (min-device-width : 375px) 
+    and (max-device-width : 667px) 
+    and (orientation : portrait) 
+    and (-webkit-min-device-pixel-ratio : 2)
+{ 
+ .dropdown-size-sm{
+  left: -20px;  
+  }
+}
 /*****************
 *  Animations    *
 *****************/
