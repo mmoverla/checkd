@@ -15,10 +15,7 @@ h1, h2 {
 /*****************
 * BOOTSTRAP NAV  *
 *****************/
-/* Denne skal visst fikse iOS problemet med hamburger */
-.dropdown-backdrop {
-position: static;
-}
+
 .nav-buttons{
   padding-top: 2px;
   padding-left:0px;
@@ -1311,9 +1308,18 @@ input[type="email"] {
 *  Mobile Size    *
 *****************/
 @media screen and (max-width: 500px){
+<<<<<<< HEAD
  /*  .right.first {
     padding-left: 50px;
   } */
+=======
+  .right.first {
+    padding-left: 60px;
+  }
+  .dropdown-size-sm{
+  left:-20px;
+  }
+>>>>>>> eirikBranch
   .right.third.image{
     padding-left:36px;
   }
@@ -1340,9 +1346,16 @@ left: 42px;
     left: 0;
     right: 0;
   }
+<<<<<<< HEAD
   .dropdown-size-sm{
   left:-18px;
   }
+=======
+  .footFAQ, .footSupport {
+float: right;
+padding-right: 5px;
+}
+>>>>>>> eirikBranch
 }
 /* END */
 /*****************
