@@ -531,7 +531,11 @@ hr.style-two {
 .control-slider-wrapper-2 {
   position: absolute;
   background-color: #ffffff;
+<<<<<<< HEAD
   overflow: hidden;
+=======
+  overflow-y: hidden;
+>>>>>>> eirikBranch
   height: 380px;
   width: 218px;
   top: 54px;
@@ -883,7 +887,11 @@ input[type="submit"] {
     height: 330px;
     width: 186px;
     top: 46px;
+<<<<<<< HEAD
     left: 62px;
+=======
+    left: 71px;
+>>>>>>> eirikBranch
   }
   .sony-control-first{
     width:210px;
@@ -1004,7 +1012,11 @@ input[type="submit"] {
 }
 .right.third.image{
   width: 320px;
+<<<<<<< HEAD
   padding-left:20px;
+=======
+  padding-left:50px;
+>>>>>>> eirikBranch
 }
 .hours-backend-wrapper{
  height:129px;
@@ -1039,7 +1051,11 @@ input[type="submit"] {
   height: 136px;
   width: 259px;
   top: 6px;
+<<<<<<< HEAD
   left: 26px;
+=======
+  left: 56px;
+>>>>>>> eirikBranch
 }
 #slider-wrap3{
   height:360px;
