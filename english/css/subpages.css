@@ -657,11 +657,23 @@ hr.style-two {
 .reg-box-lp {
   width:400px;
   height:100px;
-  color: #ffffff;
+ /*  color: #ffffff; */
   margin: auto;
   position: relative;
   top: 20px; left: 0; bottom: 0; right: 0;
   z-index: 999;
+}
+.reg-control{
+ color: rgb(25,229,127) !important;
+}
+.reg-floorplan{
+color: rgb(59,166,221) !important;
+}
+.reg-equipment{
+ color: rgb(115,115,115) !important;
+}
+.reg-hours{
+ color: rgb(241,98,70) !important;
 }
 input[type="email"] {
   appearance: none;
@@ -701,9 +713,9 @@ input[type="submit"] {
   width:380px;
   height:50px;
   font-size:1.05em;
-  background: rgba(24, 169, 240, 0.8);
-  
-  color: #cfd0d3;
+ /*  background: rgba(24, 169, 240, 0.8); */
+  background: #fff;
+  /* color: #cfd0d3; */
   border:none;
   text-align:center;
   letter-spacing:0.15em;
@@ -1329,6 +1341,16 @@ padding-right: 5px;
 }
 }
 /* END */
+
+@media screen and (max-width: 375px){
+  .nav-lp-logo{
+   height:31px;
+   width: auto;
+   margin-top: 5px;
+   margin-left: 0px;
+   margin-right: 30px;
+  }
+}
 /*****************
 *  Animations    *
 *****************/
