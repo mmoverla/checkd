@@ -41,7 +41,7 @@
           <span class="icon-bar white"></span>
         </a>
 
-        <a class="navbar-brand" href="index-beta-norsk.html"><img class="nav-lp-logo logo-size" src="images/frontpage/new/elements/checkd_logo_white.png"></a>
+        <a class="navbar-brand" href="index.html"><img class="nav-lp-logo logo-size" src="images/frontpage/new/elements/checkd_logo_white.png"></a>
         <!-- ******** LITEN ******** -->
         <ul class="nav navbar-nav navbar-brand navbar-left  dropdown-sm-display">
           <li class="dropdown dropdown-size-sm">
@@ -88,7 +88,7 @@
             <form method="post" name="form" id="form" class="navbar-form navbar-right" action="registration_process.php" style="display:block">
              <input type="text" id="email" name="email" placeholder="E-mail her" style="input" tabindex="1" class="form-control thirdIcon nav-lp-btn" required>
              <input type="hidden" name="task" value="registrationNew" />
-             <a class="btn btn-nav-border-equipment fourthIcon nav-lp-btn" type="submit" name="Submit">Registrer</a>
+             <button class="btn btn-nav-border-equipment fourthIcon nav-lp-btn" type="submit" name="Submit">Registrer</button>
            </form>
          </div><!-- /.navbar-collapse -->
        </div><!-- /.container-fluid -->
@@ -149,7 +149,8 @@
         <div class="shell-wrap">
           <div class="shell-container-equipment">
             <video id="videoId" class="video-equipment-1"  loop autoplay>
-              <source src="images/subpages/new/equipment-out.webm" type="video/webm">
+              <source src="images/subpages/new/equipment-out.webm" type="video/webm"/>
+               <source src="images/subpages/new/equipment-out.mp4" type="video/mp4"/>
               </video>
             </div>
             <img class="iphone-hours-second" src="images/subpages/new/Hours-anim-iphone-cut.png">
@@ -225,7 +226,7 @@
 
   <form class="reg-box-lp" method="post" action="registration_process.php"> 
     <input type="email" id="email" name="email" placeholder="e-mail her" required></input>
-    <input type="submit" value="register deg nå"></input>
+    <input type="submit" value="register deg nå" class="reg-equipment"></input>
   </form>
   
   <br>
