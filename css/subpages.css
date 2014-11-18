@@ -1321,10 +1321,38 @@ input[type="email"] {
 *****************/
 @media screen and (max-width: 500px){
 <<<<<<< HEAD
+<<<<<<< HEAD
  /*  .right.first {
     padding-left: 50px;
   } */
 =======
+=======
+  .intro h2{
+    font-size: 28px;
+  }
+  .textBox{
+  font-size: 17px;
+  }
+  .store-icon-container img{
+  height:70px;
+  }
+  .text h2{
+  font-size:28px;
+  }
+  h2{
+    font-size: 28px;
+  }
+  .mediaBox img{
+   height:50px;
+  }
+  .mediaBox{
+      padding-top: 20px;
+  }
+  
+  
+  
+  
+>>>>>>> eirikBranch
   .right.first {
     padding-left: 60px;
   }

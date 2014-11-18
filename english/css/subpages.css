@@ -217,7 +217,7 @@ hr.style-two {
   padding-right: 55px;
 }
 .left.text {
-  padding-left: 55px;
+  padding-left: 0px;
 }
 .left{
   float: left;
@@ -250,8 +250,8 @@ hr.style-two {
   padding-left:160px;
 }
 .right.second{
-  margin-top: 70px;
-  padding-right:287px;
+  margin-top: 120px;
+ /*  padding-right:287px; */
 }
 .left.third{
   padding-top:80px;
@@ -532,7 +532,7 @@ hr.style-two {
 .control-slider-wrapper-2 {
   position: absolute;
   background-color: #ffffff;
-  overflow-y: hidden;
+  overflow: hidden;
   height: 380px;
   width: 218px;
   top: 54px;
@@ -859,7 +859,7 @@ input[type="submit"] {
     max-height:420px;
   }
   .right.first {
-    padding-left: 60px;
+    padding-left: 50px;
   }
   /* Hours END */
   /* Floorplan */
@@ -896,7 +896,7 @@ input[type="submit"] {
     height: 330px;
     width: 186px;
     top: 46px;
-    left: 71px;
+    left: 62px;
   }
   .sony-control-first{
     width:210px;
@@ -1017,17 +1017,18 @@ input[type="submit"] {
 }
 .right.third.image{
   width: 320px;
-  padding-left:50px;
+  padding-left:20px;
+  /* padding-left:50px;  */ 
 }
 .hours-backend-wrapper{
  height:129px;
  width:198px;
  top:7px;
- left:93px;
+ left:55px;
 }
 #slider-wrap2{
   height:240px;
-  width:211px;
+  width:223px;
 }
 .backend-hours{
   width: 198px;
@@ -1052,7 +1053,11 @@ input[type="submit"] {
   height: 136px;
   width: 259px;
   top: 6px;
+<<<<<<< HEAD
+  left: 26px;
+=======
   left: 56px;
+>>>>>>> eirikBranch
 }
 #slider-wrap3{
   height:360px;
@@ -1315,18 +1320,64 @@ input[type="email"] {
 *  Mobile Size    *
 *****************/
 @media screen and (max-width: 500px){
+<<<<<<< HEAD
+<<<<<<< HEAD
+ /*  .right.first {
+    padding-left: 50px;
+  } */
+=======
+=======
+  .intro h2{
+    font-size: 28px;
+  }
+  .textBox{
+  font-size: 17px;
+  }
+  .store-icon-container img{
+  height:70px;
+  }
+  .text h2{
+  font-size:28px;
+  }
+  h2{
+    font-size: 28px;
+  }
+  .mediaBox img{
+   height:50px;
+  }
+  .mediaBox{
+      padding-top: 20px;
+  }
+  
+  
+  
+  
+>>>>>>> eirikBranch
   .right.first {
     padding-left: 60px;
   }
   .dropdown-size-sm{
   left:-20px;
   }
+>>>>>>> eirikBranch
   .right.third.image{
     padding-left:36px;
   }
   .hours-backend-wrapper{
-    left:52px;
+    left:64px;
   }
+  .right.first {
+padding-left: 50px;
+}
+  .right.first.fp{
+  padding-left: 25px !important;
+  }
+  .floorplan-slider-wrapper {
+left: 56px;
+}
+.equipment-backend-wrapper {
+left: 42px;
+}
   #play-icon-lp {
     height: 50px;
     width: 50px;
@@ -1335,10 +1386,16 @@ input[type="email"] {
     left: 0;
     right: 0;
   }
+<<<<<<< HEAD
+  .dropdown-size-sm{
+  left:-18px;
+  }
+=======
   .footFAQ, .footSupport {
 float: right;
 padding-right: 5px;
 }
+>>>>>>> eirikBranch
 }
 /* END */
 
@@ -1349,6 +1406,26 @@ padding-right: 5px;
    margin-top: 5px;
    margin-left: 0px;
    margin-right: 30px;
+  }
+}
+/*****************
+*  Iphone 6    *
+*****************/
+@media only screen 
+    and (min-device-width : 375px) 
+    and (max-device-width : 667px) 
+    and (orientation : landscape) 
+    and (-webkit-min-device-pixel-ratio : 2)
+{ }
+
+@media only screen 
+    and (min-device-width : 375px) 
+    and (max-device-width : 667px) 
+    and (orientation : portrait) 
+    and (-webkit-min-device-pixel-ratio : 2)
+{ 
+ .dropdown-size-sm{
+  left: -20px;  
   }
 }
 /*****************
