@@ -1832,6 +1832,7 @@ div#preloader { position: fixed; left: 0; top: 0; z-index: 5999; width: 100%; he
 
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px)and (-webkit-min-device-pixel-ratio: 1)  {
     .myImageNew{height: 1024px; background-attachment: scroll;}
+    .intro-checkd{background-attachment: scroll;}
     .parallax-1{background-attachment: scroll;}
     .parallax-2{background-attachment: scroll;}  
     .parallax-3{background-attachment: scroll;}
@@ -1853,6 +1854,7 @@ div#preloader { position: fixed; left: 0; top: 0; z-index: 5999; width: 100%; he
     .info-button-time{width: 100%;}
     .info-button-floorplan{width: 100%;}
     .info-button-equipment{width: 100%;}
+    .intro-checkd{background-attachment: scroll;}
     .parallax-1{background-attachment: scroll;}
     .parallax-2{background-attachment: scroll;}  
     .parallax-3{background-attachment: scroll;}
@@ -1861,6 +1863,7 @@ div#preloader { position: fixed; left: 0; top: 0; z-index: 5999; width: 100%; he
     .parallax-6{background-attachment: scroll;}
     .contact-section-heading{font-size: 4.2rem;}
     .section-heading{font-size: 4.2rem;}
+    .clients img {margin: 10px 0;}
 }
 
 
