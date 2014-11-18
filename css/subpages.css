@@ -1053,11 +1053,7 @@ input[type="submit"] {
   height: 136px;
   width: 259px;
   top: 6px;
-<<<<<<< HEAD
   left: 26px;
-=======
-  left: 56px;
->>>>>>> eirikBranch
 }
 #slider-wrap3{
   height:360px;
@@ -1320,16 +1316,6 @@ input[type="email"] {
 *  Mobile Size    *
 *****************/
 @media screen and (max-width: 500px){
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
- /*  .right.first {
-    padding-left: 50px;
-  } */
-=======
-=======
-=======
->>>>>>> eirikBranch
   .intro h2{
     font-size: 28px;
   }
@@ -1352,20 +1338,6 @@ input[type="email"] {
       padding-top: 20px;
   }
   
-  
-  
-  
-<<<<<<< HEAD
->>>>>>> eirikBranch
-=======
->>>>>>> eirikBranch
-  .right.first {
-    padding-left: 60px;
-  }
-  .dropdown-size-sm{
-  left:-20px;
-  }
->>>>>>> eirikBranch
   .right.third.image{
     padding-left:36px;
   }
@@ -1392,16 +1364,13 @@ left: 42px;
     left: 0;
     right: 0;
   }
-<<<<<<< HEAD
   .dropdown-size-sm{
   left:-18px;
   }
-=======
   .footFAQ, .footSupport {
 float: right;
 padding-right: 5px;
 }
->>>>>>> eirikBranch
 }
 /* END */
 
