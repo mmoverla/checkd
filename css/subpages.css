@@ -372,7 +372,7 @@ hr.style-two {
 .floorplan-slider-wrapper{
   position: absolute;
   background-color: #ffffff;
-  overflow-y:hidden;
+  overflow:hidden;
   height:290px;
   width:238px;
   top:175px;
@@ -443,7 +443,7 @@ hr.style-two {
 .hours-slider-wrapper{
   position: absolute;
   background-color: #ffffff;
-  overflow-x:hidden;
+  overflow:hidden;
   height:126px;
   width:266px;
   top:123px;
@@ -496,7 +496,7 @@ hr.style-two {
 .equipment-slider-wrapper{
   position: absolute;
   background-color: #ffffff;
-  overflow-y:hidden;
+  overflow:hidden;
   height:319px;
   width:220px;
   top:99px;
